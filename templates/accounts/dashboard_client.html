@@ -1,0 +1,155 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Dashboard" %}{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="dash-head reveal">
+    <span class="avatar avatar-lg g-{{ user.avatar_gradient }}">{{ user.initials }}</span>
+    <div>
+      <p class="muted" style="margin:0;font-weight:700">{% translate "Hello," %}</p>
+      <h1>{{ user.first_name|default:user.username }} 👋</h1>
+    </div>
+    <span class="spacer"></span>
+    <a href="{% url 'learning:catalog' %}" class="btn btn-primary">＋ {% translate "New topic" %}</a>
+  </div>
+
+  <div class="tiles">
+    <div class="tile reveal"><span class="e grad g-violet">🪜</span><div class="num" data-count="{{ stats.steps }}">0</div><div class="label">{% translate "Steps done" %}</div></div>
+    <div class="tile reveal" style="--d:.06s"><span class="e grad g-mint">🏆</span><div class="num" data-count="{{ stats.completed }}">0</div><div class="label">{% translate "Topics completed" %}</div></div>
+    <div class="tile reveal" style="--d:.12s"><span class="e grad g-ocean">📝</span><div class="num" data-count="{{ stats.tests }}">0</div><div class="label">{% translate "Tests taken" %}</div></div>
+    <div class="tile reveal" style="--d:.18s"><span class="e grad g-rose">✍️</span><div class="num" data-count="{{ stats.reflections }}">0</div><div class="label">{% translate "Reflections" %}</div></div>
+  </div>
+
+  <div class="dash-grid">
+    <div class="stack">
+      {% for r in due_reminders %}
+        <div class="alert-card due reveal">
+          <div class="row">
+            <span style="font-size:1.8rem">⏰</span>
+            <div style="flex:1;min-width:200px"><b>{% translate "Time to come back!" %}</b><div class="muted small">{{ r.topic.title }} · {{ r.remind_at|date:"d.m.Y H:i" }}</div></div>
+            <form method="post" action="{% url 'learning:reminder_done' r.pk %}">{% csrf_token %}<input type="hidden" name="go" value="1"><button class="btn btn-primary btn-sm">{% translate "Continue now" %} →</button></form>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% if abandoned %}
+        <div class="reveal">
+          <h3 class="panel-title">🧩 {% translate "You stopped halfway" %}</h3>
+          {% for e in abandoned %}
+            <div class="alert-card" style="margin-bottom:12px">
+              <div class="row">
+                <span class="thumb grad g-{{ e.topic.color }}" style="width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem">{{ e.topic.icon }}</span>
+                <div style="flex:1;min-width:180px">
+                  <b>{{ e.topic.title }}</b>
+                  <div class="muted small">{% translate "Last activity" %}: {{ e.last_activity|date:"d.m.Y" }} · {{ e.progress_percent }}%</div>
+                </div>
+                <a href="{% url 'learning:continue' e.topic.slug %}" class="btn btn-primary btn-sm">{% translate "Resume" %}</a>
+                <button class="btn btn-sm" data-dialog-open="pause-{{ e.topic.pk }}">🔔 {% translate "Remind me" %}</button>
+              </div>
+              {% if e.suggestions %}
+                <p class="small" style="margin:14px 0 0;font-weight:700">{% translate "Or try a related topic:" %}</p>
+                <div class="suggest">{% for s in e.suggestions %}<a href="{{ s.get_absolute_url }}">{{ s.icon }} {{ s.title }}</a>{% endfor %}</div>
+              {% endif %}
+            </div>
+            {% include "learning/_pause_dialog.html" with topic=e.topic %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="reveal">
+        <h3 class="panel-title">📚 {% translate "In progress" %}</h3>
+        {% for e in in_progress %}
+          <div class="list-item">
+            <span class="thumb grad g-{{ e.topic.color }}">{{ e.topic.icon }}</span>
+            <div class="info">
+              <b>{{ e.topic.title }}</b>
+              <div class="progress" style="margin-top:8px"><span style="--p: {{ e.progress_percent }}%"></span></div>
+            </div>
+            <div class="ring-progress" style="--p: {{ e.progress_percent }};--size:54px"><span>{{ e.progress_percent }}%</span></div>
+            <a href="{% url 'learning:continue' e.topic.slug %}" class="btn btn-soft btn-sm">{% translate "Continue" %}</a>
+          </div>
+        {% empty %}
+          <div class="card empty" style="padding:40px 20px"><span class="e">🌱</span>{% translate "Nothing in progress yet." %}<br><a href="{% url 'learning:catalog' %}" class="btn btn-primary btn-sm" style="margin-top:14px">{% translate "Choose a topic" %}</a></div>
+        {% endfor %}
+      </div>
+
+      {% if completed %}
+        <div class="reveal">
+          <h3 class="panel-title">🏆 {% translate "Completed" %}</h3>
+          {% for e in completed %}
+            <a class="list-item" href="{% url 'learning:finish' e.topic.slug %}">
+              <span class="thumb grad g-{{ e.topic.color }}">{{ e.topic.icon }}</span>
+              <div class="info"><b>{{ e.topic.title }}</b><span class="muted small">{{ e.completed_at|date:"d.m.Y" }}</span></div>
+              <span class="chip chip-success">✔ 100%</span>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if recommended %}
+        <div class="reveal">
+          <h3 class="panel-title">✨ {% translate "Recommended for you" %}</h3>
+          <div class="grid grid-3">{% for topic in recommended %}{% include "partials/topic_card.html" %}{% endfor %}</div>
+        </div>
+      {% endif %}
+    </div>
+
+    <aside class="stack">
+      {% include "partials/mood_widget.html" with moods=moods %}
+
+      <div class="card reveal">
+        <h3 class="panel-title">🧑‍⚕️ {% translate "My psychologist" %}</h3>
+        {% for c in connections %}
+          <a class="row my-psy" href="{% url 'care:chat' c.pk %}" style="flex-wrap:nowrap">
+            <span class="avatar g-{{ c.psychologist.avatar_gradient }}" style="width:46px;height:46px">{{ c.psychologist.initials }}</span>
+            <div style="flex:1;min-width:0"><b style="display:block">{{ c.psychologist.display_name }}</b><span class="small muted">{{ c.get_status_display }}</span></div>
+            {% if c.unread %}<span class="unread-pill">{{ c.unread }}</span>{% endif %}
+            <span class="btn btn-sm btn-soft">💬</span>
+          </a>
+        {% empty %}
+          <p class="small muted">{% translate "Choose a psychologist who works with your age and talk privately." %}</p>
+          {% for p in suggested_psychologists %}
+            <a class="row my-psy" href="{% url 'care:psychologist' p.username %}" style="flex-wrap:nowrap">
+              <span class="avatar g-{{ p.avatar_gradient }}" style="width:40px;height:40px">{{ p.initials }}</span>
+              <div style="flex:1;min-width:0"><b class="small" style="display:block">{{ p.display_name }}</b><span class="small muted">{{ p.specialization|truncatechars:34 }}</span></div>
+              <span class="go">→</span>
+            </a>
+          {% endfor %}
+          <a class="btn btn-primary btn-block btn-sm" style="margin-top:12px" href="{% url 'care:psychologists' %}">{% translate "Choose a psychologist" %}</a>
+        {% endfor %}
+      </div>
+
+      <div class="card calendar reveal">
+        <div class="cal-head">
+          <a class="icon-btn" href="?month={{ cal.prev }}" aria-label="{% translate 'Previous month' %}">‹</a>
+          <b>{{ cal.first|date:"F Y" }}</b>
+          <a class="icon-btn" href="?month={{ cal.next }}" aria-label="{% translate 'Next month' %}">›</a>
+        </div>
+        <div class="cal-grid">
+          <span class="dow">{% translate "Mo" %}</span><span class="dow">{% translate "Tu" %}</span><span class="dow">{% translate "We" %}</span><span class="dow">{% translate "Th" %}</span><span class="dow">{% translate "Fr" %}</span><span class="dow">{% translate "Sa" %}</span><span class="dow">{% translate "Su" %}</span>
+          {% for week in cal.weeks %}{% for d in week %}
+            <span class="cal-day{% if not d.in_month %} out{% endif %}{% if d.date == cal.today %} today{% endif %}{% if d.reminders %} has-rem{% endif %}{% if d.active %} active{% endif %}"
+              {% if d.reminders %}title="{% for r in d.reminders %}{{ r.remind_at|time:'H:i' }} {{ r.topic.title }}{% if not forloop.last %}&#10;{% endif %}{% endfor %}"{% endif %}>{{ d.date.day }}</span>
+          {% endfor %}{% endfor %}
+        </div>
+        <div class="legend"><span><i style="background:var(--primary)"></i>{% translate "Reminder" %}</span><span><i style="background:var(--success)"></i>{% translate "Active day" %}</span></div>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="panel-title">🔔 {% translate "Upcoming reminders" %}</h3>
+        {% for r in upcoming_reminders %}
+          <div style="padding:12px 0;{% if not forloop.first %}border-top:1px solid var(--border){% endif %}">
+            <div class="row" style="flex-wrap:nowrap"><span style="font-size:1.4rem">{{ r.topic.icon }}</span><div style="min-width:0"><b style="display:block">{{ r.topic.title }}</b><span class="muted small">{{ r.remind_at|date:"D, d.m.Y H:i" }}</span></div></div>
+            <div class="row" style="margin-top:10px;gap:6px">
+              <a class="btn btn-sm btn-soft" href="{% url 'learning:reminder_google' r.pk %}" target="_blank" rel="noopener">📅 Google</a>
+              <a class="btn btn-sm btn-soft" href="{% url 'learning:reminder_ics' r.pk %}">📲 {% translate "Phone calendar" %}</a>
+              <form method="post" action="{% url 'learning:reminder_done' r.pk %}">{% csrf_token %}<button class="btn btn-sm btn-ghost" title="{% translate 'Remove' %}">✕</button></form>
+            </div>
+          </div>
+        {% empty %}
+          <p class="muted small" style="margin:0">{% translate "No reminders. When you pause a topic, choose a time and we will remind you." %}</p>
+        {% endfor %}
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}

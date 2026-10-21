@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Messages" %}{% endblock %}
+{% block content %}
+<div class="narrow" style="padding:34px 0 60px">
+  <div class="row reveal" style="margin-bottom:20px">
+    <h1 style="font-size:clamp(1.6rem,3.4vw,2.3rem);margin:0">💬 {% translate "Messages" %}</h1>
+    <span class="spacer"></span>
+    {% if user.is_client %}<a class="btn btn-soft btn-sm" href="{% url 'care:psychologists' %}">＋ {% translate "Choose a psychologist" %}</a>{% endif %}
+  </div>
+  {% for c in connections %}
+    <a class="list-item reveal" href="{% url 'care:chat' c.pk %}" style="--d:{% cycle '0s' '.05s' '.1s' %}">
+      <span class="avatar g-{{ c.partner.avatar_gradient }}" style="width:52px;height:52px">{{ c.partner.initials }}</span>
+      <div class="info">
+        <b>{{ c.partner.display_name }}</b>
+        <span class="muted small inbox-last">{% if c.last %}{% if c.last.sender_id == user.pk %}{% translate "You" %}: {% endif %}{% if c.last.text %}{{ c.last.text|truncatechars:70 }}{% else %}📚 {{ c.last.topic.title }}{% endif %}{% else %}{{ c.concern|default:_("No messages yet")|truncatechars:70 }}{% endif %}</span>
+      </div>
+      <div style="text-align:right;display:grid;gap:6px;justify-items:end">
+        <span class="chip {% if c.status == 'active' %}chip-success{% elif c.status == 'pending' %}chip-warn{% endif %}">{{ c.get_status_display }}</span>
+        {% if c.unread %}<span class="unread-pill">{{ c.unread }}</span>{% endif %}
+      </div>
+    </a>
+  {% empty %}
+    <div class="card empty reveal">
+      <span class="e">💬</span>
+      {% if user.is_psychologist %}{% translate "When clients choose you, their requests will appear here." %}{% else %}{% translate "You have no conversations yet. Choose a psychologist to start." %}<br><a class="btn btn-primary btn-sm" style="margin-top:14px" href="{% url 'care:psychologists' %}">{% translate "Choose a psychologist" %}</a>{% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

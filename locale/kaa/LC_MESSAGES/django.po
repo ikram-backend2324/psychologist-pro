@@ -1,0 +1,1505 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ruhiyat\n"
+"Language: kaa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(count)d psychologist(s) revoked."
+msgstr "%(count)d psixologtan tastıyıqlaw alındı."
+
+msgid "%(count)d psychologist(s) verified."
+msgstr "%(count)d psixolog tastıyıqlandı."
+
+msgid "A good place to start"
+msgstr "Baslaw ushın jaqsı noqat"
+
+msgid "A user with that username already exists."
+msgstr "Bunday paydalanıwshı atı bar."
+
+msgid "AI feedback"
+msgstr "AI pikiri"
+
+msgid "AI feedback is unavailable right now, but your answer was saved."
+msgstr "AI pikiri házir joq, biraq juwabıńız saqlandı."
+
+msgid "About"
+msgstr "Óz haqqımda"
+
+msgid "About me"
+msgstr "Óz haqqımda"
+
+msgid "About this topic"
+msgstr "Tema haqqında"
+
+msgid "Accept"
+msgstr "Qabıl etiw"
+
+msgid "Accept to start working together. You will see this client's progress."
+msgstr ""
+"Birge islewdi baslaw ushın qabıl etiń. Klienttiń nátiyjelerin kóresiz."
+
+msgid "Account"
+msgstr "Akkaunt"
+
+msgid "Active"
+msgstr "Belsendi"
+
+msgid "Active day"
+msgstr "Belsendi kún"
+
+msgid ""
+"Add the ages you work with, your languages and a short bio so clients can "
+"find and choose you."
+msgstr ""
+"Klientler sizdi tawıp tańlawı ushın islesetuǵın jaslarıńızdı, tillerińizdi "
+"hám qısqa maǵlıwmat qosıń."
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Adults (18–59)"
+msgstr "Úlkenler (18–59)"
+
+msgid "Advanced"
+msgstr "Joqarı"
+
+msgid "Age"
+msgstr "Jas"
+
+msgid "All"
+msgstr "Hámmesi"
+
+msgid "All psychologists"
+msgstr "Barlıq psixologlar"
+
+msgid "All topics"
+msgstr "Barlıq temalar"
+
+msgid "Already registered?"
+msgstr "Dizimnen óttińiz be?"
+
+msgid "Amber"
+msgstr "Qaxrabo"
+
+msgid ""
+"An administrator will check your profile. After that you can create topics, "
+"tests and games in the studio."
+msgstr ""
+"Administrator profilińizdi tekseredi. Sonnan keyin studiyada temalar, "
+"testler hám oyınlar jarata alasız."
+
+msgid "Answer"
+msgstr "Juwap"
+
+msgid "Answered"
+msgstr "Juwap berildi"
+
+msgid "Any"
+msgstr "Qálegen"
+
+msgid "Any age"
+msgstr "Qálegen jas"
+
+msgid "Any level"
+msgstr "Qálegen dáreje"
+
+msgid "Apply"
+msgstr "Qollanıw"
+
+msgid "April"
+msgstr "Aprel"
+
+msgid "Are you a psychologist?"
+msgstr "Siz psixologsız ba?"
+
+msgid "August"
+msgstr "Avgust"
+
+msgid "Average test score"
+msgstr "Ortasha test nátiyjesi"
+
+msgid "Awaiting verification"
+msgstr "Tastıyıqlaw kútilmekte"
+
+msgid "Back"
+msgstr "Artqa"
+
+msgid "Bad"
+msgstr "Jaman"
+
+msgid "Beginner"
+msgstr "Baslanǵısh"
+
+msgid "Breathing exercises and flip cards turn theory into practice."
+msgstr ""
+"Dem shınıǵıwları hám awdarılatuǵın kartalar teoriyanı ámeliyatqa "
+"aylandıradı."
+
+msgid "Breathing game"
+msgstr "Dem oyını"
+
+msgid "Cancel"
+msgstr "Biykarlaw"
+
+msgid "Catalog"
+msgstr "Katalog"
+
+msgid "Children (6–12)"
+msgstr "Balalar (6–12)"
+
+msgid "Choose"
+msgstr "Tańlaw"
+
+msgid "Choose a psychologist"
+msgstr "Psixolog tańlaw"
+
+msgid "Choose a psychologist who works with your age and talk privately."
+msgstr "Jasıńızǵa say psixologtı tańlań hám jeke sóylesiń."
+
+msgid "Choose a topic"
+msgstr "Tema tańlaw"
+
+msgid ""
+"Choose a topic, pass tests and playful exercises prepared by real "
+"psychologists, and get insights that help you grow — at your own pace."
+msgstr ""
+"Tema tańlań, haqıyqıy psixologlar tayarlaǵan testler hám oyınlı "
+"shınıǵıwlardı orınlań hám rawajlanıwıńızǵa járdem beretuǵın juwmaqlar alıń —"
+" óz tempıńızda."
+
+msgid "Choose this psychologist"
+msgstr "Usı psixologtı tańlaw"
+
+msgid "Choose your psychologist"
+msgstr "Psixologıńızdı tańlań"
+
+msgid "Client"
+msgstr "Klient"
+
+msgid "Client's topics"
+msgstr "Klient temaları"
+
+msgid "Client–psychologist links"
+msgstr "Klient hám psixolog baylanısları"
+
+msgid "Close"
+msgstr "Jabıw"
+
+msgid "Close conversation"
+msgstr "Sáwbetti jabıw"
+
+msgid "Close this conversation?"
+msgstr "Bul sáwbet jabılsın ba?"
+
+msgid "Comma separated, used to suggest related topics."
+msgstr "Útir menen ajıratıń — uqsas temalardı usınıw ushın."
+
+msgid "Complete profile"
+msgstr "Profildi toltırıw"
+
+msgid "Complete your public profile"
+msgstr "Ashıq profilińizdi toltırıń"
+
+msgid "Completed"
+msgstr "Tamamlanǵan"
+
+msgid "Completed!"
+msgstr "Tamamlandı!"
+
+msgid "Completion rate"
+msgstr "Tamamlaw dárejesi"
+
+msgid "Confidence"
+msgstr "Isenim"
+
+msgid "Congratulations!"
+msgstr "Qutlıqlaymız!"
+
+msgid "Consultation languages"
+msgstr "Másláhát tilleri"
+
+msgid "Content by verified psychologists"
+msgstr "Tastıyıqlanǵan psixologlar kontenti"
+
+msgid "Continue"
+msgstr "Dawam etiw"
+
+msgid "Continue now"
+msgstr "Házir dawam etiw"
+
+msgid "Continue where you left off."
+msgstr "Toqtaǵan jerińizden dawam etiń."
+
+msgid "Continue your conversation in the private chat."
+msgstr "Sáwbetti jeke chatta dawam ettiriń."
+
+msgid "Create account"
+msgstr "Akkaunt jaratıw"
+
+msgid "Create one"
+msgstr "Jaratıw"
+
+msgid "Create topic"
+msgstr "Tema jaratıw"
+
+msgid ""
+"Create topics, tests and exercises, and see how your clients progress — all "
+"in one studio."
+msgstr ""
+"Temalar, testler hám shınıǵıwlar jaratıń hám klientlerińizdiń rawajlanıwın "
+"baqlań — hámmesi bir studiyada."
+
+msgid "Create your account"
+msgstr "Akkauntıńızdı jaratıń"
+
+msgid "Daily progress"
+msgstr "Kúnlik nátiyje"
+
+msgid "Dashboard"
+msgstr "Kabinet"
+
+msgid "December"
+msgstr "Dekabr"
+
+msgid "Decline"
+msgstr "Biykarlaw"
+
+msgid "Declined"
+msgstr "Biykarlanǵan"
+
+msgid ""
+"Discover yourself with tests, and practise solutions in interactive games."
+msgstr ""
+"Testler arqalı ózińizdi ashıń, interaktiv oyınlarda sheshimlerdi "
+"shınıqtırıń."
+
+msgid "Done"
+msgstr "Orınlandı"
+
+msgid "Draft"
+msgstr "Qaralama"
+
+msgid "Draft — only you can see it"
+msgstr "Qaralama — tek siz kóresiz"
+
+msgid ""
+"Each topic is a short journey of lessons, tests and games prepared by a "
+"psychologist."
+msgstr ""
+"Hár bir tema — psixolog tayarlaǵan sabaqlar, testler hám oyınlardan ibarat "
+"qısqa saparı."
+
+msgid "Edit"
+msgstr "Ózgertiw"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Ended"
+msgstr "Juwmaqlanǵan"
+
+msgid "Enter the same password as before, for verification."
+msgstr "Tekseriw ushın paroldi qayta kiritiń."
+
+msgid ""
+"Every test gives you an explanation written by a psychologist, not just a "
+"number."
+msgstr "Hár bir test tek san emes, psixolog jazǵan túsindirmeni de beredi."
+
+msgid "Everything is built around topics that psychologists prepare for you."
+msgstr ""
+"Hámmesi psixologlar siz ushın tayarlaytuǵın temalar átirapında qurılǵan."
+
+msgid "Exhale"
+msgstr "Dem shıǵarıń"
+
+msgid "February"
+msgstr "Fevral"
+
+msgid "Find a specialist who works with your age and talk in a private chat."
+msgstr "Jasıńız benen isleytuǵın qánigeni tabıń hám jeke chatta sóylesiń."
+
+msgid "Find your topic"
+msgstr "Óz temańızdı tabıń"
+
+msgid "First name"
+msgstr "Atı"
+
+msgid "First, tell us who you are."
+msgstr "Áweli kim ekenińizdi aytıń."
+
+msgid "Flip cards game"
+msgstr "Kartalar oyını"
+
+msgid "For any age"
+msgstr "Qálegen jas ushın"
+
+msgid "For example: I often feel anxious before exams…"
+msgstr "Mısalı: imtixanlar aldınan jiyi qáweterlenemen…"
+
+msgid "For psychologists"
+msgstr "Psixologlar ushın"
+
+msgid "For psychologists, e.g. “Family psychology”."
+msgstr "Psixologlar ushın, mısalı: «Shańaraq psixologiyası»."
+
+msgid "Four languages"
+msgstr "Tórt til"
+
+msgid "Four simple steps to a better you"
+msgstr "Jaqsı ózgeriske tórt ápiwayı qádem"
+
+msgid "Fr"
+msgstr "Ju"
+
+msgid "Fri"
+msgstr "Ju"
+
+msgid "Games"
+msgstr "Oyınlar"
+
+msgid ""
+"Generated automatically. It is not a diagnosis; your psychologist also sees "
+"your answer."
+msgstr ""
+"Avtomat túrde jaratılǵan. Bul diagnoz emes; juwabıńızdı psixologıńız da "
+"kóredi."
+
+msgid "Get insights"
+msgstr "Juwmaqlar alıń"
+
+msgid "Get started"
+msgstr "Baslaw"
+
+msgid "Get supportive AI feedback"
+msgstr "AI dan qollap-quwatlawshı pikir alıw"
+
+msgid "Go to dashboard"
+msgstr "Kabinetke ótiw"
+
+msgid "Good"
+msgstr "Jaqsı"
+
+msgid "Good, with room to grow"
+msgstr "Jaqsı, rawajlanıw ushın orın bar"
+
+msgid "Got it, continue"
+msgstr "Túsindim, dawam etemiz"
+
+msgid "Great"
+msgstr "Ájayıp"
+
+msgid "Great choice!"
+msgstr "Ájayıp tańlaw!"
+
+msgid "Great result!"
+msgstr "Ájayıp nátiyje!"
+
+msgid "Groups"
+msgstr "Toparlar"
+
+msgid "Hello,"
+msgstr "Sálem,"
+
+msgid "Helps us suggest psychologists who work with your age."
+msgstr "Jasıńızǵa say psixologlardı usınıwımızǵa járdem beredi."
+
+msgid "History"
+msgstr "Tariyx"
+
+msgid "Hold"
+msgstr "Uslap turıń"
+
+msgid "Home"
+msgstr "Bas bet"
+
+msgid "How do you feel today?"
+msgstr "Búgin ózińizdi qalay sezip atırsız?"
+
+msgid "How it works"
+msgstr "Qalay isleydi"
+
+msgid "I accept new clients"
+msgstr "Jańa klientlerdi qabıl etemen"
+
+msgid "I accepted your request. Let's work together!"
+msgstr "Sorawıńızdı qabıl ettim. Kelıń, birge isleymiz!"
+
+msgid "I am joining as"
+msgstr "Men qosılıp atırman:"
+
+msgid "I create topics and tests and follow my clients' progress."
+msgstr "Tema hám testler jaratamán, klientlerimniń rawajlanıwın baqlayman."
+
+msgid "I want to learn about myself, pass tests and grow."
+msgstr "Ózimdi bilgim keledi, test tapsırıp, rawajlanǵım keledi."
+
+msgid "I work with"
+msgstr "Men isleymen"
+
+msgid "In 3 days"
+msgstr "3 kúnnen keyin"
+
+msgid "In progress"
+msgstr "Processte"
+
+msgid "Inhale"
+msgstr "Dem alıń"
+
+msgid "Interactive games"
+msgstr "Interaktiv oyınlar"
+
+msgid "Intermediate"
+msgstr "Orta"
+
+msgid "January"
+msgstr "Yanvar"
+
+msgid "Join as a psychologist"
+msgstr "Psixolog retinde qosılıw"
+
+msgid "July"
+msgstr "Iyul"
+
+msgid "June"
+msgstr "Iyun"
+
+msgid "Know yourself"
+msgstr "Ózińizdi tanıń"
+
+msgid "Language"
+msgstr "Til"
+
+msgid "Last activity"
+msgstr "Aqırǵı belsendilik"
+
+msgid "Last name"
+msgstr "Familiyası"
+
+msgid "Latest reflections from clients"
+msgstr "Klientlerdiń sońǵı oylanıwları"
+
+msgid "Latest test results"
+msgstr "Sońǵı test nátiyjeleri"
+
+msgid "Learners"
+msgstr "Oqıwshılar"
+
+msgid "Lesson"
+msgstr "Sabaq"
+
+msgid ""
+"Lesson: text (blank line = new paragraph). Reflection: the question. Cards: "
+"one card per line as “front | back”. Situation game: an introduction; "
+"situations are added as questions."
+msgstr ""
+"Sabaq: tekst (bos qatar = jańa abzac). Oylanıw: soraw. Kartalar: hár qatarda"
+" bir karta «aldı | artı». Jaǵday oyını: kirisiw teksti; jaǵdaylar soraw "
+"retinde qosıladı."
+
+msgid "Log in"
+msgstr "Kiriw"
+
+msgid "Log out"
+msgstr "Shıǵıw"
+
+msgid "Look and placement"
+msgstr "Kórinis hám jaylasıw"
+
+msgid "Made to keep you motivated"
+msgstr "Motivaciyańızdı saqlaw ushın jaratılǵan"
+
+msgid "Made with care for your mental well-being"
+msgstr "Ruwxıy salamatlıǵıńız ushın ǵamxorlıq penen jaratılǵan"
+
+msgid "Main"
+msgstr "Tiykarǵı"
+
+msgid "Main menu"
+msgstr "Tiykarǵı menyu"
+
+msgid "March"
+msgstr "Mart"
+
+msgid "May"
+msgstr "May"
+
+msgid "Menu"
+msgstr "Menyu"
+
+msgid "Messages"
+msgstr "Xabarlar"
+
+msgid "Mint"
+msgstr "Jalbız"
+
+msgid "Mo"
+msgstr "Dú"
+
+msgid "Mon"
+msgstr "Dú"
+
+msgid "Mood check-ins"
+msgstr "Kewil-kúy belgileri"
+
+msgid "Mood, last 14 days"
+msgstr "Kewil-kúy, sońǵı 14 kún"
+
+msgid "My clients"
+msgstr "Klientlerim"
+
+msgid "My psychologist"
+msgstr "Meniń psixologım"
+
+msgid "My topics"
+msgstr "Meniń temalarım"
+
+msgid "Name"
+msgstr "Atı"
+
+msgid "Name or specialization…"
+msgstr "Atı yamasa qánigeligi…"
+
+msgid "New client requests"
+msgstr "Jańa klient sorawları"
+
+msgid "New request"
+msgstr "Jańa soraw"
+
+msgid "New topic"
+msgstr "Jańa tema"
+
+msgid "Next"
+msgstr "Keyingi"
+
+msgid "Next month"
+msgstr "Keyingi ay"
+
+msgid "Next situation"
+msgstr "Keyingi jaǵday"
+
+msgid "No account yet?"
+msgstr "Akkauntıńız joq pa?"
+
+msgid "No answers yet."
+msgstr "Házirshe juwaplar joq."
+
+msgid "No clients yet. Complete your profile so clients can find you."
+msgstr ""
+"Házirshe klientler joq. Klientler sizdi tabıwı ushın profildi toltırıń."
+
+msgid "No free slots"
+msgstr "Bos orın joq"
+
+msgid "No messages yet"
+msgstr "Házirshe xabar joq"
+
+msgid "No psychologist matches these filters yet."
+msgstr "Bul filtrlerge say psixolog házirshe joq."
+
+msgid ""
+"No reminders. When you pause a topic, choose a time and we will remind you."
+msgstr "Eskertpeler joq. Temanı toqtatqanda waqıt tańlań — biz eskertemiz."
+
+msgid "No results yet."
+msgstr "Házirshe nátiyjeler joq."
+
+msgid "None available"
+msgstr "Hesh nárse joq"
+
+msgid "Not bad, but there is a better way."
+msgstr "Jaman emes, biraq jaqsıraq jol bar."
+
+msgid "Nothing found. Try another search."
+msgstr "Hesh nárse tabılmadı. Basqasha izlep kóriń."
+
+msgid "Nothing in progress yet."
+msgstr "Házirshe baslanǵan tema joq."
+
+msgid "November"
+msgstr "Noyabr"
+
+msgid "Ocean"
+msgstr "Okean"
+
+msgid "October"
+msgstr "Oktyabr"
+
+msgid "Okay"
+msgstr "Normal"
+
+msgid ""
+"One option per line as “answer | points”, e.g. “Often | 2”. In a situation "
+"game add feedback: “answer | points | feedback”."
+msgstr ""
+"Hár qatarda bir variant: «juwap | ball», mısalı «Kóbinese | 2». Jaǵday "
+"oyınında túsinik qosıń: «juwap | ball | túsinik»."
+
+msgid "Only clients can choose a psychologist."
+msgstr "Tek klientler psixolog tańlay aladı."
+
+msgid "Open"
+msgstr "Ashıw"
+
+msgid "Open chat"
+msgstr "Chattı ashıw"
+
+msgid "Open studio"
+msgstr "Studiyanı ashıw"
+
+msgid "Or pick date and time"
+msgstr "Yamasa sáne hám waqıttı tańlań"
+
+msgid "Or try a related topic:"
+msgstr "Yamasa uqsas temanı sınap kóriń:"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Password confirmation"
+msgstr "Paroldi tastıyıqlań"
+
+msgid "Pause & remind me"
+msgstr "Toqtatıw hám eskertiw"
+
+msgid "Phone calendar"
+msgstr "Telefon kalendarı"
+
+msgid ""
+"Pick a specialist who works with your age and speaks your language, then "
+"talk to them in a private chat."
+msgstr ""
+"Jasıńız benen isleytuǵın hám tilińizde sóylesetuǵın qánigeni tańlań, keyin "
+"jeke chatta sáwbetlesiń."
+
+msgid "Platform"
+msgstr "Platforma"
+
+msgid "Play"
+msgstr "Oynaw"
+
+msgid "Please answer every question."
+msgstr "Ótinish, barlıq sorawlarǵa juwap beriń."
+
+msgid "Please choose a time in the future."
+msgstr "Ótinish, keleshektegi waqıttı tańlań."
+
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"Durıs %(username)s hám paroldi kiritiń. Eki maydan da úlken-kishi háriplerdi"
+" ajıratadı."
+
+msgid "Please tell clients what you specialize in."
+msgstr "Klientlerge qánigeligińizdi kórsetıń."
+
+msgid "Popular topics"
+msgstr "Ataqlı temalar"
+
+msgid "Prefer not to say"
+msgstr "Aytpawdı qáleymen"
+
+msgid "Prepared by"
+msgstr "Tayarlaǵan"
+
+msgid "Press start and follow the circle"
+msgstr "«Baslaw»dı basıń hám sheńberge eriseń"
+
+msgid "Previous month"
+msgstr "Aldınǵı ay"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Profile saved."
+msgstr "Profil saqlandı."
+
+msgid "Progress"
+msgstr "Nátiyje"
+
+msgid "Psychologist"
+msgstr "Psixolog"
+
+msgid "Psychologist dashboard"
+msgstr "Psixolog kabineti"
+
+msgid "Psychologists"
+msgstr "Psixologlar"
+
+msgid "Psychologists and clients"
+msgstr "Psixologlar hám klientler"
+
+msgid "Psychology made simple"
+msgstr "Psixologiya — ańsat hám qızıqlı"
+
+msgid "Psychology topics, tests and games prepared by real psychologists."
+msgstr "Haqıyqıy psixologlar tayarlaǵan temalar, testler hám oyınlar."
+
+msgid "Published"
+msgstr "Jariyalanǵan"
+
+msgid "Ready?"
+msgstr "Tayarsız ba?"
+
+msgid "Recommend a topic"
+msgstr "Tema usınıw"
+
+msgid "Recommended for you"
+msgstr "Siz ushın usınıslar"
+
+msgid "Recommended topic"
+msgstr "Usınılǵan tema"
+
+msgid "Reflection"
+msgstr "Oylanıw"
+
+msgid "Reflections"
+msgstr "Oylanıwlar"
+
+msgid "Register"
+msgstr "Dizimnen ótiń"
+
+msgid "Register to choose"
+msgstr "Tańlaw ushın dizimnen ótiń"
+
+msgid "Register to start"
+msgstr "Baslaw ushın dizimnen ótiń"
+
+msgid "Registration is free and takes a minute."
+msgstr "Dizimnen ótiw biypul hám bir minut aladı."
+
+msgid "Related topics"
+msgstr "Uqsas temalar"
+
+msgid "Remind me"
+msgstr "Eskertiw"
+
+msgid "Remind me later"
+msgstr "Keyinirek eskertiw"
+
+msgid "Reminder"
+msgstr "Eskertpe"
+
+msgid "Reminders"
+msgstr "Eskertpeler"
+
+msgid "Remove"
+msgstr "Óshiriw"
+
+msgid "Request"
+msgstr "Soraw"
+
+msgid "Request sent"
+msgstr "Soraw jiberildi"
+
+msgid "Request sent! %(name)s will reply soon."
+msgstr "Soraw jiberildi! %(name)s tez arada juwap beredi."
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+"Mindetli. 150 belgiden aspawı kerek. Tek háripler, sanlar hám @/./+/-/_ "
+"belgileri."
+
+msgid "Resume"
+msgstr "Dawam ettiriw"
+
+msgid "Retake test"
+msgstr "Testti qayta tapsırıw"
+
+msgid "Review steps"
+msgstr "Qádemlerdi qayta kóriw"
+
+msgid "Revoke verification"
+msgstr "Tastıyıqlawdı biykarlaw"
+
+msgid "Rose"
+msgstr "Gúl"
+
+msgid "Ruhiyat profile"
+msgstr "Ruhiyat profili"
+
+msgid "Ruhiyat: continue “%(topic)s”"
+msgstr "Ruhiyat: «%(topic)s» temasın dawam ettiriń"
+
+msgid "Sa"
+msgstr "Sh"
+
+msgid "Sat"
+msgstr "Sh"
+
+msgid "Save"
+msgstr "Saqlaw"
+
+msgid "Save and add another"
+msgstr "Saqlaw hám jáne qosıw"
+
+msgid "Save and continue editing"
+msgstr "Saqlaw hám ózgertiwdi dawam etiw"
+
+msgid "Save answer"
+msgstr "Juwaptı saqlaw"
+
+msgid "Saved for today. You can change it any time."
+msgstr "Búgin ushın saqlandı. Qálegen waqıtta ózgertiwińiz múmkin."
+
+msgid ""
+"Saved! We will remind you on %(when)s. Add it to your phone calendar from "
+"the dashboard."
+msgstr ""
+"Saqlandı! Sizge %(when)s waqtında eskertemiz. Onı kabinetten telefon "
+"kalendarına qosıń."
+
+msgid "Say hello and describe what you would like to work on."
+msgstr "Sálemlesiń hám ne ústinde islegińiz keletuǵının jazıń."
+
+msgid "Search topics…"
+msgstr "Temalardı izlew…"
+
+msgid "See my result"
+msgstr "Nátiyjemdi kóriw"
+
+msgid "See my results"
+msgstr "Nátiyjelerimdi kóriw"
+
+msgid "See your results, reflect, and get reminders to come back."
+msgstr "Nátiyjelerińizdi kóriń, oylanıń hám qaytıw ushın eskertpeler alıń."
+
+msgid "Send"
+msgstr "Jiberiw"
+
+msgid "Send request"
+msgstr "Soraw jiberiw"
+
+msgid "Seniors (60+)"
+msgstr "Garrılar (60+)"
+
+msgid "September"
+msgstr "Sentyabr"
+
+msgid "Set reminder"
+msgstr "Eskertpe qoyıw"
+
+msgid "Show everyone"
+msgstr "Hámmesin kórsetiw"
+
+msgid "Sign up as a client or as a psychologist — it takes a minute."
+msgstr "Klient yamasa psixolog retinde dizimnen ótiń — bir minut waqıt aladı."
+
+msgid "Situation"
+msgstr "Jaǵday"
+
+msgid "Situation game"
+msgstr "Jaǵday oyını"
+
+msgid "Situations will be added soon."
+msgstr "Jaǵdaylar tez arada qosıladı."
+
+msgid "Smart reminders"
+msgstr "Aqıllı eskertpeler"
+
+msgid "Sorry, I can't take this request right now."
+msgstr "Keshiriń, házir bul sorawdı qabıl ete almayman."
+
+msgid "Specialization"
+msgstr "Qánigelik"
+
+msgid "Start"
+msgstr "Baslaw"
+
+msgid "Start for free"
+msgstr "Biypul baslaw"
+
+msgid "Start topic"
+msgstr "Temanı baslaw"
+
+msgid "Start with these"
+msgstr "Usılardan baslań"
+
+msgid "Status"
+msgstr "Jaǵday"
+
+msgid "Step"
+msgstr "Qádem"
+
+msgid "Steps"
+msgstr "Qádemler"
+
+msgid "Steps done"
+msgstr "Orınlanǵan qádemler"
+
+msgid "Steps will be added soon."
+msgstr "Qádemler tez arada qosıladı."
+
+msgid "Stopped halfway"
+msgstr "Yarımda toqtaǵanlar"
+
+msgid ""
+"Stopped halfway? Pick a time, add it to your calendar, and we will bring you"
+" back."
+msgstr ""
+"Yarım jolda toqtadıńız ba? Waqıt tańlań, kalendarǵa qosıń — biz sizdi "
+"qaytaramız."
+
+msgid "Studio (admin panel)"
+msgstr "Studiya (admin panel)"
+
+msgid "Su"
+msgstr "Ek"
+
+msgid "Sun"
+msgstr "Ek"
+
+msgid "Sunset"
+msgstr "Shapaq"
+
+msgid "Supportive feedback"
+msgstr "Qollap-quwatlawshı pikir"
+
+msgid "Switch theme"
+msgstr "Temanı almastırıw"
+
+msgid "Take a break — we'll remind you"
+msgstr "Dem alıń — biz eskertemiz"
+
+msgid ""
+"Take tests to learn about yourself, and play games that help you find a way "
+"through your problems."
+msgstr ""
+"Ózińizdi biliw ushın testlerden ótiń hám máselelerińizge sheshim tabıwǵa "
+"járdem beretuǵın oyınlardı oynań."
+
+msgid "Take the test"
+msgstr "Testti baslaw"
+
+msgid "Tap each card to turn it over."
+msgstr "Hár bir kartanı awdarıw ushın basıń."
+
+msgid "Teenagers (13–17)"
+msgstr "Óspirimler (13–17)"
+
+msgid "Tell briefly what worries you. Only the psychologist will see it."
+msgstr ""
+"Sizdi ne biyzarlap atırǵanın qısqasha jazıń. Bunı tek psixolog kóredi."
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test completed"
+msgstr "Test juwmaqlandı"
+
+msgid "Test results"
+msgstr "Test nátiyjeleri"
+
+msgid "Tests"
+msgstr "Testler"
+
+msgid "Tests & games"
+msgstr "Testler hám oyınlar"
+
+msgid "Tests and games will appear here soon."
+msgstr "Testler hám oyınlar tez arada payda boladı."
+
+msgid "Tests taken"
+msgstr "Tapsırılǵan testler"
+
+msgid "Tests with clear results"
+msgstr "Anıq nátiyjeli testler"
+
+msgid "Th"
+msgstr "Pi"
+
+msgid "Thanks! Your mood is saved."
+msgstr "Raxmet! Kewil-kúyińiz saqlandı."
+
+msgid ""
+"The client has not started any topic yet. Recommend one with the 📚 button."
+msgstr "Klient ele hesh bir temanı baslamaǵan. 📚 túymesi arqalı usınıń."
+
+msgid "The client's progress becomes visible after you accept the request."
+msgstr "Sorawdı qabıl etkennen keyin klient nátiyjeleri kórinedi."
+
+msgid "The conversation was closed."
+msgstr "Sáwbet jabıldı."
+
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr "Parol «%(verbose_name)s» ǵa júdá uqsas."
+
+msgid "The two password fields didn’t match."
+msgstr "Paroller sáykes kelmedi."
+
+msgid "Think again — this may make things harder."
+msgstr "Jáne oylap kóriń — bul jaǵdaydı qıyınlastırıwı múmkin."
+
+msgid "Thinking"
+msgstr "Oylanıp atır"
+
+msgid "This conversation is closed."
+msgstr "Bul sáwbet jabılǵan."
+
+msgid "This evening"
+msgstr "Búgin keshte"
+
+msgid "This field is required."
+msgstr "Bul maydan toltırılıwı shárt."
+
+msgid "This is your psychologist"
+msgstr "Bul sizdiń psixologıńız"
+
+msgid "This page got lost. Let's find your way back."
+msgstr "Bul bet adasıp qaldı. Kelıń, artqa jol tabamız."
+
+msgid "This password is entirely numeric."
+msgstr "Bul parol tek sanlardan ibarat."
+
+msgid "This password is too common."
+msgstr "Bul parol júdá ápiwayı."
+
+msgid ""
+"This platform does not replace professional help. If you are in danger, call"
+" local emergency services right away."
+msgstr ""
+"Bul platforma qánigeniń járdeminiń ornın baspaydı. Eger qáwip astında "
+"bolsańız, dárhal tez járdem xızmetine qońıraw etiń."
+
+msgid "This psychologist is not accepting new clients right now."
+msgstr "Bul psixolog házir jańa klientlerdi qabıl etpeydi."
+
+msgid ""
+"This psychologist is not accepting new clients right now. Try another "
+"specialist."
+msgstr ""
+"Bul psixolog házir jańa klientlerdi qabıl etpeydi. Basqa qánigeni tańlań."
+
+msgid "This topic has no steps yet."
+msgstr "Bul temada ele qádemler joq."
+
+msgid "Thoughtful choices"
+msgstr "Oylanǵan tańlawlar"
+
+msgid "Thu"
+msgstr "Pi"
+
+msgid "Time to come back!"
+msgstr "Qaytıw waqtı keldi!"
+
+msgid "Tomorrow"
+msgstr "Erteń"
+
+msgid "Topic"
+msgstr "Tema"
+
+msgid "Topic completed"
+msgstr "Tema tamamlandı"
+
+msgid "Topics"
+msgstr "Temalar"
+
+msgid "Topics and progress"
+msgstr "Temalar hám nátiyjeler"
+
+msgid "Topics by this psychologist"
+msgstr "Usı psixolog temaları"
+
+msgid "Topics completed"
+msgstr "Tamamlanǵan temalar"
+
+msgid "Topics will appear here soon."
+msgstr "Temalar tez arada payda boladı."
+
+msgid ""
+"Topics, tests and games prepared by psychologists — learn to understand "
+"yourself step by step."
+msgstr ""
+"Psixologlar tayarlaǵan temalar, testler hám oyınlar — ózińizdi qádemme-qádem"
+" túsiniwdi úyreniń."
+
+msgid "Tu"
+msgstr "Si"
+
+msgid "Tue"
+msgstr "Si"
+
+msgid "Understand yourself"
+msgstr "Ózińizdi túsinıń"
+
+msgid "Upcoming reminders"
+msgstr "Jaqın eskertpeler"
+
+msgid "Username"
+msgstr "Paydalanıwshı atı"
+
+msgid "Users"
+msgstr "Paydalanıwshılar"
+
+msgid "Uzbek, Karakalpak, Russian and English — switch any time."
+msgstr "Ózbek, qaraqalpaq, orıs hám inglis — qálegen waqıtta almastırıń."
+
+msgid "Verified"
+msgstr "Tastıyıqlanǵan"
+
+msgid "Verified psychologist"
+msgstr "Tastıyıqlanǵan psixolog"
+
+msgid "Verified psychologists can publish topics in the studio."
+msgstr "Tastıyıqlanǵan psixologlar studiyada tema jariyalay aladı."
+
+msgid "Verify selected psychologists (studio access)"
+msgstr "Tańlanǵan psixologlardı tastıyıqlaw (studiyaǵa kiriw)"
+
+msgid "Very bad"
+msgstr "Júdá jaman"
+
+msgid "View on site"
+msgstr "Saytta kóriw"
+
+msgid "Violet"
+msgstr "Fiolet"
+
+msgid "Waiting for reply"
+msgstr "Juwap kútilmekte"
+
+msgid "Waiting for the psychologist to accept"
+msgstr "Psixologtıń qabıl etiwi kútilmekte"
+
+msgid "We"
+msgstr "Sá"
+
+msgid "Wed"
+msgstr "Sá"
+
+msgid "Welcome back"
+msgstr "Xosh keldińiz"
+
+msgid "Welcome to Ruhiyat! Choose your first topic."
+msgstr "Ruhiyatqa xosh keldińiz! Birinshi temańızdı tańlań."
+
+msgid ""
+"Welcome! An administrator will verify your profile so you can publish "
+"topics."
+msgstr ""
+"Xosh keldińiz! Administrator profilińizdi tastıyıqlaǵannan keyin temalar "
+"jaylastıra alasız."
+
+msgid "Well done!"
+msgstr "Barekella!"
+
+msgid "What to learn next"
+msgstr "Keyin neni úyreniwge boladı"
+
+msgid "What you will achieve"
+msgstr "Neǵe erisesiz"
+
+msgid "When clients choose you, their requests will appear here."
+msgstr "Klientler sizdi tańlaǵanda, sorawları usı jerde payda boladı."
+
+msgid ""
+"When the psychologist accepts, they will see your progress on the platform."
+msgstr "Psixolog qabıl etkennen keyin, platformadaǵı nátiyjelerińizdi kóredi."
+
+msgid "Why Ruhiyat"
+msgstr "Ne ushın Ruhiyat"
+
+msgid "Works with"
+msgstr "Kimler menen isleydi"
+
+msgid "Write a few words — it is only for you and your psychologist."
+msgstr "Bir neshe sóz jazıń — bul tek siz hám psixologıńız ushın."
+
+msgid "Write a message…"
+msgstr "Xabar jazıń…"
+
+msgid "Write honestly — only you and your psychologist will see it."
+msgstr "Shın kewilden jazıń — bunı tek siz hám psixologıńız kóredi."
+
+msgid "Years of experience"
+msgstr "Tájiriybe (jıl)"
+
+msgid "You"
+msgstr "Siz"
+
+msgid "You can already write in the chat while you wait for a reply."
+msgstr "Juwaptı kútip atırǵanda chatqa jaza alasız."
+
+msgid "You completed the topic"
+msgstr "Siz temanı tamamladıńız:"
+
+msgid "You have no conversations yet. Choose a psychologist to start."
+msgstr "Sizde ele sáwbetler joq. Baslaw ushın psixolog tańlań."
+
+msgid "You have no topics yet."
+msgstr "Sizde ele temalar joq."
+
+msgid "You have used today's AI feedback limit. Your answer was saved."
+msgstr "Búgingi AI pikir limitinen paydalandıńız. Juwabıńız saqlandı."
+
+msgid "You stopped halfway"
+msgstr "Siz yarım jolda toqtadıńız"
+
+msgid "You went through every situation!"
+msgstr "Siz barlıq jaǵdaylardan óttińiz!"
+
+msgid "Your age group"
+msgstr "Jas toparıńız"
+
+msgid "Your answer"
+msgstr "Sizdiń juwabıńız"
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Parol keń tarqalǵan parol bolmawı kerek."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Parol tek sanlardan ibarat bolmawı kerek."
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Parol jeke maǵlıwmatlarıńızǵa júdá uqsas bolmawı kerek."
+
+msgid "Your path"
+msgstr "Sizdiń jolıńız"
+
+msgid "Your profile is awaiting verification"
+msgstr "Profilińiz tastıyıqlanıwın kútpekte"
+
+msgid "Your progress"
+msgstr "Sizdiń nátiyjeńiz"
+
+msgid "Your progress is saved. Choose when you want to come back to:"
+msgstr "Nátiyjeńiz saqlandı. Qashan qaytqıńız keledi:"
+
+msgid "Your psychologist"
+msgstr "Sizdiń psixologıńız"
+
+msgid "Your result"
+msgstr "Nátiyjeńiz"
+
+msgid "about"
+msgstr "óz haqqında"
+
+msgid "accepts new clients"
+msgstr "jańa klientlerdi qabıl etedi"
+
+msgid "age group"
+msgstr "jas toparı"
+
+msgid "answer"
+msgstr "juwap"
+
+msgid "answer options"
+msgstr "juwap variantları"
+
+msgid "categories"
+msgstr "kategoriyalar"
+
+msgid "category"
+msgstr "kategoriya"
+
+msgid "clients"
+msgstr "klient"
+
+msgid "client–psychologist link"
+msgstr "klient–psixolog baylanısı"
+
+msgid "color"
+msgstr "reń"
+
+msgid "consultation languages"
+msgstr "másláhát tilleri"
+
+msgid "content"
+msgstr "mazmunı"
+
+msgid "cycles"
+msgstr "cikller"
+
+msgid "description"
+msgstr "táriyp"
+
+msgid "done"
+msgstr "orınlandı"
+
+msgid "duration (minutes)"
+msgstr "dawamlılıǵı (minut)"
+
+msgid "email address"
+msgstr "email mánzil"
+
+msgid "enrollment"
+msgstr "jazılıw"
+
+msgid "enrollments"
+msgstr "jazılıwlar"
+
+msgid "exhale (s)"
+msgstr "dem shıǵarıw (s)"
+
+msgid "hold (s)"
+msgstr "uslap turıw (s)"
+
+msgid "icon (emoji)"
+msgstr "belgi (emoji)"
+
+msgid "inhale (s)"
+msgstr "dem alıw (s)"
+
+msgid "level"
+msgstr "dáreje"
+
+msgid "maximum"
+msgstr "maksimum"
+
+msgid "message"
+msgstr "xabar"
+
+msgid "min"
+msgstr "min"
+
+msgid "mood"
+msgstr "kewil-kúy"
+
+msgid "mood check-in"
+msgstr "kewil-kúy belgisi"
+
+msgid "name"
+msgstr "atı"
+
+msgid "note"
+msgstr "túsinik"
+
+msgid "order"
+msgstr "tártip"
+
+msgid "psychologist"
+msgstr "psixolog"
+
+msgid "published"
+msgstr "jariyalanǵan"
+
+msgid "question"
+msgstr "soraw"
+
+msgid "questions"
+msgstr "soraw"
+
+msgid "reflection"
+msgstr "oylanıw"
+
+msgid "reflections"
+msgstr "oylanıwlar"
+
+msgid "remind at"
+msgstr "eskertiw waqtı"
+
+msgid "reminder"
+msgstr "eskertpe"
+
+msgid "reminders"
+msgstr "eskertpeler"
+
+msgid "result"
+msgstr "nátiyje"
+
+msgid "result: high score"
+msgstr "nátiyje: joqarı ball"
+
+msgid "result: low score"
+msgstr "nátiyje: tómen ball"
+
+msgid "result: medium score"
+msgstr "nátiyje: orta ball"
+
+msgid "role"
+msgstr "rol"
+
+msgid "score"
+msgstr "ball"
+
+msgid "short summary"
+msgstr "qısqa táriyp"
+
+msgid "situations"
+msgstr "jaǵday"
+
+msgid "slug"
+msgstr "slug"
+
+msgid "specialization"
+msgstr "qánigelik"
+
+msgid "status"
+msgstr "jaǵday"
+
+msgid "step"
+msgstr "qádem"
+
+msgid "step by step"
+msgstr "qádemme-qádem"
+
+msgid "steps"
+msgstr "qádem"
+
+msgid "tags"
+msgstr "tegler"
+
+msgid "tap"
+msgstr "basıń"
+
+msgid "test question"
+msgstr "test sorawı"
+
+msgid "test questions"
+msgstr "test sorawları"
+
+msgid "test result"
+msgstr "test nátiyjesi"
+
+msgid "test results"
+msgstr "test nátiyjeleri"
+
+msgid "title"
+msgstr "atama"
+
+msgid "topic"
+msgstr "tema"
+
+msgid "topics"
+msgstr "tema"
+
+msgid "type"
+msgstr "túri"
+
+msgid "user"
+msgstr "paydalanıwshı"
+
+msgid "username"
+msgstr "paydalanıwshı atı"
+
+msgid "verified psychologist"
+msgstr "tastıyıqlanǵan psixolog"
+
+msgid "what the client wants help with"
+msgstr "klient neden járdem soraydı"
+
+msgid "what you will achieve"
+msgstr "neǵe erisiledi"
+
+msgid "works with ages"
+msgstr "isleytuǵın jaslar"
+
+msgid "years of experience"
+msgstr "tájiriybe (jıl)"
+
+msgid "yrs"
+msgstr "jıl"
+
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Parol keminde %(min_length)d belgiden ibarat bolıwı kerek."
+
+msgid "This password is too short. It must contain at least %d character."
+msgid_plural ""
+"This password is too short. It must contain at least %d characters."
+msgstr[0] "Parol júdá qısqa. Keminde %d belgi bolıwı kerek."

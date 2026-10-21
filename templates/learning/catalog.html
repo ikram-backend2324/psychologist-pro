@@ -1,0 +1,38 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Topics" %}{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="page-head reveal">
+    <span class="eyebrow"><span class="dot"></span>{% translate "Catalog" %}</span>
+    <h1>{% translate "Find your topic" %}</h1>
+    <p>{% translate "Each topic is a short journey of lessons, tests and games prepared by a psychologist." %}</p>
+  </div>
+
+  <form class="filters reveal" method="get">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" name="q" value="{{ q }}" placeholder="{% translate 'Search topics…' %}">
+      {% if active_category %}<input type="hidden" name="category" value="{{ active_category }}">{% endif %}
+      {% if active_level %}<input type="hidden" name="level" value="{{ active_level }}">{% endif %}
+    </div>
+    <select name="level" onchange="this.form.submit()" style="width:auto;border-radius:999px">
+      <option value="">{% translate "Any level" %}</option>
+      {% for value, label in levels %}<option value="{{ value }}" {% if value == active_level %}selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select>
+  </form>
+
+  <div class="filter-chips reveal" style="margin-bottom:30px">
+    <a class="chip {% if not active_category %}on{% endif %}" href="?{% if q %}q={{ q|urlencode }}&{% endif %}{% if active_level %}level={{ active_level }}{% endif %}">✨ {% translate "All" %}</a>
+    {% for c in categories %}
+      <a class="chip {% if c.slug == active_category %}on{% endif %}" href="?category={{ c.slug }}{% if q %}&q={{ q|urlencode }}{% endif %}{% if active_level %}&level={{ active_level }}{% endif %}">{{ c.icon }} {{ c.name }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="grid grid-3" style="padding-bottom:60px">
+    {% for topic in topics %}{% cycle '0s' '.08s' '.16s' as delay silent %}{% include "partials/topic_card.html" with delay=delay %}
+    {% empty %}
+      <div class="empty card" style="grid-column:1/-1"><span class="e">🔍</span>{% translate "Nothing found. Try another search." %}</div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

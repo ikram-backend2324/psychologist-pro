@@ -1,0 +1,126 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Psychologist dashboard" %}{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="dash-head reveal">
+    <span class="avatar avatar-lg g-{{ user.avatar_gradient }}">{{ user.initials }}</span>
+    <div>
+      <p class="muted" style="margin:0;font-weight:700">{{ user.specialization|default:_("Psychologist") }}</p>
+      <h1>{{ user.display_name }}</h1>
+    </div>
+    <span class="spacer"></span>
+    {% if user.is_verified %}
+      <a href="{% url 'admin:learning_topic_add' %}" class="btn btn-primary">＋ {% translate "Create topic" %}</a>
+      <a href="{% url 'admin:index' %}" class="btn">🛠 {% translate "Open studio" %}</a>
+    {% endif %}
+  </div>
+
+  {% if not user.is_verified %}
+    <div class="alert-card reveal" style="margin-bottom:24px">
+      <div class="row"><span style="font-size:2rem">⏳</span><div style="flex:1;min-width:220px"><b>{% translate "Your profile is awaiting verification" %}</b><p class="muted small" style="margin:4px 0 0">{% translate "An administrator will check your profile. After that you can create topics, tests and games in the studio." %}</p></div><a class="btn btn-sm" href="{% url 'accounts:profile' %}">{% translate "Complete profile" %}</a></div>
+    </div>
+  {% endif %}
+
+  {% if profile_incomplete %}
+    <div class="alert-card reveal" style="margin-bottom:24px">
+      <div class="row"><span style="font-size:2rem">📝</span><div style="flex:1;min-width:220px"><b>{% translate "Complete your public profile" %}</b><p class="muted small" style="margin:4px 0 0">{% translate "Add the ages you work with, your languages and a short bio so clients can find and choose you." %}</p></div><a class="btn btn-sm btn-primary" href="{% url 'accounts:profile' %}">{% translate "Complete profile" %}</a></div>
+    </div>
+  {% endif %}
+
+  {% if requests %}
+    <div class="card reveal" style="margin-bottom:24px">
+      <h3 class="panel-title">📨 {% translate "New client requests" %} <span class="unread-pill">{{ requests|length }}</span></h3>
+      {% for c in requests %}
+        <div class="list-item">
+          <span class="avatar g-{{ c.client.avatar_gradient }}" style="width:46px;height:46px">{{ c.client.initials }}</span>
+          <div class="info"><b>{{ c.client.display_name }}</b><span class="muted small">{{ c.concern|default:"—"|truncatechars:90 }}</span></div>
+          <form method="post" action="{% url 'care:respond' c.pk %}" class="row" style="gap:6px">{% csrf_token %}
+            <a class="btn btn-sm btn-ghost" href="{% url 'care:chat' c.pk %}">💬</a>
+            <button class="btn btn-sm" name="action" value="decline">{% translate "Decline" %}</button>
+            <button class="btn btn-sm btn-primary" name="action" value="accept">✓ {% translate "Accept" %}</button>
+          </form>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="tiles">
+    <div class="tile reveal"><span class="e grad g-violet">💬</span><div class="num" data-count="{{ stats.clients }}">0</div><div class="label">{% translate "My clients" %}</div></div>
+    <div class="tile reveal" style="--d:.06s"><span class="e grad g-ocean">👥</span><div class="num" data-count="{{ stats.learners }}">0</div><div class="label">{% translate "Learners" %}</div></div>
+    <div class="tile reveal" style="--d:.12s"><span class="e grad g-mint">✅</span><div class="num"><span data-count="{{ stats.completion }}">0</span>%</div><div class="label">{% translate "Completion rate" %}</div></div>
+    <div class="tile reveal" style="--d:.18s"><span class="e grad g-amber">🧩</span><div class="num" data-count="{{ stats.abandoned }}">0</div><div class="label">{% translate "Stopped halfway" %}</div></div>
+  </div>
+
+  <div class="dash-grid">
+    <div class="stack">
+      <div class="card reveal">
+        <h3 class="panel-title">🧠 {% translate "My topics" %}</h3>
+        <div class="table-wrap">
+          <table class="clean">
+            <thead><tr><th>{% translate "Topic" %}</th><th>{% translate "Steps" %}</th><th>{% translate "Learners" %}</th><th>{% translate "Completed" %}</th><th>{% translate "Status" %}</th><th></th></tr></thead>
+            <tbody>
+              {% for t in topics %}
+                <tr>
+                  <td><div class="row" style="flex-wrap:nowrap"><span class="thumb grad g-{{ t.color }}" style="width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none">{{ t.icon }}</span><b>{{ t.title }}</b></div></td>
+                  <td>{{ t.step_count }}</td>
+                  <td>{{ t.learners }}</td>
+                  <td>{{ t.finished }}</td>
+                  <td>{% if t.is_published %}<span class="chip chip-success">{% translate "Published" %}</span>{% else %}<span class="chip chip-warn">{% translate "Draft" %}</span>{% endif %}</td>
+                  <td>{% if user.is_staff %}<a class="btn btn-sm btn-soft" href="{% url 'admin:learning_topic_change' t.pk %}">{% translate "Edit" %}</a>{% endif %}</td>
+                </tr>
+              {% empty %}
+                <tr><td colspan="6" class="muted center" style="padding:30px">{% translate "You have no topics yet." %}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="panel-title">✍️ {% translate "Latest reflections from clients" %}</h3>
+        {% for r in reflections %}
+          <div style="padding:14px 0;{% if not forloop.first %}border-top:1px solid var(--border){% endif %}">
+            <div class="row"><span class="avatar g-{{ r.enrollment.user.avatar_gradient }}" style="width:30px;height:30px;font-size:.7rem">{{ r.enrollment.user.initials }}</span><b>{{ r.enrollment.user.display_name }}</b><span class="muted small">· {{ r.step.topic.title }} · {{ r.created_at|date:"d.m.Y H:i" }}</span></div>
+            <div class="quote small" style="margin-top:10px">{{ r.text|truncatewords:50 }}</div>
+          </div>
+        {% empty %}
+          <p class="muted small" style="margin:0">{% translate "No answers yet." %}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <aside class="stack">
+      <div class="card reveal">
+        <h3 class="panel-title">💬 {% translate "My clients" %}</h3>
+        {% for c in clients %}
+          <a class="row my-psy" href="{% url 'care:chat' c.pk %}" style="flex-wrap:nowrap">
+            <span class="avatar g-{{ c.client.avatar_gradient }}" style="width:42px;height:42px">{{ c.client.initials }}</span>
+            <div style="flex:1;min-width:0"><b class="small" style="display:block">{{ c.client.display_name }}</b><span class="small muted">{% if c.last_mood %}{{ c.last_mood.emoji }} {{ c.last_mood.date|date:"d.m" }} · {% endif %}📚 {{ c.progress }}</span></div>
+            {% if c.unread %}<span class="unread-pill">{{ c.unread }}</span>{% endif %}
+            <span class="go">→</span>
+          </a>
+        {% empty %}
+          <p class="muted small" style="margin:0">{% translate "No clients yet. Complete your profile so clients can find you." %}</p>
+        {% endfor %}
+      </div>
+
+      <div class="card reveal">
+        <h3 class="panel-title">📈 {% translate "Average test score" %}</h3>
+        <div class="gauge band-mid" style="--p: {{ stats.avg_score }};width:150px;height:150px"><b>{{ stats.avg_score }}%</b></div>
+      </div>
+      <div class="card reveal">
+        <h3 class="panel-title">📝 {% translate "Latest test results" %}</h3>
+        {% for res in results %}
+          <div class="row" style="padding:10px 0;flex-wrap:nowrap;{% if not forloop.first %}border-top:1px solid var(--border){% endif %}">
+            <span class="avatar g-{{ res.enrollment.user.avatar_gradient }}" style="width:32px;height:32px;font-size:.7rem">{{ res.enrollment.user.initials }}</span>
+            <div style="flex:1;min-width:0"><b class="small" style="display:block">{{ res.enrollment.user.display_name }}</b><span class="muted small">{{ res.step.title }}</span></div>
+            <span class="chip {% if res.band == 'high' %}chip-success{% elif res.band == 'low' %}chip-warn{% else %}chip-primary{% endif %}">{{ res.score }}/{{ res.max_score }}</span>
+          </div>
+        {% empty %}
+          <p class="muted small" style="margin:0">{% translate "No results yet." %}</p>
+        {% endfor %}
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}

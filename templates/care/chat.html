@@ -1,0 +1,97 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ partner.display_name }}{% endblock %}
+{% block footer %}{% endblock %}
+{% block content %}
+<div class="container chat-layout">
+  <section class="card chat-card">
+    <header class="chat-head">
+      <a href="{% url 'care:inbox' %}" class="icon-btn" aria-label="{% translate 'Back' %}">←</a>
+      <span class="avatar g-{{ partner.avatar_gradient }}" style="width:44px;height:44px">{{ partner.initials }}</span>
+      <div style="min-width:0;flex:1">
+        <b style="display:block">{{ partner.display_name }}</b>
+        <span class="small muted">{% if partner.is_psychologist %}{{ partner.specialization|default:_("Psychologist") }}{% else %}{% translate "Client" %}{% endif %} · <span data-chat-status>{{ c.get_status_display }}</span></span>
+      </div>
+      {% if c.is_open %}
+        <form method="post" action="{% url 'care:respond' c.pk %}" data-confirm="{% translate 'Close this conversation?' %}">{% csrf_token %}
+          <button class="btn btn-sm btn-ghost" name="action" value="end" title="{% translate 'Close conversation' %}">✕ <span class="hide-s">{% translate "Close" %}</span></button>
+        </form>
+      {% endif %}
+    </header>
+
+    {% if c.status == "pending" %}
+      {% if is_psychologist_side %}
+        <div class="chat-banner">
+          <div><b>{% translate "New request" %}</b><p class="small muted" style="margin:2px 0 0">{% translate "Accept to start working together. You will see this client's progress." %}</p></div>
+          <form method="post" action="{% url 'care:respond' c.pk %}" class="row">{% csrf_token %}
+            <button class="btn btn-sm btn-ghost" name="action" value="decline">{% translate "Decline" %}</button>
+            <button class="btn btn-sm btn-primary" name="action" value="accept">✓ {% translate "Accept" %}</button>
+          </form>
+        </div>
+      {% else %}
+        <div class="chat-banner"><span class="loading-dots">⏳ {% translate "Waiting for the psychologist to accept" %}</span></div>
+      {% endif %}
+    {% endif %}
+
+    <div class="chat-scroll" data-chat data-poll-url="{% url 'care:poll' c.pk %}" data-last-id="{{ last_id }}">
+      {% if c.concern %}<div class="chat-note">📝 {% translate "Request" %}: {{ c.concern|truncatechars:300 }}</div>{% endif %}
+      <div data-chat-list>{% for m in items %}{% include "care/_message.html" %}{% endfor %}</div>
+      {% if not items %}<div class="chat-empty" data-chat-empty><span>👋</span>{% translate "Say hello and describe what you would like to work on." %}</div>{% endif %}
+    </div>
+
+    {% if c.is_open %}
+      <form class="chat-form" method="post" action="{% url 'care:send' c.pk %}" data-chat-form>{% csrf_token %}
+        {% if is_psychologist_side and recommend_topics %}
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown title="{% translate 'Recommend a topic' %}">📚</button>
+            <div class="dropdown-menu recommend-menu" style="left:0;right:auto;bottom:calc(100% + 10px);top:auto;transform-origin:bottom left">
+              <p class="small muted" style="margin:4px 10px 6px;font-weight:700">{% translate "Recommend a topic" %}</p>
+              {% for t in recommend_topics %}<button type="submit" name="topic" value="{{ t.pk }}">{{ t.icon }} {{ t.title }}</button>{% endfor %}
+            </div>
+          </div>
+        {% endif %}
+        <textarea name="text" rows="1" maxlength="2000" placeholder="{% translate 'Write a message…' %}" data-autogrow></textarea>
+        <button class="btn btn-primary send-btn" type="submit" aria-label="{% translate 'Send' %}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5l2.5 7L15 12l-9.5 1.5z"/></svg></button>
+      </form>
+    {% else %}
+      <div class="chat-closed">{% translate "This conversation is closed." %}{% if user.is_client %} <a href="{% url 'care:psychologists' %}">{% translate "Choose a psychologist" %}</a>{% endif %}</div>
+    {% endif %}
+  </section>
+
+  <aside class="stack chat-side">
+    {% if is_psychologist_side %}
+      {% if client_moods %}
+        <div class="card reveal">
+          <h3 class="panel-title">🌈 {% translate "Mood, last 14 days" %}</h3>
+          {% include "partials/mood_chart.html" with moods=client_moods %}
+        </div>
+        <div class="card reveal">
+          <h3 class="panel-title">📚 {% translate "Client's topics" %}</h3>
+          {% for e in client_enrollments %}
+            <div class="row" style="flex-wrap:nowrap;padding:8px 0">
+              <span style="font-size:1.3rem">{{ e.topic.icon }}</span>
+              <div style="flex:1;min-width:0"><b class="small" style="display:block">{{ e.topic.title }}</b><div class="progress" style="height:6px;margin-top:6px"><span style="--p: {{ e.progress_percent }}%"></span></div></div>
+              <span class="small muted">{{ e.progress_percent }}%</span>
+            </div>
+          {% empty %}<p class="muted small" style="margin:0">{% translate "The client has not started any topic yet. Recommend one with the 📚 button." %}</p>{% endfor %}
+        </div>
+        <div class="card reveal">
+          <h3 class="panel-title">📝 {% translate "Test results" %}</h3>
+          {% for r in client_results %}
+            <div class="row" style="flex-wrap:nowrap;padding:6px 0"><div style="flex:1;min-width:0"><b class="small" style="display:block">{{ r.step.title }}</b><span class="small muted">{{ r.created_at|date:"d.m.Y" }}</span></div><span class="chip {% if r.band == 'high' %}chip-success{% elif r.band == 'low' %}chip-warn{% else %}chip-primary{% endif %}">{{ r.percent }}%</span></div>
+          {% empty %}<p class="muted small" style="margin:0">{% translate "No results yet." %}</p>{% endfor %}
+        </div>
+      {% else %}
+        <div class="card reveal"><p class="muted small" style="margin:0">🔒 {% translate "The client's progress becomes visible after you accept the request." %}</p></div>
+      {% endif %}
+    {% else %}
+      <div class="card reveal center">
+        <span class="avatar avatar-lg g-{{ partner.avatar_gradient }}" style="margin:0 auto 12px">{{ partner.initials }}</span>
+        <b>{{ partner.display_name }}</b>
+        <div class="small" style="color:var(--primary);font-weight:700">{{ partner.specialization }}</div>
+        <a class="btn btn-sm btn-soft" style="margin-top:12px" href="{% url 'care:psychologist' partner.username %}">{% translate "Profile" %}</a>
+      </div>
+      <div class="card reveal"><p class="small muted" style="margin:0">🆘 {% translate "This platform does not replace professional help. If you are in danger, call local emergency services right away." %}</p></div>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}

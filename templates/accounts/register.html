@@ -1,0 +1,43 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Create account" %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block content %}
+<div class="container auth-wrap">
+  <div class="card auth-card wide">
+    <div class="center" style="margin-bottom:24px">
+      <h1 style="font-size:1.9rem">{% translate "Create your account" %}</h1>
+      <p class="muted">{% translate "First, tell us who you are." %}</p>
+    </div>
+    <form method="post" novalidate>{% csrf_token %}
+      {% if form.non_field_errors %}<div class="non-field-errors">{{ form.non_field_errors|join:" " }}</div>{% endif %}
+      <div class="role-picker" role="radiogroup" aria-label="{{ form.role.label }}">
+        {% for choice in form.role %}
+          <label>
+            {{ choice.tag }}
+            <span class="role-option">
+              {% if choice.data.value == "psychologist" %}
+                <span class="e">🧑‍⚕️</span><b>{% translate "Psychologist" %}</b><span class="d">{% translate "I create topics and tests and follow my clients' progress." %}</span>
+              {% else %}
+                <span class="e">🌱</span><b>{% translate "Client" %}</b><span class="d">{% translate "I want to learn about myself, pass tests and grow." %}</span>
+              {% endif %}
+            </span>
+          </label>
+        {% endfor %}
+      </div>
+      {% if form.role.errors %}<div class="non-field-errors">{{ form.role.errors|join:" " }}</div>{% endif %}
+      <div class="form-grid">
+        {% include "partials/field.html" with field=form.first_name %}
+        {% include "partials/field.html" with field=form.last_name %}
+        {% include "partials/field.html" with field=form.username %}
+        {% include "partials/field.html" with field=form.email %}
+        {% include "partials/field.html" with field=form.specialization extra_class="full psych-only" %}
+        {% include "partials/field.html" with field=form.age_group extra_class="full client-only" %}
+        {% include "partials/field.html" with field=form.password1 %}
+        {% include "partials/field.html" with field=form.password2 %}
+      </div>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">{% translate "Create account" %} →</button>
+    </form>
+    <p class="center muted" style="margin:20px 0 0">{% translate "Already registered?" %} <a href="{% url 'accounts:login' %}" style="color:var(--primary);font-weight:700">{% translate "Log in" %}</a></p>
+  </div>
+</div>
+{% endblock %}

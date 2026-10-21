@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Profile" %}{% endblock %}
+{% block content %}
+<div class="narrow" style="padding:40px 0 60px">
+  <div class="card reveal">
+    <div class="row" style="margin-bottom:24px">
+      <span class="avatar avatar-lg g-{{ user.avatar_gradient }}">{{ user.initials }}</span>
+      <div>
+        <h1 style="font-size:1.6rem;margin:0">{{ user.display_name }}</h1>
+        <div class="row" style="margin-top:6px">
+          <span class="chip chip-primary">{{ user.get_role_display }}</span>
+          {% if user.is_psychologist %}
+            {% if user.is_verified %}<span class="chip chip-success">✔ {% translate "Verified" %}</span>{% else %}<span class="chip chip-warn">⏳ {% translate "Awaiting verification" %}</span>{% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <form method="post">{% csrf_token %}
+      <div class="form-grid">
+        {% for field in form %}
+          {% if field.name in "bio age_groups spoken_languages accepts_clients" %}{% include "partials/field.html" with extra_class="full" %}{% else %}{% include "partials/field.html" %}{% endif %}
+        {% endfor %}
+      </div>
+      <button class="btn btn-primary" type="submit">{% translate "Save" %}</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

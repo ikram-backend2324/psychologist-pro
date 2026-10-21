@@ -1,0 +1,41 @@
+/* Jazzmin 3 (AdminLTE 4 / Bootstrap 5) polish for Ruhiyat Studio */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap");
+:root { --rh-1: #6c47ff; --rh-2: #b05cff; }
+body { font-family: "Manrope", system-ui, sans-serif !important; }
+
+#jazzy-navbar.app-header {
+  background: linear-gradient(90deg, #4b2bd6, #8b3dff 60%, #c05cff) !important;
+  box-shadow: 0 8px 30px -12px rgba(76, 43, 214, 0.6);
+}
+#jazzy-navbar .nav-link, #jazzy-navbar .btn-navbar { color: #fff !important; }
+#jazzy-navbar .form-control-navbar { background: rgba(255, 255, 255, 0.18); border: 0; color: #fff; border-radius: 999px; }
+#jazzy-navbar .form-control-navbar::placeholder { color: rgba(255, 255, 255, 0.75); }
+
+#jazzy-sidebar.app-sidebar { background: linear-gradient(180deg, #150e30, #23134f 60%, #2d1366) !important; }
+#jazzy-sidebar .sidebar-brand { border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+#jazzy-sidebar .brand-image { opacity: 1 !important; box-shadow: 0 6px 18px rgba(108, 71, 255, 0.6) !important; }
+#jazzy-sidebar .nav-header { color: rgba(255, 255, 255, 0.45) !important; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; }
+#jazzy-sidebar .nav-link { border-radius: 12px; margin: 2px 8px; transition: background 0.2s, transform 0.2s; color: rgba(255, 255, 255, 0.8); }
+#jazzy-sidebar .nav-link:hover { transform: translateX(3px); background: rgba(255, 255, 255, 0.06); color: #fff; }
+#jazzy-sidebar .nav-link.active { background: linear-gradient(90deg, var(--rh-1), var(--rh-2)) !important; color: #fff !important; box-shadow: 0 8px 20px -8px rgba(108, 71, 255, 0.9); }
+
+[data-bs-theme="light"] .app-main, [data-bs-theme="light"] body.bg-body-tertiary { background: #f6f4ff !important; }
+.card { border: 0; border-radius: 18px; box-shadow: 0 10px 30px -14px rgba(60, 30, 160, 0.28); overflow: hidden; animation: rh-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.card-header { border-bottom: 1px solid rgba(0, 0, 0, 0.05); font-weight: 800; }
+.btn { border-radius: 999px !important; font-weight: 700; }
+.btn-primary { background: linear-gradient(120deg, var(--rh-1), var(--rh-2)) !important; border: 0 !important; }
+.btn-success.addlink { background: rgba(16, 185, 129, 0.14); color: #047857; border: 0; }
+.btn-info.changelink, .btn-info.viewlink { background: rgba(108, 71, 255, 0.12); color: var(--rh-1); border: 0; }
+[data-bs-theme="dark"] .btn-success.addlink { color: #34d399; }
+[data-bs-theme="dark"] .btn-info.changelink, [data-bs-theme="dark"] .btn-info.viewlink { color: #c4b5fd; }
+.form-control, .form-select { border-radius: 12px !important; }
+.vTextField, .vLargeTextField, .app-main textarea { width: 100% !important; max-width: 720px; }
+.form-control:focus, .form-select:focus { border-color: var(--rh-1); box-shadow: 0 0 0 4px rgba(108, 71, 255, 0.15); }
+a { color: var(--rh-1); }
+.table > tbody > tr { transition: background 0.2s; }
+.login-page {
+  background: radial-gradient(circle at 20% 20%, #b9a6ff, transparent 40%), radial-gradient(circle at 80% 70%, #ffc4e1, transparent 40%), #f6f4ff !important;
+}
+.login-box .card { border-radius: 24px; }
+@keyframes rh-up { from { opacity: 0; transform: translateY(12px); } }
+.login-logo img, .login-box img, img.logo-light, img.logo-dark { width: 84px !important; height: 84px !important; margin: 0 auto 6px; display: block; filter: drop-shadow(0 12px 24px rgba(108, 71, 255, 0.45)); }

@@ -1,0 +1,161 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ step.title }} · {{ topic.title }}{% endblock %}
+{% block footer %}{% endblock %}
+{% block content %}
+<div class="container player">
+  <aside>
+    <a href="{{ topic.get_absolute_url }}" class="row" style="margin-bottom:16px;flex-wrap:nowrap">
+      <span class="thumb grad g-{{ topic.color }}" style="width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:1.3rem;flex:none">{{ topic.icon }}</span>
+      <b style="line-height:1.3">{{ topic.title }}</b>
+    </a>
+    <div class="progress" style="margin-bottom:6px"><span style="--p: {{ progress }}%"></span></div>
+    <p class="small muted" style="font-weight:700">{{ progress }}% · {% translate "Step" %} {{ index }} / {{ total }}</p>
+    <ul class="step-nav">
+      {% for s in steps %}
+        <li>
+          <a href="{% url 'learning:step' topic.slug s.order %}" class="{% if s.id == step.id %}current{% endif %} {% if s.id in done_ids %}done{% endif %}"><span class="n">{% if s.id in done_ids %}✓{% else %}{{ forloop.counter }}{% endif %}</span><span class="label">{{ s.title }}</span></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </aside>
+
+  <section class="card stage" id="stage">
+    <div class="stage-top">
+      <span class="chip chip-primary">{% if step.kind == 'quiz' %}📝{% elif step.kind == 'reflection' %}✍️{% elif step.kind == 'breathing' %}🌬️{% elif step.kind == 'cards' %}🃏{% elif step.kind == 'scenario' %}🧭{% else %}📖{% endif %} {{ step.get_kind_display }}</span>
+      {% if is_done %}<span class="chip chip-success">✔ {% translate "Done" %}</span>{% endif %}
+      <span class="spacer"></span>
+      <button class="btn btn-sm btn-ghost" data-dialog-open="pause-{{ topic.pk }}">⏸ {% translate "Pause & remind me" %}</button>
+    </div>
+    <h2>{{ step.title }}</h2>
+
+    {% if step.kind == 'lesson' %}
+      <div class="prose">{% for p in step.paragraphs %}<p class="reveal" style="--d:{% cycle '0s' '.05s' '.1s' '.15s' %}">{{ p|linebreaksbr }}</p>{% endfor %}</div>
+      <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" class="stage-actions">{% csrf_token %}
+        {% if prev_step %}<a class="btn" href="{% url 'learning:step' topic.slug prev_step.order %}">← {% translate "Back" %}</a>{% endif %}
+        <span class="spacer"></span>
+        <button class="btn btn-primary btn-lg" type="submit">{% if is_done %}{% translate "Next" %}{% else %}{% translate "Got it, continue" %}{% endif %} →</button>
+      </form>
+
+    {% elif step.kind == 'quiz' %}
+      {% if result %}
+        <div class="result-box band-{{ result.band }}">
+          <div class="gauge" style="--p: {{ result.percent }}"><b>{{ result.percent }}%<small>{{ result.score }} / {{ result.max_score }}</small></b></div>
+          <h3>{% if result.band == 'high' %}{% translate "Great result!" %}{% elif result.band == 'mid' %}{% translate "Good, with room to grow" %}{% else %}{% translate "A good place to start" %}{% endif %}</h3>
+          {% if result_text %}<div class="interpret">{{ result_text|linebreaksbr }}</div>{% endif %}
+        </div>
+        <div class="stage-actions">
+          <a class="btn" href="?retake=1">↻ {% translate "Retake test" %}</a>
+          <span class="spacer"></span>
+          <a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}">{% translate "Continue" %} →</a>
+        </div>
+      {% else %}
+        {% if step.body %}<p class="muted">{{ step.body }}</p>{% endif %}
+        <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" data-quiz>{% csrf_token %}
+          {% for q in questions %}
+            <div class="question reveal">
+              <h4><span class="qn">{{ forloop.counter }}.</span> {{ q.text }}</h4>
+              <div class="options">
+                {% for o in q.option_list %}
+                  <label class="option"><input type="radio" name="q{{ q.id }}" value="{{ o.index }}" required><span class="box">{{ o.label }}</span></label>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+          <div class="stage-actions">
+            <span class="quiz-counter">{% translate "Answered" %}: <b>0</b> / {{ questions|length }}</span>
+            <span class="spacer"></span>
+            <button class="btn btn-primary btn-lg" type="submit" disabled>{% translate "See my result" %} →</button>
+          </div>
+        </form>
+      {% endif %}
+
+    {% elif step.kind == 'reflection' %}
+      <div class="quote" style="font-size:1.1rem;font-weight:600">💭 {{ step.body }}</div>
+      {% if reflection %}
+        <p class="small muted" style="margin:20px 0 8px;font-weight:700">{% translate "Your answer" %}</p>
+        <div class="quote">{{ reflection.text }}</div>
+        {% if reflection.ai_feedback %}
+          <div class="ai-box reveal"><div class="who"><span class="spark">✦</span>{% translate "Supportive feedback" %}</div><div style="white-space:pre-line">{{ reflection.ai_feedback }}</div><p class="small muted" style="margin:10px 0 0">{% translate "Generated automatically. It is not a diagnosis; your psychologist also sees your answer." %}</p></div>
+        {% endif %}
+        <div class="stage-actions"><span class="spacer"></span><a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}">{% translate "Continue" %} →</a></div>
+      {% else %}
+        <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" data-reflection style="margin-top:20px">{% csrf_token %}
+          <div class="field"><label for="ref-text">{% translate "Your answer" %}</label><textarea id="ref-text" name="text" required placeholder="{% translate 'Write honestly — only you and your psychologist will see it.' %}"></textarea></div>
+          <div class="stage-actions">
+            {% if ai_enabled %}<label class="switch"><input type="checkbox" name="ai" value="1" checked><span class="track"></span>✦ {% translate "Get supportive AI feedback" %}</label>{% endif %}
+            <span class="spacer"></span>
+            <button class="btn btn-primary btn-lg" type="submit" data-thinking="{% translate 'Thinking' %}">{% translate "Save answer" %} →</button>
+          </div>
+        </form>
+      {% endif %}
+
+    {% elif step.kind == 'breathing' %}
+      {% if step.body %}<p class="muted">{{ step.body }}</p>{% endif %}
+      <div class="breath" data-breath data-inhale="{{ step.inhale_seconds }}" data-hold="{{ step.hold_seconds }}" data-exhale="{{ step.exhale_seconds }}" data-cycles="{{ step.cycles }}"
+           data-l-inhale="{% translate 'Inhale' %}" data-l-hold="{% translate 'Hold' %}" data-l-exhale="{% translate 'Exhale' %}" data-l-done="{% translate 'Well done!' %}">
+        <div class="breath-stage"><span class="halo"></span><span class="breath-ring"></span><div class="breath-circle">{% translate "Ready?" %}</div></div>
+        <div class="breath-info">
+          <div class="phase">{% translate "Press start and follow the circle" %}</div>
+          <div class="breath-dots">{% for i in "x"|rjust:step.cycles %}<i></i>{% endfor %}</div>
+          <button class="btn btn-soft" style="margin-top:16px" data-breath-start type="button">▶ {% translate "Start" %}</button>
+        </div>
+      </div>
+      <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" class="stage-actions">{% csrf_token %}
+        {% if prev_step %}<a class="btn" href="{% url 'learning:step' topic.slug prev_step.order %}">← {% translate "Back" %}</a>{% endif %}
+        <span class="spacer"></span>
+        <button class="btn btn-lg {% if is_done %}btn-primary{% endif %}" type="submit" data-breath-finish {% if not is_done %}disabled{% endif %}>{% translate "Continue" %} →</button>
+      </form>
+
+    {% elif step.kind == 'cards' %}
+      <p class="muted">{% translate "Tap each card to turn it over." %}</p>
+      <div class="flip-grid" data-flip-grid>
+        {% for c in step.cards %}
+          <button type="button" class="flip reveal" style="--d:{% cycle '0s' '.06s' '.12s' '.18s' %}">
+            <span class="flip-inner">
+              <span class="flip-face flip-front grad g-{% cycle 'violet' 'ocean' 'sunset' 'mint' 'rose' 'amber' %}"><span>{{ c.front }}<small>↻ {% translate "tap" %}</small></span></span>
+              <span class="flip-face flip-back">{{ c.back }}</span>
+            </span>
+          </button>
+        {% endfor %}
+      </div>
+      <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" class="stage-actions">{% csrf_token %}
+        {% if prev_step %}<a class="btn" href="{% url 'learning:step' topic.slug prev_step.order %}">← {% translate "Back" %}</a>{% endif %}
+        <span class="spacer"></span>
+        <button class="btn btn-primary btn-lg" type="submit" data-flip-finish {% if not is_done %}disabled{% endif %}>{% translate "Continue" %} →</button>
+      </form>
+    {% elif step.kind == 'scenario' %}
+      {% if step.body %}<p class="muted">{{ step.body }}</p>{% endif %}
+      <div class="scenario" data-scenario
+           data-l-great="{% translate 'Great choice!' %}" data-l-ok="{% translate 'Not bad, but there is a better way.' %}" data-l-bad="{% translate 'Think again — this may make things harder.' %}">
+        <div class="scn-dots">{% for q in questions %}<i class="{% if forloop.first %}on{% endif %}"></i>{% endfor %}</div>
+        {% for q in questions %}
+          <div class="scn-card" data-scn {% if not forloop.first %}hidden{% endif %}>
+            <span class="scn-num">{% translate "Situation" %} {{ forloop.counter }} / {{ questions|length }}</span>
+            <h3>{{ q.text }}</h3>
+            <div class="scn-options">
+              {% for o in q.option_list %}
+                <button type="button" class="scn-opt" data-points="{{ o.points }}" data-max="{{ q.max_points }}" data-feedback="{{ o.feedback }}"><span class="letter">{% cycle 'A' 'B' 'C' 'D' 'E' %}</span><span>{{ o.label }}</span></button>
+              {% endfor %}
+            </div>
+            <div class="scn-result" hidden><b data-scn-verdict></b><p data-scn-feedback></p></div>
+            {% if not forloop.last %}<button type="button" class="btn btn-soft scn-next" hidden>{% translate "Next situation" %} →</button>{% endif %}
+          </div>
+        {% empty %}
+          <p class="muted">{% translate "Situations will be added soon." %}</p>
+        {% endfor %}
+        <div class="scn-summary" hidden>
+          <div style="font-size:3rem">🧭</div>
+          <h3>{% translate "You went through every situation!" %}</h3>
+          <p class="muted">{% translate "Thoughtful choices" %}: <b data-scn-score></b></p>
+        </div>
+      </div>
+      <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" class="stage-actions">{% csrf_token %}
+        {% if prev_step %}<a class="btn" href="{% url 'learning:step' topic.slug prev_step.order %}">← {% translate "Back" %}</a>{% endif %}
+        <span class="spacer"></span>
+        <button class="btn btn-primary btn-lg" type="submit" data-scn-finish {% if not is_done and questions %}disabled{% endif %}>{% translate "Continue" %} →</button>
+      </form>
+    {% endif %}
+  </section>
+</div>
+{% include "learning/_pause_dialog.html" %}
+{% endblock %}

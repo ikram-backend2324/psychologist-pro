@@ -1,0 +1,12 @@
+{% load i18n %}<div class="card mood-card reveal" data-mood-card>
+  <h3 class="panel-title">🌈 {% translate "How do you feel today?" %}</h3>
+  <form method="post" action="{% url 'care:mood' %}" class="mood-picker" data-mood-form>{% csrf_token %}
+    {% for value, label, emoji in mood_choices %}
+      <button type="submit" name="mood" value="{{ value }}" class="mood-btn{% if today_mood.mood == value %} on{% endif %}" title="{{ label }}">
+        <span class="e">{{ emoji }}</span><span class="l">{{ label }}</span>
+      </button>
+    {% endfor %}
+  </form>
+  <p class="small muted mood-thanks" data-mood-thanks {% if not today_mood %}hidden{% endif %}>✓ {% translate "Saved for today. You can change it any time." %}</p>
+  {% include "partials/mood_chart.html" %}
+</div>

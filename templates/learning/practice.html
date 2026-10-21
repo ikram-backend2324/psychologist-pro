@@ -1,0 +1,24 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Tests & games" %}{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="page-head reveal">
+    <span class="eyebrow"><span class="dot"></span>{% translate "Know yourself" %}</span>
+    <h1>{% translate "Tests & games" %}</h1>
+    <p>{% translate "Take tests to learn about yourself, and play games that help you find a way through your problems." %}</p>
+  </div>
+
+  <div class="seg reveal" role="tablist" data-seg>
+    <button class="on" data-filter="all" role="tab">✨ {% translate "All" %} <b>{{ total }}</b></button>
+    <button data-filter="quiz" role="tab">📝 {% translate "Tests" %} <b>{{ tests|length }}</b></button>
+    <button data-filter="game" role="tab">🎮 {% translate "Games" %} <b>{{ games|length }}</b></button>
+    <span class="seg-glider" aria-hidden="true"></span>
+  </div>
+
+  <div class="grid grid-3 practice-grid" style="padding:26px 0 60px" data-seg-items>
+    {% for s in tests %}{% include "learning/_practice_card.html" with group="quiz" %}{% endfor %}
+    {% for s in games %}{% include "learning/_practice_card.html" with group="game" %}{% endfor %}
+    {% if not tests and not games %}<div class="empty card" style="grid-column:1/-1"><span class="e">🎲</span>{% translate "Tests and games will appear here soon." %}</div>{% endif %}
+  </div>
+</div>
+{% endblock %}

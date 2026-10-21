@@ -1,0 +1,8 @@
+{% load i18n %}<div class="mood-chart" role="img" aria-label="{% translate 'Mood, last 14 days' %}">
+  {% for d in moods %}
+    <div class="mood-col" title="{{ d.date|date:'d.m' }}{% if d.entry %} · {{ d.entry.get_mood_display }}{% endif %}">
+      <span class="bar m{{ d.entry.mood|default:0 }}" style="--h: {% if d.entry %}{% widthratio d.entry.mood 5 100 %}{% else %}6{% endif %}%; --i: {{ forloop.counter0 }}"></span>
+      <span class="day">{% if d.entry %}{{ d.entry.emoji }}{% else %}·{% endif %}</span>
+    </div>
+  {% endfor %}
+</div>

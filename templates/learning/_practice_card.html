@@ -1,0 +1,15 @@
+{% load i18n %}<a class="card card-hover practice-card tilt reveal" data-group="{{ group }}" href="{% url 'learning:step' s.topic.slug s.order %}">
+  <div class="practice-icon grad g-{{ s.topic.color }}">
+    {% if s.kind == 'quiz' %}📝{% elif s.kind == 'breathing' %}🌬️{% elif s.kind == 'cards' %}🃏{% else %}🧭{% endif %}
+    {% if s.done %}<span class="done-badge">✓</span>{% endif %}
+  </div>
+  <div class="practice-body">
+    <span class="kind">{{ s.get_kind_display }}{% if s.question_count %} · {{ s.question_count }} {% if s.kind == 'quiz' %}{% translate "questions" %}{% else %}{% translate "situations" %}{% endif %}{% endif %}</span>
+    <h3>{{ s.title }}</h3>
+    <span class="small muted">{{ s.topic.icon }} {{ s.topic.title }}</span>
+  </div>
+  <div class="practice-foot">
+    {% if s.score is not None %}<span class="chip chip-success">{% translate "Your result" %}: {{ s.score }}%</span>{% elif s.done %}<span class="chip chip-success">✓ {% translate "Done" %}</span>{% else %}<span class="chip chip-primary">{% if group == 'quiz' %}{% translate "Take the test" %}{% else %}{% translate "Play" %}{% endif %}</span>{% endif %}
+    <span class="go">→</span>
+  </div>
+</a>

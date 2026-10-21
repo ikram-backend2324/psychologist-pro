@@ -1,0 +1,42 @@
+# Render Blueprint for Ruhiyat (free plan only — nothing paid is provisioned).
+# Free tier limits (render.com/docs/free): the web service sleeps after 15 min idle (~1 min cold start),
+# has no persistent disk, no shell and no pre-deploy command; the free Postgres expires 30 days after creation.
+services:
+  - type: web
+    name: ruhiyat
+    runtime: python
+    plan: free
+    region: frankfurt
+    buildCommand: bash build.sh
+    startCommand: gunicorn -c gunicorn.conf.py config.wsgi:application
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: DEBUG
+        value: "false"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ruhiyat-db
+          property: connectionString
+      - key: WEB_CONCURRENCY
+        value: "2"
+      - key: SEED_DEMO
+        value: "true"            # demo categories, 2 psychologists and 4 topics in 4 languages
+      - key: DJANGO_SUPERUSER_USERNAME
+        sync: false              # you type these in the Render dashboard when applying the Blueprint
+      - key: DJANGO_SUPERUSER_PASSWORD
+        sync: false
+      - key: DJANGO_SUPERUSER_EMAIL
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false              # optional: enables AI feedback on reflections
+      - key: OPENROUTER_MODEL
+        value: anthropic/claude-haiku-5.5
+
+databases:
+  - name: ruhiyat-db
+    plan: free
+    databaseName: ruhiyat

@@ -1,0 +1,74 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ p.display_name }}{% endblock %}
+{% block content %}
+<div class="container">
+  <section class="psy-hero grad g-{{ p.avatar_gradient }} reveal">
+    <span class="deco d1"></span><span class="deco d2"></span>
+    <div class="inner">
+      <span class="avatar psy-hero-avatar">{{ p.initials }}</span>
+      <div>
+        <span class="chip chip-glass">✔ {% translate "Verified psychologist" %}</span>
+        <h1 style="margin:12px 0 6px">{{ p.display_name }}</h1>
+        <p style="margin:0;font-size:1.1rem;opacity:.92">{{ p.specialization }}</p>
+        <div class="row" style="margin-top:16px">
+          <span class="chip chip-glass">⭐ {{ p.experience_years }} {% translate "yrs" %}</span>
+          <span class="chip chip-glass">🧠 {{ p.topic_count }} {% translate "topics" %}</span>
+          <span class="chip chip-glass">👥 {{ p.client_count }} {% translate "clients" %}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="detail-layout">
+    <div class="stack">
+      {% if p.bio %}<div class="card prose reveal"><h3 class="panel-title">👋 {% translate "About" %}</h3>{{ p.bio|linebreaks }}</div>{% endif %}
+      <div class="card reveal">
+        <h3 class="panel-title">🎯 {% translate "Works with" %}</h3>
+        <div class="age-grid">
+          {% for a in p.age_group_list %}<div class="age-tile"><span>{{ a.icon }}</span>{{ a.label }}</div>{% empty %}<p class="muted small">—</p>{% endfor %}
+        </div>
+        {% if p.language_list %}<p style="margin:16px 0 0"><b>🗣 {% translate "Consultation languages" %}:</b> {{ p.language_list|join:", " }}</p>{% endif %}
+      </div>
+      {% if topics %}
+        <div class="reveal">
+          <h3 class="panel-title">📚 {% translate "Topics by this psychologist" %}</h3>
+          <div class="grid grid-2">{% for topic in topics %}{% include "partials/topic_card.html" %}{% endfor %}</div>
+        </div>
+      {% endif %}
+    </div>
+
+    <aside class="sticky stack" id="choose">
+      <div class="card reveal">
+        {% if connection %}
+          <div class="center">
+            <div style="font-size:2.6rem">💬</div>
+            <h3>{% if connection.status == "active" %}{% translate "This is your psychologist" %}{% else %}{% translate "Request sent" %}{% endif %}</h3>
+            <p class="muted small">{% if connection.status == "active" %}{% translate "Continue your conversation in the private chat." %}{% else %}{% translate "You can already write in the chat while you wait for a reply." %}{% endif %}</p>
+            <a class="btn btn-primary btn-block" href="{% url 'care:chat' connection.pk %}">{% translate "Open chat" %} →</a>
+          </div>
+        {% elif not p.accepts_clients %}
+          <div class="center"><div style="font-size:2.4rem">⏳</div><h3>{% translate "No free slots" %}</h3><p class="muted small">{% translate "This psychologist is not accepting new clients right now. Try another specialist." %}</p><a class="btn btn-block" href="{% url 'care:psychologists' %}">{% translate "All psychologists" %}</a></div>
+        {% elif user.is_authenticated and not user.is_client %}
+          <p class="muted small" style="margin:0">{% translate "Only clients can choose a psychologist." %}</p>
+        {% elif user.is_authenticated %}
+          <form method="post" action="{% url 'care:choose' p.username %}">{% csrf_token %}
+            <h3 style="margin-bottom:6px">{% translate "Choose this psychologist" %}</h3>
+            <p class="muted small">{% translate "Tell briefly what worries you. Only the psychologist will see it." %}</p>
+            <div class="field"><textarea name="concern" rows="5" maxlength="2000" placeholder="{% translate 'For example: I often feel anxious before exams…' %}"></textarea></div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">💬 {% translate "Send request" %}</button>
+            <p class="small muted center" style="margin:12px 0 0">🔒 {% translate "When the psychologist accepts, they will see your progress on the platform." %}</p>
+          </form>
+        {% else %}
+          <div class="center">
+            <div style="font-size:2.4rem">🔐</div>
+            <h3>{% translate "Register to choose" %}</h3>
+            <p class="muted small">{% translate "Registration is free and takes a minute." %}</p>
+            <a class="btn btn-primary btn-block" href="{% url 'accounts:register' %}">{% translate "Get started" %} →</a>
+            <a class="btn btn-ghost btn-block" style="margin-top:8px" href="{% url 'accounts:login' %}?next={{ request.path|urlencode }}">{% translate "Log in" %}</a>
+          </div>
+        {% endif %}
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}

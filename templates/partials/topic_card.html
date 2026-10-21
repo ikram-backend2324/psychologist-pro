@@ -1,0 +1,17 @@
+{% load i18n %}<a href="{{ topic.get_absolute_url }}" class="card card-hover topic-card tilt reveal" style="--d: {{ delay|default:'0s' }}">
+  <div class="cover grad g-{{ topic.color }}">
+    <span class="ring r1"></span><span class="ring r2"></span>
+    <span class="chip chip-glass chip-float">{{ topic.category.icon }} {{ topic.category.name }}</span>
+    <span class="emoji">{{ topic.icon }}</span>
+  </div>
+  <div class="body">
+    <h3>{{ topic.title }}</h3>
+    <p class="muted small" style="margin:0">{{ topic.summary }}</p>
+    <div class="author-line"><span class="avatar g-{{ topic.author.avatar_gradient }}" style="width:28px;height:28px;font-size:.7rem">{{ topic.author.initials }}</span>{{ topic.author.display_name }}</div>
+    <div class="meta">
+      <span>⏱ {{ topic.duration_minutes }} {% translate "min" %}</span>
+      {% if topic.step_count %}<span>🪜 {{ topic.step_count }} {% translate "steps" %}</span>{% endif %}
+      <span>📈 {{ topic.get_level_display }}</span>
+    </div>
+  </div>
+</a>

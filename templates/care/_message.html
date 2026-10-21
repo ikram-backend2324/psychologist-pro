@@ -1,0 +1,14 @@
+{% load i18n %}<div class="msg {% if m.sender_id == user.pk %}mine{% endif %}" data-id="{{ m.pk }}">
+  {% if m.sender_id != user.pk %}<span class="avatar g-{{ m.sender.avatar_gradient }}" style="width:30px;height:30px;font-size:.65rem">{{ m.sender.initials }}</span>{% endif %}
+  <div class="bubble">
+    {% if m.text %}<div class="text">{{ m.text|linebreaksbr }}</div>{% endif %}
+    {% if m.topic %}
+      <a class="msg-topic grad g-{{ m.topic.color }}" href="{{ m.topic.get_absolute_url }}">
+        <span class="e">{{ m.topic.icon }}</span>
+        <span><small>{% translate "Recommended topic" %}</small><b>{{ m.topic.title }}</b></span>
+        <span class="go">→</span>
+      </a>
+    {% endif %}
+    <time>{{ m.created_at|date:"d.m H:i" }}{% if m.sender_id == user.pk %} {% if m.read_at %}✓✓{% else %}✓{% endif %}{% endif %}</time>
+  </div>
+</div>

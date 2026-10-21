@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Log in" %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block content %}
+<div class="container auth-wrap">
+  <div class="card auth-card">
+    <div class="center" style="margin-bottom:24px">
+      <span class="brand-mark" style="width:56px;height:56px;margin:0 auto 14px;border-radius:18px;font-size:1.4rem">♥</span>
+      <h1 style="font-size:1.8rem">{% translate "Welcome back" %}</h1>
+      <p class="muted">{% translate "Continue where you left off." %}</p>
+    </div>
+    <form method="post" novalidate>{% csrf_token %}
+      {% if form.non_field_errors %}<div class="non-field-errors">{{ form.non_field_errors|join:" " }}</div>{% endif %}
+      {% include "partials/field.html" with field=form.username %}
+      {% include "partials/field.html" with field=form.password %}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button class="btn btn-primary btn-lg btn-block" type="submit">{% translate "Log in" %}</button>
+    </form>
+    <p class="center muted" style="margin:20px 0 0">{% translate "No account yet?" %} <a href="{% url 'accounts:register' %}" style="color:var(--primary);font-weight:700">{% translate "Create one" %}</a></p>
+  </div>
+</div>
+{% endblock %}

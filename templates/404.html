@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}404{% endblock %}
+{% block content %}
+<div class="container auth-wrap">
+  <div class="center">
+    <div style="font-size:5rem" class="trophy">🧭</div>
+    <h1>404</h1>
+    <p class="muted">{% translate "This page got lost. Let's find your way back." %}</p>
+    <a href="/" class="btn btn-primary">{% translate "Home" %}</a>
+  </div>
+</div>
+{% endblock %}

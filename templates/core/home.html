@@ -1,0 +1,136 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Understand yourself" %}{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="eyebrow reveal"><span class="dot"></span>{% translate "Psychology made simple" %}</span>
+      <h1 class="reveal" style="--d:.08s">{% translate "Understand yourself" %} <span class="text-grad">{% translate "step by step" %}</span></h1>
+      <p class="lead reveal" style="--d:.16s">{% translate "Choose a topic, pass tests and playful exercises prepared by real psychologists, and get insights that help you grow — at your own pace." %}</p>
+      <div class="cta reveal" style="--d:.24s">
+        {% if user.is_authenticated %}
+          <a href="{% url 'accounts:dashboard' %}" class="btn btn-primary btn-lg">{% translate "Go to dashboard" %} →</a>
+        {% else %}
+          <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg">{% translate "Start for free" %} →</a>
+        {% endif %}
+        <a href="{% url 'care:psychologists' %}" class="btn btn-lg">🧑‍⚕️ {% translate "Choose a psychologist" %}</a>
+      </div>
+      <div class="trust reveal" style="--d:.32s">
+        <div class="avatars">
+          {% for p in psychologists %}<span class="avatar g-{{ p.avatar_gradient }}">{{ p.initials }}</span>{% endfor %}
+          {% if not psychologists %}<span class="avatar g-violet">R</span><span class="avatar g-ocean">U</span><span class="avatar g-sunset">H</span>{% endif %}
+        </div>
+        <span>{% translate "Content by verified psychologists" %}</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal" style="--d:.2s" aria-hidden="true">
+      <div class="orb"></div>
+      <div class="orbit"><span class="planet p1">🧠</span><span class="planet p2">🌿</span><span class="planet p3">💬</span></div>
+      <div class="float-card f1"><span class="icon grad g-mint">✓</span><div>{% translate "Test completed" %}<small>{% translate "Confidence" %} · 82%</small></div></div>
+      <div class="float-card f2"><span class="icon grad g-violet">🔥</span><div>{% translate "Daily progress" %}<small><span class="bar-mini"><span></span></span></small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="stats-band">
+    <div class="stat reveal"><div class="num"><span data-count="{{ counts.topics }}">0</span>+</div><div class="label">{% translate "Topics" %}</div></div>
+    <div class="stat reveal" style="--d:.08s"><div class="num"><span data-count="{{ counts.psychologists }}">0</span></div><div class="label">{% translate "Psychologists" %}</div></div>
+    <div class="stat reveal" style="--d:.16s"><div class="num"><span data-count="{{ counts.learners }}">0</span></div><div class="label">{% translate "Learners" %}</div></div>
+    <div class="stat reveal" style="--d:.24s"><div class="num"><span data-count="{{ counts.completed }}">0</span></div><div class="label">{% translate "Topics completed" %}</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% translate "How it works" %}</span>
+      <h2>{% translate "Four simple steps to a better you" %}</h2>
+      <p>{% translate "Everything is built around topics that psychologists prepare for you." %}</p>
+    </div>
+    <div class="steps-flow">
+      <div class="card flow-item reveal"><div class="num grad g-violet">1</div><h3>{% translate "Register" %}</h3><p>{% translate "Sign up as a client or as a psychologist — it takes a minute." %}</p></div>
+      <div class="card flow-item reveal" style="--d:.1s"><div class="num grad g-ocean">2</div><h3>{% translate "Choose a psychologist" %}</h3><p>{% translate "Find a specialist who works with your age and talk in a private chat." %}</p></div>
+      <div class="card flow-item reveal" style="--d:.2s"><div class="num grad g-sunset">3</div><h3>{% translate "Tests & games" %}</h3><p>{% translate "Discover yourself with tests, and practise solutions in interactive games." %}</p></div>
+      <div class="card flow-item reveal" style="--d:.3s"><div class="num grad g-mint">4</div><h3>{% translate "Get insights" %}</h3><p>{% translate "See your results, reflect, and get reminders to come back." %}</p></div>
+    </div>
+  </div>
+</section>
+
+{% if psychologists %}
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="row reveal" style="margin-bottom:30px;align-items:flex-end">
+      <div><span class="eyebrow">{% translate "For any age" %}</span><h2 style="margin:0">{% translate "Choose your psychologist" %}</h2></div>
+      <span class="spacer"></span>
+      <a href="{% url 'care:psychologists' %}" class="btn btn-soft">{% translate "All psychologists" %} →</a>
+    </div>
+    <div class="grid grid-4">
+      {% for p in psychologists %}
+        <a href="{% url 'care:psychologist' p.username %}" class="card card-hover psy-mini tilt reveal" style="--d:{% cycle '0s' '.08s' '.16s' '.24s' %}">
+          <span class="avatar avatar-lg g-{{ p.avatar_gradient }}">{{ p.initials }}<i class="status-dot {% if p.accepts_clients %}on{% endif %}"></i></span>
+          <b>{{ p.display_name }}</b>
+          <span class="small" style="color:var(--primary);font-weight:700">{{ p.specialization }}</span>
+          <span class="age-icons">{% for a in p.age_group_list %}<span title="{{ a.label }}">{{ a.icon }}</span>{% endfor %}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if categories %}
+<section class="section" style="padding-top:0">
+  <div class="marquee reveal">
+    <div class="marquee-track">
+      {% for _ in "ab" %}{% for c in categories %}
+        <a class="cat-pill" href="{% url 'learning:catalog' %}?category={{ c.slug }}"><span class="e grad g-{{ c.color }}">{{ c.icon }}</span>{{ c.name }} <span class="muted small">{{ c.n }}</span></a>
+      {% endfor %}{% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="row reveal" style="margin-bottom:30px;align-items:flex-end">
+      <div><span class="eyebrow">{% translate "Popular topics" %}</span><h2 style="margin:0">{% translate "Start with these" %}</h2></div>
+      <span class="spacer"></span>
+      <a href="{% url 'learning:catalog' %}" class="btn btn-soft">{% translate "All topics" %} →</a>
+    </div>
+    <div class="grid grid-3">
+      {% for topic in topics %}{% cycle '0s' '.08s' '.16s' as delay silent %}{% include "partials/topic_card.html" with delay=delay %}{% empty %}
+        <div class="empty card" style="grid-column:1/-1"><span class="e">🌱</span>{% translate "Topics will appear here soon." %}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{% translate "Why Ruhiyat" %}</span>
+      <h2>{% translate "Made to keep you motivated" %}</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card feature reveal"><span class="ic">🎯</span><div><h3>{% translate "Tests with clear results" %}</h3><p>{% translate "Every test gives you an explanation written by a psychologist, not just a number." %}</p></div></div>
+      <div class="card feature reveal" style="--d:.1s"><span class="ic">🎮</span><div><h3>{% translate "Interactive games" %}</h3><p>{% translate "Breathing exercises and flip cards turn theory into practice." %}</p></div></div>
+      <div class="card feature reveal"><span class="ic">🔔</span><div><h3>{% translate "Smart reminders" %}</h3><p>{% translate "Stopped halfway? Pick a time, add it to your calendar, and we will bring you back." %}</p></div></div>
+      <div class="card feature reveal" style="--d:.1s"><span class="ic">🌍</span><div><h3>{% translate "Four languages" %}</h3><p>{% translate "Uzbek, Karakalpak, Russian and English — switch any time." %}</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="bubbles" aria-hidden="true"><span style="width:120px;height:120px;left:10%;bottom:0"></span><span style="width:60px;height:60px;left:60%;bottom:0;animation-delay:-4s"></span><span style="width:90px;height:90px;left:85%;bottom:0;animation-delay:-8s"></span></div>
+      <div style="position:relative">
+        <h2>{% translate "Are you a psychologist?" %}</h2>
+        <p>{% translate "Create topics, tests and exercises, and see how your clients progress — all in one studio." %}</p>
+      </div>
+      <div style="position:relative;justify-self:end"><a href="{% url 'accounts:register' %}?role=psychologist" class="btn btn-lg">{% translate "Join as a psychologist" %} →</a></div>
+    </div>
+  </div>
+</section>
+{% endblock %}

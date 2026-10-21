@@ -1,0 +1,1503 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ruhiyat\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "%(count)d psychologist(s) revoked."
+msgstr "Подтверждение отозвано: %(count)d."
+
+msgid "%(count)d psychologist(s) verified."
+msgstr "Подтверждено психологов: %(count)d."
+
+msgid "A good place to start"
+msgstr "Хорошая точка старта"
+
+msgid "A user with that username already exists."
+msgstr "Пользователь с таким именем уже существует."
+
+msgid "AI feedback"
+msgstr "отзыв ИИ"
+
+msgid "AI feedback is unavailable right now, but your answer was saved."
+msgstr "Отзыв ИИ сейчас недоступен, но ваш ответ сохранён."
+
+msgid "About"
+msgstr "О себе"
+
+msgid "About me"
+msgstr "Обо мне"
+
+msgid "About this topic"
+msgstr "О теме"
+
+msgid "Accept"
+msgstr "Принять"
+
+msgid "Accept to start working together. You will see this client's progress."
+msgstr "Примите, чтобы начать работу. Вы увидите прогресс клиента."
+
+msgid "Account"
+msgstr "Аккаунт"
+
+msgid "Active"
+msgstr "Активно"
+
+msgid "Active day"
+msgstr "Активный день"
+
+msgid ""
+"Add the ages you work with, your languages and a short bio so clients can "
+"find and choose you."
+msgstr ""
+"Укажите возраст клиентов, языки и коротко о себе, чтобы клиенты могли вас "
+"найти и выбрать."
+
+msgid "Administrator"
+msgstr "Администратор"
+
+msgid "Adults (18–59)"
+msgstr "Взрослые (18–59)"
+
+msgid "Advanced"
+msgstr "Продвинутый"
+
+msgid "Age"
+msgstr "Возраст"
+
+msgid "All"
+msgstr "Все"
+
+msgid "All psychologists"
+msgstr "Все психологи"
+
+msgid "All topics"
+msgstr "Все темы"
+
+msgid "Already registered?"
+msgstr "Уже зарегистрированы?"
+
+msgid "Amber"
+msgstr "Янтарь"
+
+msgid ""
+"An administrator will check your profile. After that you can create topics, "
+"tests and games in the studio."
+msgstr ""
+"Администратор проверит профиль. После этого вы сможете создавать темы, тесты"
+" и игры в студии."
+
+msgid "Answer"
+msgstr "Ответ"
+
+msgid "Answered"
+msgstr "Отвечено"
+
+msgid "Any"
+msgstr "Любой"
+
+msgid "Any age"
+msgstr "Любой возраст"
+
+msgid "Any level"
+msgstr "Любой уровень"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "April"
+msgstr "Апрель"
+
+msgid "Are you a psychologist?"
+msgstr "Вы психолог?"
+
+msgid "August"
+msgstr "Август"
+
+msgid "Average test score"
+msgstr "Средний результат тестов"
+
+msgid "Awaiting verification"
+msgstr "Ожидает проверки"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Bad"
+msgstr "Плохо"
+
+msgid "Beginner"
+msgstr "Начальный"
+
+msgid "Breathing exercises and flip cards turn theory into practice."
+msgstr "Дыхательные упражнения и карточки превращают теорию в практику."
+
+msgid "Breathing game"
+msgstr "Дыхательная игра"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Catalog"
+msgstr "Каталог"
+
+msgid "Children (6–12)"
+msgstr "Дети (6–12)"
+
+msgid "Choose"
+msgstr "Выбрать"
+
+msgid "Choose a psychologist"
+msgstr "Выбрать психолога"
+
+msgid "Choose a psychologist who works with your age and talk privately."
+msgstr ""
+"Выберите психолога, который работает с вашим возрастом, и общайтесь лично."
+
+msgid "Choose a topic"
+msgstr "Выбрать тему"
+
+msgid ""
+"Choose a topic, pass tests and playful exercises prepared by real "
+"psychologists, and get insights that help you grow — at your own pace."
+msgstr ""
+"Выберите тему, проходите тесты и игровые упражнения от настоящих психологов "
+"и получайте выводы, которые помогают расти — в своём темпе."
+
+msgid "Choose this psychologist"
+msgstr "Выбрать этого психолога"
+
+msgid "Choose your psychologist"
+msgstr "Выберите своего психолога"
+
+msgid "Client"
+msgstr "Клиент"
+
+msgid "Client's topics"
+msgstr "Темы клиента"
+
+msgid "Client–psychologist links"
+msgstr "Связи клиент–психолог"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Close conversation"
+msgstr "Закрыть диалог"
+
+msgid "Close this conversation?"
+msgstr "Закрыть этот диалог?"
+
+msgid "Comma separated, used to suggest related topics."
+msgstr "Через запятую — для подбора похожих тем."
+
+msgid "Complete profile"
+msgstr "Заполнить профиль"
+
+msgid "Complete your public profile"
+msgstr "Заполните публичный профиль"
+
+msgid "Completed"
+msgstr "Пройдено"
+
+msgid "Completed!"
+msgstr "Пройдено!"
+
+msgid "Completion rate"
+msgstr "Доля завершивших"
+
+msgid "Confidence"
+msgstr "Уверенность"
+
+msgid "Congratulations!"
+msgstr "Поздравляем!"
+
+msgid "Consultation languages"
+msgstr "Языки консультаций"
+
+msgid "Content by verified psychologists"
+msgstr "Контент от проверенных психологов"
+
+msgid "Continue"
+msgstr "Продолжить"
+
+msgid "Continue now"
+msgstr "Продолжить сейчас"
+
+msgid "Continue where you left off."
+msgstr "Продолжайте с того места, где остановились."
+
+msgid "Continue your conversation in the private chat."
+msgstr "Продолжите разговор в личном чате."
+
+msgid "Create account"
+msgstr "Создать аккаунт"
+
+msgid "Create one"
+msgstr "Создать"
+
+msgid "Create topic"
+msgstr "Создать тему"
+
+msgid ""
+"Create topics, tests and exercises, and see how your clients progress — all "
+"in one studio."
+msgstr ""
+"Создавайте темы, тесты и упражнения и следите за прогрессом клиентов — всё в"
+" одной студии."
+
+msgid "Create your account"
+msgstr "Создайте аккаунт"
+
+msgid "Daily progress"
+msgstr "Прогресс дня"
+
+msgid "Dashboard"
+msgstr "Кабинет"
+
+msgid "December"
+msgstr "Декабрь"
+
+msgid "Decline"
+msgstr "Отклонить"
+
+msgid "Declined"
+msgstr "Отклонено"
+
+msgid ""
+"Discover yourself with tests, and practise solutions in interactive games."
+msgstr ""
+"Узнавайте себя с помощью тестов и тренируйте решения в интерактивных играх."
+
+msgid "Done"
+msgstr "Готово"
+
+msgid "Draft"
+msgstr "Черновик"
+
+msgid "Draft — only you can see it"
+msgstr "Черновик — видите только вы"
+
+msgid ""
+"Each topic is a short journey of lessons, tests and games prepared by a "
+"psychologist."
+msgstr ""
+"Каждая тема — короткое путешествие из уроков, тестов и игр от психолога."
+
+msgid "Edit"
+msgstr "Изменить"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Ended"
+msgstr "Завершено"
+
+msgid "Enter the same password as before, for verification."
+msgstr "Для подтверждения введите, пожалуйста, пароль ещё раз."
+
+msgid ""
+"Every test gives you an explanation written by a psychologist, not just a "
+"number."
+msgstr "Каждый тест даёт не просто число, а объяснение от психолога."
+
+msgid "Everything is built around topics that psychologists prepare for you."
+msgstr "Всё построено вокруг тем, которые готовят для вас психологи."
+
+msgid "Exhale"
+msgstr "Выдох"
+
+msgid "February"
+msgstr "Февраль"
+
+msgid "Find a specialist who works with your age and talk in a private chat."
+msgstr "Найдите специалиста для вашего возраста и общайтесь в личном чате."
+
+msgid "Find your topic"
+msgstr "Найдите свою тему"
+
+msgid "First name"
+msgstr "Имя"
+
+msgid "First, tell us who you are."
+msgstr "Сначала расскажите, кто вы."
+
+msgid "Flip cards game"
+msgstr "Игра с карточками"
+
+msgid "For any age"
+msgstr "Для любого возраста"
+
+msgid "For example: I often feel anxious before exams…"
+msgstr "Например: я часто волнуюсь перед экзаменами…"
+
+msgid "For psychologists"
+msgstr "Для психологов"
+
+msgid "For psychologists, e.g. “Family psychology”."
+msgstr "Для психологов, например: «Семейная психология»."
+
+msgid "Four languages"
+msgstr "Четыре языка"
+
+msgid "Four simple steps to a better you"
+msgstr "Четыре простых шага к лучшей версии себя"
+
+msgid "Fr"
+msgstr "Пт"
+
+msgid "Fri"
+msgstr "Пт"
+
+msgid "Games"
+msgstr "Игры"
+
+msgid ""
+"Generated automatically. It is not a diagnosis; your psychologist also sees "
+"your answer."
+msgstr ""
+"Создано автоматически. Это не диагноз; ваш ответ также видит психолог."
+
+msgid "Get insights"
+msgstr "Получайте выводы"
+
+msgid "Get started"
+msgstr "Начать"
+
+msgid "Get supportive AI feedback"
+msgstr "Получить поддерживающий отзыв ИИ"
+
+msgid "Go to dashboard"
+msgstr "Перейти в кабинет"
+
+msgid "Good"
+msgstr "Хорошо"
+
+msgid "Good, with room to grow"
+msgstr "Хорошо, есть куда расти"
+
+msgid "Got it, continue"
+msgstr "Понятно, дальше"
+
+msgid "Great"
+msgstr "Отлично"
+
+msgid "Great choice!"
+msgstr "Отличный выбор!"
+
+msgid "Great result!"
+msgstr "Отличный результат!"
+
+msgid "Groups"
+msgstr "Группы"
+
+msgid "Hello,"
+msgstr "Привет,"
+
+msgid "Helps us suggest psychologists who work with your age."
+msgstr "Поможет подобрать психологов, работающих с вашим возрастом."
+
+msgid "History"
+msgstr "История"
+
+msgid "Hold"
+msgstr "Задержка"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "How do you feel today?"
+msgstr "Как вы себя чувствуете сегодня?"
+
+msgid "How it works"
+msgstr "Как это работает"
+
+msgid "I accept new clients"
+msgstr "Принимаю новых клиентов"
+
+msgid "I accepted your request. Let's work together!"
+msgstr "Запрос принят. Давайте работать вместе!"
+
+msgid "I am joining as"
+msgstr "Я присоединяюсь как"
+
+msgid "I create topics and tests and follow my clients' progress."
+msgstr "Я создаю темы и тесты и слежу за прогрессом клиентов."
+
+msgid "I want to learn about myself, pass tests and grow."
+msgstr "Хочу узнать себя, проходить тесты и расти."
+
+msgid "I work with"
+msgstr "Я работаю с"
+
+msgid "In 3 days"
+msgstr "Через 3 дня"
+
+msgid "In progress"
+msgstr "В процессе"
+
+msgid "Inhale"
+msgstr "Вдох"
+
+msgid "Interactive games"
+msgstr "Интерактивные игры"
+
+msgid "Intermediate"
+msgstr "Средний"
+
+msgid "January"
+msgstr "Январь"
+
+msgid "Join as a psychologist"
+msgstr "Присоединиться как психолог"
+
+msgid "July"
+msgstr "Июль"
+
+msgid "June"
+msgstr "Июнь"
+
+msgid "Know yourself"
+msgstr "Узнай себя"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Last activity"
+msgstr "Последняя активность"
+
+msgid "Last name"
+msgstr "Фамилия"
+
+msgid "Latest reflections from clients"
+msgstr "Последние размышления клиентов"
+
+msgid "Latest test results"
+msgstr "Последние результаты тестов"
+
+msgid "Learners"
+msgstr "Учеников"
+
+msgid "Lesson"
+msgstr "Урок"
+
+msgid ""
+"Lesson: text (blank line = new paragraph). Reflection: the question. Cards: "
+"one card per line as “front | back”. Situation game: an introduction; "
+"situations are added as questions."
+msgstr ""
+"Урок: текст (пустая строка = новый абзац). Размышление: вопрос. Карточки: по"
+" одной в строке «лицевая | обратная». Игра-ситуация: вступление; ситуации "
+"добавляются как вопросы."
+
+msgid "Log in"
+msgstr "Войти"
+
+msgid "Log out"
+msgstr "Выйти"
+
+msgid "Look and placement"
+msgstr "Вид и размещение"
+
+msgid "Made to keep you motivated"
+msgstr "Создано, чтобы поддерживать мотивацию"
+
+msgid "Made with care for your mental well-being"
+msgstr "Создано с заботой о вашем душевном благополучии"
+
+msgid "Main"
+msgstr "Основное"
+
+msgid "Main menu"
+msgstr "Главное меню"
+
+msgid "March"
+msgstr "Март"
+
+msgid "May"
+msgstr "Май"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "Messages"
+msgstr "Сообщения"
+
+msgid "Mint"
+msgstr "Мята"
+
+msgid "Mo"
+msgstr "Пн"
+
+msgid "Mon"
+msgstr "Пн"
+
+msgid "Mood check-ins"
+msgstr "Отметки настроения"
+
+msgid "Mood, last 14 days"
+msgstr "Настроение за 14 дней"
+
+msgid "My clients"
+msgstr "Мои клиенты"
+
+msgid "My psychologist"
+msgstr "Мой психолог"
+
+msgid "My topics"
+msgstr "Мои темы"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Name or specialization…"
+msgstr "Имя или специализация…"
+
+msgid "New client requests"
+msgstr "Новые запросы клиентов"
+
+msgid "New request"
+msgstr "Новый запрос"
+
+msgid "New topic"
+msgstr "Новая тема"
+
+msgid "Next"
+msgstr "Далее"
+
+msgid "Next month"
+msgstr "Следующий месяц"
+
+msgid "Next situation"
+msgstr "Следующая ситуация"
+
+msgid "No account yet?"
+msgstr "Ещё нет аккаунта?"
+
+msgid "No answers yet."
+msgstr "Ответов пока нет."
+
+msgid "No clients yet. Complete your profile so clients can find you."
+msgstr "Клиентов пока нет. Заполните профиль, чтобы вас нашли."
+
+msgid "No free slots"
+msgstr "Нет свободных мест"
+
+msgid "No messages yet"
+msgstr "Сообщений пока нет"
+
+msgid "No psychologist matches these filters yet."
+msgstr "Пока нет психологов с такими фильтрами."
+
+msgid ""
+"No reminders. When you pause a topic, choose a time and we will remind you."
+msgstr ""
+"Напоминаний нет. Когда ставите тему на паузу, выберите время — мы напомним."
+
+msgid "No results yet."
+msgstr "Результатов пока нет."
+
+msgid "None available"
+msgstr "Недоступно"
+
+msgid "Not bad, but there is a better way."
+msgstr "Неплохо, но есть способ лучше."
+
+msgid "Nothing found. Try another search."
+msgstr "Ничего не найдено. Попробуйте другой запрос."
+
+msgid "Nothing in progress yet."
+msgstr "Пока нет начатых тем."
+
+msgid "November"
+msgstr "Ноябрь"
+
+msgid "Ocean"
+msgstr "Океан"
+
+msgid "October"
+msgstr "Октябрь"
+
+msgid "Okay"
+msgstr "Нормально"
+
+msgid ""
+"One option per line as “answer | points”, e.g. “Often | 2”. In a situation "
+"game add feedback: “answer | points | feedback”."
+msgstr ""
+"По одному варианту в строке: «ответ | баллы», например «Часто | 2». В игре-"
+"ситуации добавьте отзыв: «ответ | баллы | отзыв»."
+
+msgid "Only clients can choose a psychologist."
+msgstr "Выбрать психолога могут только клиенты."
+
+msgid "Open"
+msgstr "Открыть"
+
+msgid "Open chat"
+msgstr "Открыть чат"
+
+msgid "Open studio"
+msgstr "Открыть студию"
+
+msgid "Or pick date and time"
+msgstr "Или выберите дату и время"
+
+msgid "Or try a related topic:"
+msgstr "Или попробуйте похожую тему:"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+msgid "Pause & remind me"
+msgstr "Пауза и напоминание"
+
+msgid "Phone calendar"
+msgstr "Календарь телефона"
+
+msgid ""
+"Pick a specialist who works with your age and speaks your language, then "
+"talk to them in a private chat."
+msgstr ""
+"Выберите специалиста, который работает с вашим возрастом и говорит на вашем "
+"языке, и общайтесь в личном чате."
+
+msgid "Platform"
+msgstr "Платформа"
+
+msgid "Play"
+msgstr "Играть"
+
+msgid "Please answer every question."
+msgstr "Пожалуйста, ответьте на все вопросы."
+
+msgid "Please choose a time in the future."
+msgstr "Пожалуйста, выберите время в будущем."
+
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"Пожалуйста, введите правильные %(username)s и пароль. Оба поля могут быть "
+"чувствительны к регистру."
+
+msgid "Please tell clients what you specialize in."
+msgstr "Укажите клиентам вашу специализацию."
+
+msgid "Popular topics"
+msgstr "Популярные темы"
+
+msgid "Prefer not to say"
+msgstr "Предпочитаю не указывать"
+
+msgid "Prepared by"
+msgstr "Подготовил(а)"
+
+msgid "Press start and follow the circle"
+msgstr "Нажмите «Старт» и следуйте за кругом"
+
+msgid "Previous month"
+msgstr "Предыдущий месяц"
+
+msgid "Profile"
+msgstr "Профиль"
+
+msgid "Profile saved."
+msgstr "Профиль сохранён."
+
+msgid "Progress"
+msgstr "Прогресс"
+
+msgid "Psychologist"
+msgstr "Психолог"
+
+msgid "Psychologist dashboard"
+msgstr "Кабинет психолога"
+
+msgid "Psychologists"
+msgstr "Психологи"
+
+msgid "Psychologists and clients"
+msgstr "Психологи и клиенты"
+
+msgid "Psychology made simple"
+msgstr "Психология — просто и интересно"
+
+msgid "Psychology topics, tests and games prepared by real psychologists."
+msgstr "Темы, тесты и игры, подготовленные настоящими психологами."
+
+msgid "Published"
+msgstr "Опубликовано"
+
+msgid "Ready?"
+msgstr "Готовы?"
+
+msgid "Recommend a topic"
+msgstr "Рекомендовать тему"
+
+msgid "Recommended for you"
+msgstr "Рекомендуем вам"
+
+msgid "Recommended topic"
+msgstr "Рекомендованная тема"
+
+msgid "Reflection"
+msgstr "Размышление"
+
+msgid "Reflections"
+msgstr "Размышления"
+
+msgid "Register"
+msgstr "Регистрация"
+
+msgid "Register to choose"
+msgstr "Зарегистрируйтесь, чтобы выбрать"
+
+msgid "Register to start"
+msgstr "Зарегистрируйтесь, чтобы начать"
+
+msgid "Registration is free and takes a minute."
+msgstr "Регистрация бесплатна и займёт минуту."
+
+msgid "Related topics"
+msgstr "Похожие темы"
+
+msgid "Remind me"
+msgstr "Напомнить"
+
+msgid "Remind me later"
+msgstr "Напомнить позже"
+
+msgid "Reminder"
+msgstr "Напоминание"
+
+msgid "Reminders"
+msgstr "Напоминания"
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid "Request"
+msgstr "Запрос"
+
+msgid "Request sent"
+msgstr "Запрос отправлен"
+
+msgid "Request sent! %(name)s will reply soon."
+msgstr "Запрос отправлен! %(name)s скоро ответит."
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+"Обязательное поле. Не более 150 символов. Только буквы, цифры и символы "
+"@/./+/-/_."
+
+msgid "Resume"
+msgstr "Продолжить"
+
+msgid "Retake test"
+msgstr "Пройти заново"
+
+msgid "Review steps"
+msgstr "Повторить шаги"
+
+msgid "Revoke verification"
+msgstr "Отозвать подтверждение"
+
+msgid "Rose"
+msgstr "Роза"
+
+msgid "Ruhiyat profile"
+msgstr "Профиль Ruhiyat"
+
+msgid "Ruhiyat: continue “%(topic)s”"
+msgstr "Ruhiyat: продолжите «%(topic)s»"
+
+msgid "Sa"
+msgstr "Сб"
+
+msgid "Sat"
+msgstr "Сб"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Save and add another"
+msgstr "Сохранить и добавить другой объект"
+
+msgid "Save and continue editing"
+msgstr "Сохранить и продолжить редактирование"
+
+msgid "Save answer"
+msgstr "Сохранить ответ"
+
+msgid "Saved for today. You can change it any time."
+msgstr "Сохранено на сегодня. Можно изменить в любой момент."
+
+msgid ""
+"Saved! We will remind you on %(when)s. Add it to your phone calendar from "
+"the dashboard."
+msgstr ""
+"Сохранено! Напомним %(when)s. Добавьте напоминание в календарь телефона из "
+"кабинета."
+
+msgid "Say hello and describe what you would like to work on."
+msgstr "Поздоровайтесь и опишите, над чем хотите поработать."
+
+msgid "Search topics…"
+msgstr "Поиск тем…"
+
+msgid "See my result"
+msgstr "Узнать результат"
+
+msgid "See my results"
+msgstr "Мои результаты"
+
+msgid "See your results, reflect, and get reminders to come back."
+msgstr "Смотрите результаты, размышляйте и получайте напоминания вернуться."
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Send request"
+msgstr "Отправить запрос"
+
+msgid "Seniors (60+)"
+msgstr "Пожилые (60+)"
+
+msgid "September"
+msgstr "Сентябрь"
+
+msgid "Set reminder"
+msgstr "Поставить напоминание"
+
+msgid "Show everyone"
+msgstr "Показать всех"
+
+msgid "Sign up as a client or as a psychologist — it takes a minute."
+msgstr "Зарегистрируйтесь как клиент или психолог — это займёт минуту."
+
+msgid "Situation"
+msgstr "Ситуация"
+
+msgid "Situation game"
+msgstr "Игра-ситуация"
+
+msgid "Situations will be added soon."
+msgstr "Ситуации скоро появятся."
+
+msgid "Smart reminders"
+msgstr "Умные напоминания"
+
+msgid "Sorry, I can't take this request right now."
+msgstr "Извините, сейчас я не могу взять этот запрос."
+
+msgid "Specialization"
+msgstr "Специализация"
+
+msgid "Start"
+msgstr "Старт"
+
+msgid "Start for free"
+msgstr "Начать бесплатно"
+
+msgid "Start topic"
+msgstr "Начать тему"
+
+msgid "Start with these"
+msgstr "Начните с этих"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Step"
+msgstr "Шаг"
+
+msgid "Steps"
+msgstr "Шаги"
+
+msgid "Steps done"
+msgstr "Шагов пройдено"
+
+msgid "Steps will be added soon."
+msgstr "Шаги скоро появятся."
+
+msgid "Stopped halfway"
+msgstr "Бросили на полпути"
+
+msgid ""
+"Stopped halfway? Pick a time, add it to your calendar, and we will bring you"
+" back."
+msgstr ""
+"Остановились на полпути? Выберите время, добавьте в календарь — и мы вас "
+"вернём."
+
+msgid "Studio (admin panel)"
+msgstr "Студия (админ-панель)"
+
+msgid "Su"
+msgstr "Вс"
+
+msgid "Sun"
+msgstr "Вс"
+
+msgid "Sunset"
+msgstr "Закат"
+
+msgid "Supportive feedback"
+msgstr "Поддерживающий отзыв"
+
+msgid "Switch theme"
+msgstr "Сменить тему"
+
+msgid "Take a break — we'll remind you"
+msgstr "Сделайте паузу — мы напомним"
+
+msgid ""
+"Take tests to learn about yourself, and play games that help you find a way "
+"through your problems."
+msgstr ""
+"Проходите тесты, чтобы узнать себя, и играйте в игры, которые помогают найти"
+" выход из трудностей."
+
+msgid "Take the test"
+msgstr "Пройти тест"
+
+msgid "Tap each card to turn it over."
+msgstr "Нажмите на каждую карточку, чтобы перевернуть."
+
+msgid "Teenagers (13–17)"
+msgstr "Подростки (13–17)"
+
+msgid "Tell briefly what worries you. Only the psychologist will see it."
+msgstr "Коротко опишите, что вас беспокоит. Это увидит только психолог."
+
+msgid "Test"
+msgstr "Тест"
+
+msgid "Test completed"
+msgstr "Тест пройден"
+
+msgid "Test results"
+msgstr "Результаты теста"
+
+msgid "Tests"
+msgstr "Тесты"
+
+msgid "Tests & games"
+msgstr "Тесты и игры"
+
+msgid "Tests and games will appear here soon."
+msgstr "Тесты и игры скоро появятся."
+
+msgid "Tests taken"
+msgstr "Тестов пройдено"
+
+msgid "Tests with clear results"
+msgstr "Тесты с понятным результатом"
+
+msgid "Th"
+msgstr "Чт"
+
+msgid "Thanks! Your mood is saved."
+msgstr "Спасибо! Настроение сохранено."
+
+msgid ""
+"The client has not started any topic yet. Recommend one with the 📚 button."
+msgstr "Клиент ещё не начал ни одной темы. Порекомендуйте тему кнопкой 📚."
+
+msgid "The client's progress becomes visible after you accept the request."
+msgstr "Прогресс клиента станет виден после принятия запроса."
+
+msgid "The conversation was closed."
+msgstr "Диалог закрыт."
+
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr "Пароль слишком похож на %(verbose_name)s."
+
+msgid "The two password fields didn’t match."
+msgstr "Пароли не совпадают."
+
+msgid "Think again — this may make things harder."
+msgstr "Подумайте ещё — это может всё усложнить."
+
+msgid "Thinking"
+msgstr "Думаю"
+
+msgid "This conversation is closed."
+msgstr "Этот диалог закрыт."
+
+msgid "This evening"
+msgstr "Сегодня вечером"
+
+msgid "This field is required."
+msgstr "Обязательное поле."
+
+msgid "This is your psychologist"
+msgstr "Это ваш психолог"
+
+msgid "This page got lost. Let's find your way back."
+msgstr "Эта страница потерялась. Давайте найдём дорогу назад."
+
+msgid "This password is entirely numeric."
+msgstr "Пароль состоит только из цифр."
+
+msgid "This password is too common."
+msgstr "Этот пароль слишком распространён."
+
+msgid ""
+"This platform does not replace professional help. If you are in danger, call"
+" local emergency services right away."
+msgstr ""
+"Платформа не заменяет профессиональную помощь. Если вам угрожает опасность, "
+"сразу звоните в экстренные службы."
+
+msgid "This psychologist is not accepting new clients right now."
+msgstr "Этот психолог сейчас не принимает новых клиентов."
+
+msgid ""
+"This psychologist is not accepting new clients right now. Try another "
+"specialist."
+msgstr ""
+"Этот психолог сейчас не принимает новых клиентов. Выберите другого "
+"специалиста."
+
+msgid "This topic has no steps yet."
+msgstr "В этой теме пока нет шагов."
+
+msgid "Thoughtful choices"
+msgstr "Взвешенные решения"
+
+msgid "Thu"
+msgstr "Чт"
+
+msgid "Time to come back!"
+msgstr "Пора вернуться!"
+
+msgid "Tomorrow"
+msgstr "Завтра"
+
+msgid "Topic"
+msgstr "Тема"
+
+msgid "Topic completed"
+msgstr "Тема пройдена"
+
+msgid "Topics"
+msgstr "Темы"
+
+msgid "Topics and progress"
+msgstr "Темы и прогресс"
+
+msgid "Topics by this psychologist"
+msgstr "Темы этого психолога"
+
+msgid "Topics completed"
+msgstr "Тем пройдено"
+
+msgid "Topics will appear here soon."
+msgstr "Темы скоро появятся."
+
+msgid ""
+"Topics, tests and games prepared by psychologists — learn to understand "
+"yourself step by step."
+msgstr ""
+"Темы, тесты и игры от психологов — учитесь понимать себя шаг за шагом."
+
+msgid "Tu"
+msgstr "Вт"
+
+msgid "Tue"
+msgstr "Вт"
+
+msgid "Understand yourself"
+msgstr "Пойми себя"
+
+msgid "Upcoming reminders"
+msgstr "Ближайшие напоминания"
+
+msgid "Username"
+msgstr "Имя пользователя"
+
+msgid "Users"
+msgstr "Пользователи"
+
+msgid "Uzbek, Karakalpak, Russian and English — switch any time."
+msgstr ""
+"Узбекский, каракалпакский, русский и английский — переключайте в любой "
+"момент."
+
+msgid "Verified"
+msgstr "Проверен"
+
+msgid "Verified psychologist"
+msgstr "Проверенный психолог"
+
+msgid "Verified psychologists can publish topics in the studio."
+msgstr "Проверенные психологи могут публиковать темы в студии."
+
+msgid "Verify selected psychologists (studio access)"
+msgstr "Подтвердить выбранных психологов (доступ к студии)"
+
+msgid "Very bad"
+msgstr "Очень плохо"
+
+msgid "View on site"
+msgstr "Смотреть на сайте"
+
+msgid "Violet"
+msgstr "Фиолетовый"
+
+msgid "Waiting for reply"
+msgstr "Ожидает ответа"
+
+msgid "Waiting for the psychologist to accept"
+msgstr "Ждём, когда психолог примет запрос"
+
+msgid "We"
+msgstr "Ср"
+
+msgid "Wed"
+msgstr "Ср"
+
+msgid "Welcome back"
+msgstr "С возвращением"
+
+msgid "Welcome to Ruhiyat! Choose your first topic."
+msgstr "Добро пожаловать в Ruhiyat! Выберите первую тему."
+
+msgid ""
+"Welcome! An administrator will verify your profile so you can publish "
+"topics."
+msgstr ""
+"Добро пожаловать! Администратор проверит профиль, и вы сможете публиковать "
+"темы."
+
+msgid "Well done!"
+msgstr "Отлично!"
+
+msgid "What to learn next"
+msgstr "Что изучить дальше"
+
+msgid "What you will achieve"
+msgstr "Чего вы достигнете"
+
+msgid "When clients choose you, their requests will appear here."
+msgstr "Когда клиенты выберут вас, их запросы появятся здесь."
+
+msgid ""
+"When the psychologist accepts, they will see your progress on the platform."
+msgstr "После принятия запроса психолог увидит ваш прогресс на платформе."
+
+msgid "Why Ruhiyat"
+msgstr "Почему Ruhiyat"
+
+msgid "Works with"
+msgstr "Работает с"
+
+msgid "Write a few words — it is only for you and your psychologist."
+msgstr "Напишите несколько слов — это только для вас и вашего психолога."
+
+msgid "Write a message…"
+msgstr "Напишите сообщение…"
+
+msgid "Write honestly — only you and your psychologist will see it."
+msgstr "Пишите честно — это увидите только вы и ваш психолог."
+
+msgid "Years of experience"
+msgstr "Опыт (лет)"
+
+msgid "You"
+msgstr "Вы"
+
+msgid "You can already write in the chat while you wait for a reply."
+msgstr "Пока ждёте ответа, уже можно писать в чат."
+
+msgid "You completed the topic"
+msgstr "Вы прошли тему"
+
+msgid "You have no conversations yet. Choose a psychologist to start."
+msgstr "У вас пока нет диалогов. Выберите психолога, чтобы начать."
+
+msgid "You have no topics yet."
+msgstr "У вас пока нет тем."
+
+msgid "You have used today's AI feedback limit. Your answer was saved."
+msgstr "Дневной лимит отзывов ИИ исчерпан. Ваш ответ сохранён."
+
+msgid "You stopped halfway"
+msgstr "Вы остановились на полпути"
+
+msgid "You went through every situation!"
+msgstr "Вы прошли все ситуации!"
+
+msgid "Your age group"
+msgstr "Ваша возрастная группа"
+
+msgid "Your answer"
+msgstr "Ваш ответ"
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Пароль не должен быть слишком простым и распространённым."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Пароль не может состоять только из цифр."
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Пароль не должен быть слишком похож на другую вашу личную информацию."
+
+msgid "Your path"
+msgstr "Ваш путь"
+
+msgid "Your profile is awaiting verification"
+msgstr "Ваш профиль ожидает проверки"
+
+msgid "Your progress"
+msgstr "Ваш прогресс"
+
+msgid "Your progress is saved. Choose when you want to come back to:"
+msgstr "Прогресс сохранён. Выберите, когда вернуться к теме:"
+
+msgid "Your psychologist"
+msgstr "Ваш психолог"
+
+msgid "Your result"
+msgstr "Ваш результат"
+
+msgid "about"
+msgstr "о себе"
+
+msgid "accepts new clients"
+msgstr "принимает новых клиентов"
+
+msgid "age group"
+msgstr "возрастная группа"
+
+msgid "answer"
+msgstr "ответ"
+
+msgid "answer options"
+msgstr "варианты ответа"
+
+msgid "categories"
+msgstr "категории"
+
+msgid "category"
+msgstr "категория"
+
+msgid "clients"
+msgstr "клиентов"
+
+msgid "client–psychologist link"
+msgstr "связь клиент–психолог"
+
+msgid "color"
+msgstr "цвет"
+
+msgid "consultation languages"
+msgstr "языки консультаций"
+
+msgid "content"
+msgstr "содержание"
+
+msgid "cycles"
+msgstr "циклы"
+
+msgid "description"
+msgstr "описание"
+
+msgid "done"
+msgstr "выполнено"
+
+msgid "duration (minutes)"
+msgstr "длительность (мин)"
+
+msgid "email address"
+msgstr "email"
+
+msgid "enrollment"
+msgstr "запись"
+
+msgid "enrollments"
+msgstr "записи"
+
+msgid "exhale (s)"
+msgstr "выдох (с)"
+
+msgid "hold (s)"
+msgstr "задержка (с)"
+
+msgid "icon (emoji)"
+msgstr "иконка (эмодзи)"
+
+msgid "inhale (s)"
+msgstr "вдох (с)"
+
+msgid "level"
+msgstr "уровень"
+
+msgid "maximum"
+msgstr "максимум"
+
+msgid "message"
+msgstr "сообщение"
+
+msgid "min"
+msgstr "мин"
+
+msgid "mood"
+msgstr "настроение"
+
+msgid "mood check-in"
+msgstr "отметка настроения"
+
+msgid "name"
+msgstr "название"
+
+msgid "note"
+msgstr "заметка"
+
+msgid "order"
+msgstr "порядок"
+
+msgid "psychologist"
+msgstr "психолог"
+
+msgid "published"
+msgstr "опубликовано"
+
+msgid "question"
+msgstr "вопрос"
+
+msgid "questions"
+msgstr "вопросов"
+
+msgid "reflection"
+msgstr "размышление"
+
+msgid "reflections"
+msgstr "размышления"
+
+msgid "remind at"
+msgstr "когда напомнить"
+
+msgid "reminder"
+msgstr "напоминание"
+
+msgid "reminders"
+msgstr "напоминания"
+
+msgid "result"
+msgstr "результат"
+
+msgid "result: high score"
+msgstr "результат: высокий балл"
+
+msgid "result: low score"
+msgstr "результат: низкий балл"
+
+msgid "result: medium score"
+msgstr "результат: средний балл"
+
+msgid "role"
+msgstr "роль"
+
+msgid "score"
+msgstr "баллы"
+
+msgid "short summary"
+msgstr "краткое описание"
+
+msgid "situations"
+msgstr "ситуаций"
+
+msgid "slug"
+msgstr "slug"
+
+msgid "specialization"
+msgstr "специализация"
+
+msgid "status"
+msgstr "статус"
+
+msgid "step"
+msgstr "шаг"
+
+msgid "step by step"
+msgstr "шаг за шагом"
+
+msgid "steps"
+msgstr "шагов"
+
+msgid "tags"
+msgstr "теги"
+
+msgid "tap"
+msgstr "нажмите"
+
+msgid "test question"
+msgstr "вопрос теста"
+
+msgid "test questions"
+msgstr "вопросы теста"
+
+msgid "test result"
+msgstr "результат теста"
+
+msgid "test results"
+msgstr "результаты тестов"
+
+msgid "title"
+msgstr "заголовок"
+
+msgid "topic"
+msgstr "тема"
+
+msgid "topics"
+msgstr "тем"
+
+msgid "type"
+msgstr "тип"
+
+msgid "user"
+msgstr "пользователь"
+
+msgid "username"
+msgstr "имя пользователя"
+
+msgid "verified psychologist"
+msgstr "проверенный психолог"
+
+msgid "what the client wants help with"
+msgstr "с чем клиенту нужна помощь"
+
+msgid "what you will achieve"
+msgstr "чего достигнете"
+
+msgid "works with ages"
+msgstr "работает с возрастами"
+
+msgid "years of experience"
+msgstr "опыт (лет)"
+
+msgid "yrs"
+msgstr "лет"
+
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Пароль должен содержать как минимум %(min_length)d символ."
+msgstr[1] "Пароль должен содержать как минимум %(min_length)d символа."
+msgstr[2] "Пароль должен содержать как минимум %(min_length)d символов."
+
+msgid "This password is too short. It must contain at least %d character."
+msgid_plural ""
+"This password is too short. It must contain at least %d characters."
+msgstr[0] "Пароль слишком короткий. Минимум %d символ."
+msgstr[1] "Пароль слишком короткий. Минимум %d символа."
+msgstr[2] "Пароль слишком короткий. Минимум %d символов."

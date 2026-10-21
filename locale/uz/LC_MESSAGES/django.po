@@ -1,0 +1,1512 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ruhiyat\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "%(count)d psychologist(s) revoked."
+msgstr "%(count)d ta psixologdan tasdiq olindi."
+
+msgid "%(count)d psychologist(s) verified."
+msgstr "%(count)d ta psixolog tasdiqlandi."
+
+msgid "A good place to start"
+msgstr "Boshlash uchun yaxshi nuqta"
+
+msgid "A user with that username already exists."
+msgstr "Bunday foydalanuvchi nomi allaqachon mavjud."
+
+msgid "AI feedback"
+msgstr "AI fikri"
+
+msgid "AI feedback is unavailable right now, but your answer was saved."
+msgstr "AI fikri hozir mavjud emas, lekin javobingiz saqlandi."
+
+msgid "About"
+msgstr "O‘zim haqimda"
+
+msgid "About me"
+msgstr "O‘zim haqimda"
+
+msgid "About this topic"
+msgstr "Mavzu haqida"
+
+msgid "Accept"
+msgstr "Qabul qilish"
+
+msgid "Accept to start working together. You will see this client's progress."
+msgstr ""
+"Birga ishlashni boshlash uchun qabul qiling. Mijozning natijalarini "
+"ko‘rasiz."
+
+msgid "Account"
+msgstr "Hisob"
+
+msgid "Active"
+msgstr "Faol"
+
+msgid "Active day"
+msgstr "Faol kun"
+
+msgid ""
+"Add the ages you work with, your languages and a short bio so clients can "
+"find and choose you."
+msgstr ""
+"Mijozlar sizni topib tanlashi uchun ishlaydigan yoshlaringiz, tillaringiz va"
+" qisqa ma’lumot qo‘shing."
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Adults (18–59)"
+msgstr "Kattalar (18–59)"
+
+msgid "Advanced"
+msgstr "Yuqori"
+
+msgid "Age"
+msgstr "Yosh"
+
+msgid "All"
+msgstr "Hammasi"
+
+msgid "All psychologists"
+msgstr "Barcha psixologlar"
+
+msgid "All topics"
+msgstr "Barcha mavzular"
+
+msgid "Already registered?"
+msgstr "Ro‘yxatdan o‘tganmisiz?"
+
+msgid "Amber"
+msgstr "Qahrabo"
+
+msgid ""
+"An administrator will check your profile. After that you can create topics, "
+"tests and games in the studio."
+msgstr ""
+"Administrator profilingizni tekshiradi. Shundan so‘ng studiyada mavzular, "
+"testlar va o‘yinlar yarata olasiz."
+
+msgid "Answer"
+msgstr "Javob"
+
+msgid "Answered"
+msgstr "Javob berildi"
+
+msgid "Any"
+msgstr "Istalgan"
+
+msgid "Any age"
+msgstr "Istalgan yosh"
+
+msgid "Any level"
+msgstr "Istalgan daraja"
+
+msgid "Apply"
+msgstr "Qo‘llash"
+
+msgid "April"
+msgstr "Aprel"
+
+msgid "Are you a psychologist?"
+msgstr "Siz psixologmisiz?"
+
+msgid "August"
+msgstr "Avgust"
+
+msgid "Average test score"
+msgstr "O‘rtacha test natijasi"
+
+msgid "Awaiting verification"
+msgstr "Tasdiqlash kutilmoqda"
+
+msgid "Back"
+msgstr "Orqaga"
+
+msgid "Bad"
+msgstr "Yomon"
+
+msgid "Beginner"
+msgstr "Boshlang‘ich"
+
+msgid "Breathing exercises and flip cards turn theory into practice."
+msgstr ""
+"Nafas mashqlari va aylanuvchi kartalar nazariyani amaliyotga aylantiradi."
+
+msgid "Breathing game"
+msgstr "Nafas o‘yini"
+
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+msgid "Catalog"
+msgstr "Katalog"
+
+msgid "Children (6–12)"
+msgstr "Bolalar (6–12)"
+
+msgid "Choose"
+msgstr "Tanlash"
+
+msgid "Choose a psychologist"
+msgstr "Psixolog tanlash"
+
+msgid "Choose a psychologist who works with your age and talk privately."
+msgstr "Yoshingizga mos psixologni tanlang va shaxsiy suhbatlashing."
+
+msgid "Choose a topic"
+msgstr "Mavzu tanlash"
+
+msgid ""
+"Choose a topic, pass tests and playful exercises prepared by real "
+"psychologists, and get insights that help you grow — at your own pace."
+msgstr ""
+"Mavzu tanlang, haqiqiy psixologlar tayyorlagan testlar va o‘yinli mashqlarni"
+" bajaring hamda o‘sishingizga yordam beradigan xulosalar oling — o‘z "
+"sur’atingizda."
+
+msgid "Choose this psychologist"
+msgstr "Shu psixologni tanlash"
+
+msgid "Choose your psychologist"
+msgstr "Psixologingizni tanlang"
+
+msgid "Client"
+msgstr "Mijoz"
+
+msgid "Client's topics"
+msgstr "Mijoz mavzulari"
+
+msgid "Client–psychologist links"
+msgstr "Mijoz va psixolog bog‘lanishlari"
+
+msgid "Close"
+msgstr "Yopish"
+
+msgid "Close conversation"
+msgstr "Suhbatni yopish"
+
+msgid "Close this conversation?"
+msgstr "Bu suhbat yopilsinmi?"
+
+msgid "Comma separated, used to suggest related topics."
+msgstr "Vergul bilan ajrating — o‘xshash mavzularni tavsiya qilish uchun."
+
+msgid "Complete profile"
+msgstr "Profilni to‘ldirish"
+
+msgid "Complete your public profile"
+msgstr "Ochiq profilingizni to‘ldiring"
+
+msgid "Completed"
+msgstr "Tugatilgan"
+
+msgid "Completed!"
+msgstr "Tugatildi!"
+
+msgid "Completion rate"
+msgstr "Tugatish darajasi"
+
+msgid "Confidence"
+msgstr "Ishonch"
+
+msgid "Congratulations!"
+msgstr "Tabriklaymiz!"
+
+msgid "Consultation languages"
+msgstr "Maslahat tillari"
+
+msgid "Content by verified psychologists"
+msgstr "Tasdiqlangan psixologlar kontenti"
+
+msgid "Continue"
+msgstr "Davom etish"
+
+msgid "Continue now"
+msgstr "Hozir davom etish"
+
+msgid "Continue where you left off."
+msgstr "To‘xtagan joyingizdan davom eting."
+
+msgid "Continue your conversation in the private chat."
+msgstr "Suhbatni shaxsiy chatda davom ettiring."
+
+msgid "Create account"
+msgstr "Hisob yaratish"
+
+msgid "Create one"
+msgstr "Yaratish"
+
+msgid "Create topic"
+msgstr "Mavzu yaratish"
+
+msgid ""
+"Create topics, tests and exercises, and see how your clients progress — all "
+"in one studio."
+msgstr ""
+"Mavzular, testlar va mashqlar yarating hamda mijozlaringiz rivojini kuzating"
+" — barchasi bitta studiyada."
+
+msgid "Create your account"
+msgstr "Hisobingizni yarating"
+
+msgid "Daily progress"
+msgstr "Kunlik natija"
+
+msgid "Dashboard"
+msgstr "Kabinet"
+
+msgid "December"
+msgstr "Dekabr"
+
+msgid "Decline"
+msgstr "Rad etish"
+
+msgid "Declined"
+msgstr "Rad etilgan"
+
+msgid ""
+"Discover yourself with tests, and practise solutions in interactive games."
+msgstr ""
+"Testlar orqali o‘zingizni kashf eting, interaktiv o‘yinlarda yechimlarni "
+"mashq qiling."
+
+msgid "Done"
+msgstr "Bajarildi"
+
+msgid "Draft"
+msgstr "Qoralama"
+
+msgid "Draft — only you can see it"
+msgstr "Qoralama — faqat siz ko‘rasiz"
+
+msgid ""
+"Each topic is a short journey of lessons, tests and games prepared by a "
+"psychologist."
+msgstr ""
+"Har bir mavzu — psixolog tayyorlagan darslar, testlar va o‘yinlardan iborat "
+"qisqa sayohat."
+
+msgid "Edit"
+msgstr "Tahrirlash"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Ended"
+msgstr "Yakunlangan"
+
+msgid "Enter the same password as before, for verification."
+msgstr "Tekshirish uchun parolni qayta kiriting."
+
+msgid ""
+"Every test gives you an explanation written by a psychologist, not just a "
+"number."
+msgstr "Har bir test faqat raqam emas, psixolog yozgan izohni ham beradi."
+
+msgid "Everything is built around topics that psychologists prepare for you."
+msgstr ""
+"Hammasi psixologlar siz uchun tayyorlaydigan mavzular atrofida qurilgan."
+
+msgid "Exhale"
+msgstr "Nafas chiqaring"
+
+msgid "February"
+msgstr "Fevral"
+
+msgid "Find a specialist who works with your age and talk in a private chat."
+msgstr ""
+"Yoshingiz bilan ishlaydigan mutaxassisni toping va shaxsiy chatda "
+"gaplashing."
+
+msgid "Find your topic"
+msgstr "O‘z mavzuingizni toping"
+
+msgid "First name"
+msgstr "Ism"
+
+msgid "First, tell us who you are."
+msgstr "Avval kimligingizni ayting."
+
+msgid "Flip cards game"
+msgstr "Kartalar o‘yini"
+
+msgid "For any age"
+msgstr "Har qanday yosh uchun"
+
+msgid "For example: I often feel anxious before exams…"
+msgstr "Masalan: imtihonlar oldidan tez-tez xavotirlanaman…"
+
+msgid "For psychologists"
+msgstr "Psixologlar uchun"
+
+msgid "For psychologists, e.g. “Family psychology”."
+msgstr "Psixologlar uchun, masalan: «Oila psixologiyasi»."
+
+msgid "Four languages"
+msgstr "To‘rt til"
+
+msgid "Four simple steps to a better you"
+msgstr "Yaxshi o‘zgarish sari to‘rt oddiy qadam"
+
+msgid "Fr"
+msgstr "Ju"
+
+msgid "Fri"
+msgstr "Ju"
+
+msgid "Games"
+msgstr "O‘yinlar"
+
+msgid ""
+"Generated automatically. It is not a diagnosis; your psychologist also sees "
+"your answer."
+msgstr ""
+"Avtomatik yaratilgan. Bu tashxis emas; javobingizni psixologingiz ham "
+"ko‘radi."
+
+msgid "Get insights"
+msgstr "Xulosalar oling"
+
+msgid "Get started"
+msgstr "Boshlash"
+
+msgid "Get supportive AI feedback"
+msgstr "AI dan qo‘llab-quvvatlovchi fikr olish"
+
+msgid "Go to dashboard"
+msgstr "Kabinetga o‘tish"
+
+msgid "Good"
+msgstr "Yaxshi"
+
+msgid "Good, with room to grow"
+msgstr "Yaxshi, o‘sish uchun joy bor"
+
+msgid "Got it, continue"
+msgstr "Tushundim, davom etamiz"
+
+msgid "Great"
+msgstr "Ajoyib"
+
+msgid "Great choice!"
+msgstr "Ajoyib tanlov!"
+
+msgid "Great result!"
+msgstr "Ajoyib natija!"
+
+msgid "Groups"
+msgstr "Guruhlar"
+
+msgid "Hello,"
+msgstr "Salom,"
+
+msgid "Helps us suggest psychologists who work with your age."
+msgstr "Yoshingizga mos psixologlarni tavsiya qilishimizga yordam beradi."
+
+msgid "History"
+msgstr "Tarix"
+
+msgid "Hold"
+msgstr "Ushlab turing"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "How do you feel today?"
+msgstr "Bugun o‘zingizni qanday his qilyapsiz?"
+
+msgid "How it works"
+msgstr "Qanday ishlaydi"
+
+msgid "I accept new clients"
+msgstr "Yangi mijozlarni qabul qilaman"
+
+msgid "I accepted your request. Let's work together!"
+msgstr "So‘rovingizni qabul qildim. Keling, birga ishlaymiz!"
+
+msgid "I am joining as"
+msgstr "Men qo‘shilyapman:"
+
+msgid "I create topics and tests and follow my clients' progress."
+msgstr "Mavzu va testlar yarataman, mijozlarim rivojini kuzataman."
+
+msgid "I want to learn about myself, pass tests and grow."
+msgstr "O‘zimni bilmoqchiman, test topshirib, o‘smoqchiman."
+
+msgid "I work with"
+msgstr "Men ishlayman"
+
+msgid "In 3 days"
+msgstr "3 kundan keyin"
+
+msgid "In progress"
+msgstr "Jarayonda"
+
+msgid "Inhale"
+msgstr "Nafas oling"
+
+msgid "Interactive games"
+msgstr "Interaktiv o‘yinlar"
+
+msgid "Intermediate"
+msgstr "O‘rta"
+
+msgid "January"
+msgstr "Yanvar"
+
+msgid "Join as a psychologist"
+msgstr "Psixolog sifatida qo‘shilish"
+
+msgid "July"
+msgstr "Iyul"
+
+msgid "June"
+msgstr "Iyun"
+
+msgid "Know yourself"
+msgstr "O‘zingizni taniying"
+
+msgid "Language"
+msgstr "Til"
+
+msgid "Last activity"
+msgstr "Oxirgi faollik"
+
+msgid "Last name"
+msgstr "Familiya"
+
+msgid "Latest reflections from clients"
+msgstr "Mijozlarning so‘nggi mulohazalari"
+
+msgid "Latest test results"
+msgstr "So‘nggi test natijalari"
+
+msgid "Learners"
+msgstr "O‘quvchilar"
+
+msgid "Lesson"
+msgstr "Dars"
+
+msgid ""
+"Lesson: text (blank line = new paragraph). Reflection: the question. Cards: "
+"one card per line as “front | back”. Situation game: an introduction; "
+"situations are added as questions."
+msgstr ""
+"Dars: matn (bo‘sh qator = yangi xatboshi). Mulohaza: savol. Kartalar: har "
+"qatorda bitta karta «old | orqa». Vaziyat o‘yini: kirish matni; vaziyatlar "
+"savol sifatida qo‘shiladi."
+
+msgid "Log in"
+msgstr "Kirish"
+
+msgid "Log out"
+msgstr "Chiqish"
+
+msgid "Look and placement"
+msgstr "Ko‘rinish va joylashuv"
+
+msgid "Made to keep you motivated"
+msgstr "Motivatsiyangizni saqlash uchun yaratilgan"
+
+msgid "Made with care for your mental well-being"
+msgstr "Ruhiy salomatligingiz uchun g‘amxo‘rlik bilan yaratilgan"
+
+msgid "Main"
+msgstr "Asosiy"
+
+msgid "Main menu"
+msgstr "Asosiy menyu"
+
+msgid "March"
+msgstr "Mart"
+
+msgid "May"
+msgstr "May"
+
+msgid "Menu"
+msgstr "Menyu"
+
+msgid "Messages"
+msgstr "Xabarlar"
+
+msgid "Mint"
+msgstr "Yalpiz"
+
+msgid "Mo"
+msgstr "Du"
+
+msgid "Mon"
+msgstr "Du"
+
+msgid "Mood check-ins"
+msgstr "Kayfiyat belgilari"
+
+msgid "Mood, last 14 days"
+msgstr "Kayfiyat, so‘nggi 14 kun"
+
+msgid "My clients"
+msgstr "Mijozlarim"
+
+msgid "My psychologist"
+msgstr "Mening psixologim"
+
+msgid "My topics"
+msgstr "Mening mavzularim"
+
+msgid "Name"
+msgstr "Ism"
+
+msgid "Name or specialization…"
+msgstr "Ism yoki mutaxassislik…"
+
+msgid "New client requests"
+msgstr "Yangi mijoz so‘rovlari"
+
+msgid "New request"
+msgstr "Yangi so‘rov"
+
+msgid "New topic"
+msgstr "Yangi mavzu"
+
+msgid "Next"
+msgstr "Keyingi"
+
+msgid "Next month"
+msgstr "Keyingi oy"
+
+msgid "Next situation"
+msgstr "Keyingi vaziyat"
+
+msgid "No account yet?"
+msgstr "Hisobingiz yo‘qmi?"
+
+msgid "No answers yet."
+msgstr "Hozircha javoblar yo‘q."
+
+msgid "No clients yet. Complete your profile so clients can find you."
+msgstr ""
+"Hozircha mijozlar yo‘q. Mijozlar sizni topishi uchun profilni to‘ldiring."
+
+msgid "No free slots"
+msgstr "Bo‘sh joy yo‘q"
+
+msgid "No messages yet"
+msgstr "Hozircha xabar yo‘q"
+
+msgid "No psychologist matches these filters yet."
+msgstr "Bu filtrlarga mos psixolog hozircha yo‘q."
+
+msgid ""
+"No reminders. When you pause a topic, choose a time and we will remind you."
+msgstr "Eslatmalar yo‘q. Mavzuni to‘xtatganda vaqt tanlang — biz eslatamiz."
+
+msgid "No results yet."
+msgstr "Hozircha natijalar yo‘q."
+
+msgid "None available"
+msgstr "Hech narsa yo‘q"
+
+msgid "Not bad, but there is a better way."
+msgstr "Yomon emas, lekin yaxshiroq yo‘l bor."
+
+msgid "Nothing found. Try another search."
+msgstr "Hech narsa topilmadi. Boshqacha qidirib ko‘ring."
+
+msgid "Nothing in progress yet."
+msgstr "Hozircha boshlangan mavzu yo‘q."
+
+msgid "November"
+msgstr "Noyabr"
+
+msgid "Ocean"
+msgstr "Okean"
+
+msgid "October"
+msgstr "Oktyabr"
+
+msgid "Okay"
+msgstr "Normal"
+
+msgid ""
+"One option per line as “answer | points”, e.g. “Often | 2”. In a situation "
+"game add feedback: “answer | points | feedback”."
+msgstr ""
+"Har qatorda bitta variant: «javob | ball», masalan «Ko‘pincha | 2». Vaziyat "
+"o‘yinida izoh qo‘shing: «javob | ball | izoh»."
+
+msgid "Only clients can choose a psychologist."
+msgstr "Faqat mijozlar psixolog tanlay oladi."
+
+msgid "Open"
+msgstr "Ochish"
+
+msgid "Open chat"
+msgstr "Chatni ochish"
+
+msgid "Open studio"
+msgstr "Studiyani ochish"
+
+msgid "Or pick date and time"
+msgstr "Yoki sana va vaqtni tanlang"
+
+msgid "Or try a related topic:"
+msgstr "Yoki o‘xshash mavzuni sinab ko‘ring:"
+
+msgid "Password"
+msgstr "Parol"
+
+msgid "Password confirmation"
+msgstr "Parolni tasdiqlang"
+
+msgid "Pause & remind me"
+msgstr "To‘xtatish va eslatish"
+
+msgid "Phone calendar"
+msgstr "Telefon kalendari"
+
+msgid ""
+"Pick a specialist who works with your age and speaks your language, then "
+"talk to them in a private chat."
+msgstr ""
+"Yoshingiz bilan ishlaydigan va tilingizda gaplashadigan mutaxassisni "
+"tanlang, so‘ng shaxsiy chatda suhbatlashing."
+
+msgid "Platform"
+msgstr "Platforma"
+
+msgid "Play"
+msgstr "O‘ynash"
+
+msgid "Please answer every question."
+msgstr "Iltimos, barcha savollarga javob bering."
+
+msgid "Please choose a time in the future."
+msgstr "Iltimos, kelajakdagi vaqtni tanlang."
+
+msgid ""
+"Please enter a correct %(username)s and password. Note that both fields may "
+"be case-sensitive."
+msgstr ""
+"To‘g‘ri %(username)s va parolni kiriting. Ikkala maydon ham katta-kichik "
+"harfni farqlaydi."
+
+msgid "Please tell clients what you specialize in."
+msgstr "Mijozlarga mutaxassisligingizni ko‘rsating."
+
+msgid "Popular topics"
+msgstr "Ommabop mavzular"
+
+msgid "Prefer not to say"
+msgstr "Aytmaslikni afzal ko‘raman"
+
+msgid "Prepared by"
+msgstr "Tayyorlagan"
+
+msgid "Press start and follow the circle"
+msgstr "«Boshlash»ni bosing va doiraga ergashing"
+
+msgid "Previous month"
+msgstr "Oldingi oy"
+
+msgid "Profile"
+msgstr "Profil"
+
+msgid "Profile saved."
+msgstr "Profil saqlandi."
+
+msgid "Progress"
+msgstr "Natija"
+
+msgid "Psychologist"
+msgstr "Psixolog"
+
+msgid "Psychologist dashboard"
+msgstr "Psixolog kabineti"
+
+msgid "Psychologists"
+msgstr "Psixologlar"
+
+msgid "Psychologists and clients"
+msgstr "Psixologlar va mijozlar"
+
+msgid "Psychology made simple"
+msgstr "Psixologiya — oson va qiziqarli"
+
+msgid "Psychology topics, tests and games prepared by real psychologists."
+msgstr "Haqiqiy psixologlar tayyorlagan mavzular, testlar va o‘yinlar."
+
+msgid "Published"
+msgstr "E’lon qilingan"
+
+msgid "Ready?"
+msgstr "Tayyormisiz?"
+
+msgid "Recommend a topic"
+msgstr "Mavzu tavsiya qilish"
+
+msgid "Recommended for you"
+msgstr "Siz uchun tavsiyalar"
+
+msgid "Recommended topic"
+msgstr "Tavsiya etilgan mavzu"
+
+msgid "Reflection"
+msgstr "Mulohaza"
+
+msgid "Reflections"
+msgstr "Mulohazalar"
+
+msgid "Register"
+msgstr "Ro‘yxatdan o‘ting"
+
+msgid "Register to choose"
+msgstr "Tanlash uchun ro‘yxatdan o‘ting"
+
+msgid "Register to start"
+msgstr "Boshlash uchun ro‘yxatdan o‘ting"
+
+msgid "Registration is free and takes a minute."
+msgstr "Ro‘yxatdan o‘tish bepul va bir daqiqa oladi."
+
+msgid "Related topics"
+msgstr "O‘xshash mavzular"
+
+msgid "Remind me"
+msgstr "Eslatish"
+
+msgid "Remind me later"
+msgstr "Keyinroq eslatish"
+
+msgid "Reminder"
+msgstr "Eslatma"
+
+msgid "Reminders"
+msgstr "Eslatmalar"
+
+msgid "Remove"
+msgstr "O‘chirish"
+
+msgid "Request"
+msgstr "So‘rov"
+
+msgid "Request sent"
+msgstr "So‘rov yuborildi"
+
+msgid "Request sent! %(name)s will reply soon."
+msgstr "So‘rov yuborildi! %(name)s tez orada javob beradi."
+
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr ""
+"Majburiy. 150 belgidan oshmasin. Faqat harflar, raqamlar va @/./+/-/_ "
+"belgilari."
+
+msgid "Resume"
+msgstr "Davom ettirish"
+
+msgid "Retake test"
+msgstr "Testni qayta topshirish"
+
+msgid "Review steps"
+msgstr "Qadamlarni ko‘rib chiqish"
+
+msgid "Revoke verification"
+msgstr "Tasdiqni bekor qilish"
+
+msgid "Rose"
+msgstr "Atirgul"
+
+msgid "Ruhiyat profile"
+msgstr "Ruhiyat profili"
+
+msgid "Ruhiyat: continue “%(topic)s”"
+msgstr "Ruhiyat: «%(topic)s» mavzusini davom ettiring"
+
+msgid "Sa"
+msgstr "Sh"
+
+msgid "Sat"
+msgstr "Sh"
+
+msgid "Save"
+msgstr "Saqlash"
+
+msgid "Save and add another"
+msgstr "Saqlash va yana qo‘shish"
+
+msgid "Save and continue editing"
+msgstr "Saqlash va tahrirlashni davom ettirish"
+
+msgid "Save answer"
+msgstr "Javobni saqlash"
+
+msgid "Saved for today. You can change it any time."
+msgstr "Bugun uchun saqlandi. Istalgan vaqtda o‘zgartirishingiz mumkin."
+
+msgid ""
+"Saved! We will remind you on %(when)s. Add it to your phone calendar from "
+"the dashboard."
+msgstr ""
+"Saqlandi! Sizga %(when)s da eslatamiz. Uni kabinetdan telefon kalendariga "
+"qo‘shing."
+
+msgid "Say hello and describe what you would like to work on."
+msgstr "Salomlashing va nima ustida ishlashni xohlashingizni yozing."
+
+msgid "Search topics…"
+msgstr "Mavzularni qidirish…"
+
+msgid "See my result"
+msgstr "Natijamni ko‘rish"
+
+msgid "See my results"
+msgstr "Natijalarimni ko‘rish"
+
+msgid "See your results, reflect, and get reminders to come back."
+msgstr ""
+"Natijalaringizni ko‘ring, mulohaza qiling va qaytish uchun eslatmalar oling."
+
+msgid "Send"
+msgstr "Yuborish"
+
+msgid "Send request"
+msgstr "So‘rov yuborish"
+
+msgid "Seniors (60+)"
+msgstr "Keksalar (60+)"
+
+msgid "September"
+msgstr "Sentyabr"
+
+msgid "Set reminder"
+msgstr "Eslatma qo‘yish"
+
+msgid "Show everyone"
+msgstr "Hammasini ko‘rsatish"
+
+msgid "Sign up as a client or as a psychologist — it takes a minute."
+msgstr ""
+"Mijoz yoki psixolog sifatida ro‘yxatdan o‘ting — bir daqiqa vaqt oladi."
+
+msgid "Situation"
+msgstr "Vaziyat"
+
+msgid "Situation game"
+msgstr "Vaziyat o‘yini"
+
+msgid "Situations will be added soon."
+msgstr "Vaziyatlar tez orada qo‘shiladi."
+
+msgid "Smart reminders"
+msgstr "Aqlli eslatmalar"
+
+msgid "Sorry, I can't take this request right now."
+msgstr "Kechirasiz, hozir bu so‘rovni qabul qila olmayman."
+
+msgid "Specialization"
+msgstr "Mutaxassislik"
+
+msgid "Start"
+msgstr "Boshlash"
+
+msgid "Start for free"
+msgstr "Bepul boshlash"
+
+msgid "Start topic"
+msgstr "Mavzuni boshlash"
+
+msgid "Start with these"
+msgstr "Shulardan boshlang"
+
+msgid "Status"
+msgstr "Holat"
+
+msgid "Step"
+msgstr "Qadam"
+
+msgid "Steps"
+msgstr "Qadamlar"
+
+msgid "Steps done"
+msgstr "Bajarilgan qadamlar"
+
+msgid "Steps will be added soon."
+msgstr "Qadamlar tez orada qo‘shiladi."
+
+msgid "Stopped halfway"
+msgstr "Yarimda to‘xtaganlar"
+
+msgid ""
+"Stopped halfway? Pick a time, add it to your calendar, and we will bring you"
+" back."
+msgstr ""
+"Yarim yo‘lda to‘xtadingizmi? Vaqt tanlang, kalendarga qo‘shing — biz sizni "
+"qaytaramiz."
+
+msgid "Studio (admin panel)"
+msgstr "Studiya (admin panel)"
+
+msgid "Su"
+msgstr "Ya"
+
+msgid "Sun"
+msgstr "Ya"
+
+msgid "Sunset"
+msgstr "Shafaq"
+
+msgid "Supportive feedback"
+msgstr "Qo‘llab-quvvatlovchi fikr"
+
+msgid "Switch theme"
+msgstr "Mavzuni almashtirish"
+
+msgid "Take a break — we'll remind you"
+msgstr "Dam oling — biz eslatamiz"
+
+msgid ""
+"Take tests to learn about yourself, and play games that help you find a way "
+"through your problems."
+msgstr ""
+"O‘zingizni bilish uchun testlardan o‘ting va muammolaringizga yechim "
+"topishga yordam beradigan o‘yinlarni o‘ynang."
+
+msgid "Take the test"
+msgstr "Testni boshlash"
+
+msgid "Tap each card to turn it over."
+msgstr "Har bir kartani aylantirish uchun bosing."
+
+msgid "Teenagers (13–17)"
+msgstr "O‘smirlar (13–17)"
+
+msgid "Tell briefly what worries you. Only the psychologist will see it."
+msgstr ""
+"Sizni nima bezovta qilayotganini qisqacha yozing. Buni faqat psixolog "
+"ko‘radi."
+
+msgid "Test"
+msgstr "Test"
+
+msgid "Test completed"
+msgstr "Test yakunlandi"
+
+msgid "Test results"
+msgstr "Test natijalari"
+
+msgid "Tests"
+msgstr "Testlar"
+
+msgid "Tests & games"
+msgstr "Testlar va o‘yinlar"
+
+msgid "Tests and games will appear here soon."
+msgstr "Testlar va o‘yinlar tez orada paydo bo‘ladi."
+
+msgid "Tests taken"
+msgstr "Topshirilgan testlar"
+
+msgid "Tests with clear results"
+msgstr "Aniq natijali testlar"
+
+msgid "Th"
+msgstr "Pa"
+
+msgid "Thanks! Your mood is saved."
+msgstr "Rahmat! Kayfiyatingiz saqlandi."
+
+msgid ""
+"The client has not started any topic yet. Recommend one with the 📚 button."
+msgstr ""
+"Mijoz hali birorta mavzuni boshlamagan. 📚 tugmasi orqali tavsiya qiling."
+
+msgid "The client's progress becomes visible after you accept the request."
+msgstr "So‘rovni qabul qilganingizdan so‘ng mijoz natijalari ko‘rinadi."
+
+msgid "The conversation was closed."
+msgstr "Suhbat yopildi."
+
+msgid "The password is too similar to the %(verbose_name)s."
+msgstr "Parol «%(verbose_name)s» ga juda o‘xshash."
+
+msgid "The two password fields didn’t match."
+msgstr "Parollar mos kelmadi."
+
+msgid "Think again — this may make things harder."
+msgstr "Yana o‘ylab ko‘ring — bu vaziyatni qiyinlashtirishi mumkin."
+
+msgid "Thinking"
+msgstr "O‘ylanmoqda"
+
+msgid "This conversation is closed."
+msgstr "Bu suhbat yopilgan."
+
+msgid "This evening"
+msgstr "Bugun kechqurun"
+
+msgid "This field is required."
+msgstr "Bu maydon to‘ldirilishi shart."
+
+msgid "This is your psychologist"
+msgstr "Bu sizning psixologingiz"
+
+msgid "This page got lost. Let's find your way back."
+msgstr "Bu sahifa adashib qoldi. Keling, ortga yo‘l topamiz."
+
+msgid "This password is entirely numeric."
+msgstr "Bu parol faqat raqamlardan iborat."
+
+msgid "This password is too common."
+msgstr "Bu parol juda oddiy."
+
+msgid ""
+"This platform does not replace professional help. If you are in danger, call"
+" local emergency services right away."
+msgstr ""
+"Bu platforma mutaxassis yordamining o‘rnini bosmaydi. Agar xavf ostida "
+"bo‘lsangiz, darhol tez yordam xizmatiga qo‘ng‘iroq qiling."
+
+msgid "This psychologist is not accepting new clients right now."
+msgstr "Bu psixolog hozir yangi mijozlarni qabul qilmayapti."
+
+msgid ""
+"This psychologist is not accepting new clients right now. Try another "
+"specialist."
+msgstr ""
+"Bu psixolog hozir yangi mijozlarni qabul qilmayapti. Boshqa mutaxassisni "
+"tanlang."
+
+msgid "This topic has no steps yet."
+msgstr "Bu mavzuda hali qadamlar yo‘q."
+
+msgid "Thoughtful choices"
+msgstr "O‘ylangan tanlovlar"
+
+msgid "Thu"
+msgstr "Pa"
+
+msgid "Time to come back!"
+msgstr "Qaytish vaqti keldi!"
+
+msgid "Tomorrow"
+msgstr "Ertaga"
+
+msgid "Topic"
+msgstr "Mavzu"
+
+msgid "Topic completed"
+msgstr "Mavzu tugatildi"
+
+msgid "Topics"
+msgstr "Mavzular"
+
+msgid "Topics and progress"
+msgstr "Mavzular va natijalar"
+
+msgid "Topics by this psychologist"
+msgstr "Shu psixolog mavzulari"
+
+msgid "Topics completed"
+msgstr "Tugatilgan mavzular"
+
+msgid "Topics will appear here soon."
+msgstr "Mavzular tez orada paydo bo‘ladi."
+
+msgid ""
+"Topics, tests and games prepared by psychologists — learn to understand "
+"yourself step by step."
+msgstr ""
+"Psixologlar tayyorlagan mavzular, testlar va o‘yinlar — o‘zingizni qadamma-"
+"qadam tushunishni o‘rganing."
+
+msgid "Tu"
+msgstr "Se"
+
+msgid "Tue"
+msgstr "Se"
+
+msgid "Understand yourself"
+msgstr "O‘zingizni tushuning"
+
+msgid "Upcoming reminders"
+msgstr "Yaqin eslatmalar"
+
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+msgid "Uzbek, Karakalpak, Russian and English — switch any time."
+msgstr "O‘zbek, qoraqalpoq, rus va ingliz — istalgan vaqtda almashtiring."
+
+msgid "Verified"
+msgstr "Tasdiqlangan"
+
+msgid "Verified psychologist"
+msgstr "Tasdiqlangan psixolog"
+
+msgid "Verified psychologists can publish topics in the studio."
+msgstr "Tasdiqlangan psixologlar studiyada mavzu e’lon qila oladi."
+
+msgid "Verify selected psychologists (studio access)"
+msgstr "Tanlangan psixologlarni tasdiqlash (studiyaga kirish)"
+
+msgid "Very bad"
+msgstr "Juda yomon"
+
+msgid "View on site"
+msgstr "Saytda ko‘rish"
+
+msgid "Violet"
+msgstr "Binafsha"
+
+msgid "Waiting for reply"
+msgstr "Javob kutilmoqda"
+
+msgid "Waiting for the psychologist to accept"
+msgstr "Psixolog qabul qilishi kutilmoqda"
+
+msgid "We"
+msgstr "Ch"
+
+msgid "Wed"
+msgstr "Ch"
+
+msgid "Welcome back"
+msgstr "Xush kelibsiz"
+
+msgid "Welcome to Ruhiyat! Choose your first topic."
+msgstr "Ruhiyatga xush kelibsiz! Birinchi mavzuingizni tanlang."
+
+msgid ""
+"Welcome! An administrator will verify your profile so you can publish "
+"topics."
+msgstr ""
+"Xush kelibsiz! Administrator profilingizni tasdiqlagach, mavzular joylay "
+"olasiz."
+
+msgid "Well done!"
+msgstr "Barakalla!"
+
+msgid "What to learn next"
+msgstr "Keyin nimani o‘rganish mumkin"
+
+msgid "What you will achieve"
+msgstr "Nimaga erishasiz"
+
+msgid "When clients choose you, their requests will appear here."
+msgstr "Mijozlar sizni tanlaganda, so‘rovlari shu yerda paydo bo‘ladi."
+
+msgid ""
+"When the psychologist accepts, they will see your progress on the platform."
+msgstr "Psixolog qabul qilgach, platformadagi natijalaringizni ko‘radi."
+
+msgid "Why Ruhiyat"
+msgstr "Nega Ruhiyat"
+
+msgid "Works with"
+msgstr "Kimlar bilan ishlaydi"
+
+msgid "Write a few words — it is only for you and your psychologist."
+msgstr "Bir necha so‘z yozing — bu faqat siz va psixologingiz uchun."
+
+msgid "Write a message…"
+msgstr "Xabar yozing…"
+
+msgid "Write honestly — only you and your psychologist will see it."
+msgstr "Samimiy yozing — buni faqat siz va psixologingiz ko‘radi."
+
+msgid "Years of experience"
+msgstr "Tajriba (yil)"
+
+msgid "You"
+msgstr "Siz"
+
+msgid "You can already write in the chat while you wait for a reply."
+msgstr "Javobni kutayotganda chatga yozishingiz mumkin."
+
+msgid "You completed the topic"
+msgstr "Siz mavzuni tugatdingiz:"
+
+msgid "You have no conversations yet. Choose a psychologist to start."
+msgstr "Sizda hali suhbatlar yo‘q. Boshlash uchun psixolog tanlang."
+
+msgid "You have no topics yet."
+msgstr "Sizda hali mavzular yo‘q."
+
+msgid "You have used today's AI feedback limit. Your answer was saved."
+msgstr "Bugungi AI fikr limitidan foydalandingiz. Javobingiz saqlandi."
+
+msgid "You stopped halfway"
+msgstr "Siz yarim yo‘lda to‘xtadingiz"
+
+msgid "You went through every situation!"
+msgstr "Siz barcha vaziyatlardan o‘tdingiz!"
+
+msgid "Your age group"
+msgstr "Yosh guruhingiz"
+
+msgid "Your answer"
+msgstr "Sizning javobingiz"
+
+msgid "Your password can’t be a commonly used password."
+msgstr "Parol keng tarqalgan parol bo‘lmasin."
+
+msgid "Your password can’t be entirely numeric."
+msgstr "Parol faqat raqamlardan iborat bo‘lmasin."
+
+msgid "Your password can’t be too similar to your other personal information."
+msgstr "Parol shaxsiy ma’lumotlaringizga juda o‘xshash bo‘lmasin."
+
+msgid "Your path"
+msgstr "Sizning yo‘lingiz"
+
+msgid "Your profile is awaiting verification"
+msgstr "Profilingiz tasdiqlanishini kutmoqda"
+
+msgid "Your progress"
+msgstr "Sizning natijangiz"
+
+msgid "Your progress is saved. Choose when you want to come back to:"
+msgstr "Natijangiz saqlandi. Qachon qaytishni xohlaysiz:"
+
+msgid "Your psychologist"
+msgstr "Sizning psixologingiz"
+
+msgid "Your result"
+msgstr "Natijangiz"
+
+msgid "about"
+msgstr "o‘zi haqida"
+
+msgid "accepts new clients"
+msgstr "yangi mijozlarni qabul qiladi"
+
+msgid "age group"
+msgstr "yosh guruhi"
+
+msgid "answer"
+msgstr "javob"
+
+msgid "answer options"
+msgstr "javob variantlari"
+
+msgid "categories"
+msgstr "kategoriyalar"
+
+msgid "category"
+msgstr "kategoriya"
+
+msgid "clients"
+msgstr "mijoz"
+
+msgid "client–psychologist link"
+msgstr "mijoz–psixolog bog‘lanishi"
+
+msgid "color"
+msgstr "rang"
+
+msgid "consultation languages"
+msgstr "maslahat tillari"
+
+msgid "content"
+msgstr "mazmun"
+
+msgid "cycles"
+msgstr "sikllar"
+
+msgid "description"
+msgstr "tavsif"
+
+msgid "done"
+msgstr "bajarildi"
+
+msgid "duration (minutes)"
+msgstr "davomiyligi (daqiqa)"
+
+msgid "email address"
+msgstr "email manzil"
+
+msgid "enrollment"
+msgstr "yozilish"
+
+msgid "enrollments"
+msgstr "yozilishlar"
+
+msgid "exhale (s)"
+msgstr "nafas chiqarish (s)"
+
+msgid "hold (s)"
+msgstr "ushlab turish (s)"
+
+msgid "icon (emoji)"
+msgstr "belgi (emoji)"
+
+msgid "inhale (s)"
+msgstr "nafas olish (s)"
+
+msgid "level"
+msgstr "daraja"
+
+msgid "maximum"
+msgstr "maksimum"
+
+msgid "message"
+msgstr "xabar"
+
+msgid "min"
+msgstr "daq"
+
+msgid "mood"
+msgstr "kayfiyat"
+
+msgid "mood check-in"
+msgstr "kayfiyat belgisi"
+
+msgid "name"
+msgstr "nomi"
+
+msgid "note"
+msgstr "izoh"
+
+msgid "order"
+msgstr "tartib"
+
+msgid "psychologist"
+msgstr "psixolog"
+
+msgid "published"
+msgstr "e’lon qilingan"
+
+msgid "question"
+msgstr "savol"
+
+msgid "questions"
+msgstr "savol"
+
+msgid "reflection"
+msgstr "mulohaza"
+
+msgid "reflections"
+msgstr "mulohazalar"
+
+msgid "remind at"
+msgstr "eslatish vaqti"
+
+msgid "reminder"
+msgstr "eslatma"
+
+msgid "reminders"
+msgstr "eslatmalar"
+
+msgid "result"
+msgstr "natija"
+
+msgid "result: high score"
+msgstr "natija: yuqori ball"
+
+msgid "result: low score"
+msgstr "natija: past ball"
+
+msgid "result: medium score"
+msgstr "natija: o‘rta ball"
+
+msgid "role"
+msgstr "rol"
+
+msgid "score"
+msgstr "ball"
+
+msgid "short summary"
+msgstr "qisqa tavsif"
+
+msgid "situations"
+msgstr "vaziyat"
+
+msgid "slug"
+msgstr "slug"
+
+msgid "specialization"
+msgstr "mutaxassislik"
+
+msgid "status"
+msgstr "holat"
+
+msgid "step"
+msgstr "qadam"
+
+msgid "step by step"
+msgstr "qadamma-qadam"
+
+msgid "steps"
+msgstr "qadam"
+
+msgid "tags"
+msgstr "teglar"
+
+msgid "tap"
+msgstr "bosing"
+
+msgid "test question"
+msgstr "test savoli"
+
+msgid "test questions"
+msgstr "test savollari"
+
+msgid "test result"
+msgstr "test natijasi"
+
+msgid "test results"
+msgstr "test natijalari"
+
+msgid "title"
+msgstr "sarlavha"
+
+msgid "topic"
+msgstr "mavzu"
+
+msgid "topics"
+msgstr "mavzu"
+
+msgid "type"
+msgstr "turi"
+
+msgid "user"
+msgstr "foydalanuvchi"
+
+msgid "username"
+msgstr "foydalanuvchi nomi"
+
+msgid "verified psychologist"
+msgstr "tasdiqlangan psixolog"
+
+msgid "what the client wants help with"
+msgstr "mijoz nimada yordam so‘raydi"
+
+msgid "what you will achieve"
+msgstr "nimaga erishiladi"
+
+msgid "works with ages"
+msgstr "ishlaydigan yoshlar"
+
+msgid "years of experience"
+msgstr "tajriba (yil)"
+
+msgid "yrs"
+msgstr "yil"
+
+msgid "Your password must contain at least %(min_length)d character."
+msgid_plural "Your password must contain at least %(min_length)d characters."
+msgstr[0] "Parol kamida %(min_length)d ta belgidan iborat bo‘lsin."
+
+msgid "This password is too short. It must contain at least %d character."
+msgid_plural ""
+"This password is too short. It must contain at least %d characters."
+msgstr[0] "Parol juda qisqa. Kamida %d ta belgi bo‘lishi kerak."

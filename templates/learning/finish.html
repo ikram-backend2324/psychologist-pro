@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{% translate "Topic completed" %}{% endblock %}
+{% block confetti %}data-auto="1"{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="finish-hero">
+    <span class="trophy">🏆</span>
+    <h1 class="reveal">{% translate "Congratulations!" %}</h1>
+    <p class="muted reveal" style="font-size:1.15rem;--d:.1s">{% translate "You completed the topic" %} <b style="color:var(--text)">{{ topic.title }}</b></p>
+    <div class="row reveal" style="justify-content:center;--d:.2s">
+      <a href="{% url 'accounts:dashboard' %}" class="btn btn-primary btn-lg">{% translate "Go to dashboard" %}</a>
+      {% with first=topic.steps.first %}{% if first %}<a href="{% url 'learning:step' topic.slug first.order %}" class="btn btn-lg">↻ {% translate "Review steps" %}</a>{% endif %}{% endwith %}
+    </div>
+  </div>
+
+  {% if results or reflections %}
+    <div class="grid grid-2" style="margin-top:20px">
+      {% for r in results %}
+        <div class="card reveal band-{{ r.band }}">
+          <div class="row" style="flex-wrap:nowrap">
+            <div class="gauge" style="--p: {{ r.percent }};width:96px;height:96px;margin:0;flex:none"><b style="font-size:1.2rem">{{ r.percent }}%</b></div>
+            <div><span class="chip chip-primary">📝 {% translate "Test" %}</span><h3 style="margin:8px 0 4px">{{ r.step.title }}</h3><span class="muted small">{{ r.score }} / {{ r.max_score }}</span></div>
+          </div>
+        </div>
+      {% endfor %}
+      {% for r in reflections %}
+        <div class="card reveal"><span class="chip chip-primary">✍️ {% translate "Reflection" %}</span><h3 style="margin:10px 0">{{ r.step.title }}</h3><div class="quote small">{{ r.text|truncatewords:40 }}</div></div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if related %}
+    <section class="section" style="padding-bottom:40px">
+      <h2 class="reveal">{% translate "What to learn next" %}</h2>
+      <div class="grid grid-3">{% for topic in related %}{% include "partials/topic_card.html" %}{% endfor %}</div>
+    </section>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "base.html" %}{% load i18n %}
+{% block title %}{{ topic.title }}{% endblock %}
+{% block content %}
+<div class="container">
+  <section class="topic-hero grad g-{{ topic.color }} reveal">
+    <span class="deco d1"></span><span class="deco d2"></span>
+    <div class="inner">
+      <div>
+        <div class="row" style="margin-bottom:18px">
+          <span class="chip">{{ topic.category.icon }} {{ topic.category.name }}</span>
+          <span class="chip">⏱ {{ topic.duration_minutes }} {% translate "min" %}</span>
+          <span class="chip">📈 {{ topic.get_level_display }}</span>
+          <span class="chip">👥 {{ learners }}</span>
+        </div>
+        <h1 style="font-size:clamp(1.8rem,4.4vw,3.2rem)">{{ topic.title }}</h1>
+        <p>{{ topic.summary }}</p>
+        {% if not topic.is_published %}<span class="chip">🚧 {% translate "Draft — only you can see it" %}</span>{% endif %}
+      </div>
+      <div class="big-emoji" aria-hidden="true">{{ topic.icon }}</div>
+    </div>
+  </section>
+
+  <div class="detail-layout">
+    <div class="stack">
+      {% if topic.goal %}
+        <div class="card reveal"><h3 class="panel-title">🎯 {% translate "What you will achieve" %}</h3><p style="margin:0;font-size:1.06rem">{{ topic.goal }}</p></div>
+      {% endif %}
+      {% if topic.description %}
+        <div class="card prose reveal"><h3 class="panel-title">📖 {% translate "About this topic" %}</h3>{{ topic.description|linebreaks }}</div>
+      {% endif %}
+      <div class="card reveal">
+        <h3 class="panel-title">🪜 {% translate "Your path" %}</h3>
+        <ol class="timeline">
+          {% for s in steps %}
+            <li class="{% if s.id in done_ids %}done{% endif %}">
+              <span class="dot">{% if s.id in done_ids %}✓{% elif s.kind == 'quiz' %}📝{% elif s.kind == 'reflection' %}✍️{% elif s.kind == 'breathing' %}🌬️{% elif s.kind == 'cards' %}🃏{% elif s.kind == 'scenario' %}🧭{% else %}📖{% endif %}</span>
+              <div style="flex:1"><div class="kind">{{ s.get_kind_display }}</div><b>{{ s.title }}</b></div>
+              {% if user.is_authenticated and topic.is_published %}<a class="btn btn-sm btn-ghost" href="{% url 'learning:step' topic.slug s.order %}" aria-label="{% translate 'Open' %}: {{ s.title }}">→</a>{% endif %}
+            </li>
+          {% empty %}
+            <li class="muted">{% translate "Steps will be added soon." %}</li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+
+    <aside class="sticky stack">
+      <div class="card reveal">
+        {% if enrollment %}
+          <div class="row" style="margin-bottom:16px">
+            <div class="ring-progress" style="--p: {{ enrollment.progress_percent }}"><span>{{ enrollment.progress_percent }}%</span></div>
+            <div><b>{% if enrollment.status == 'completed' %}{% translate "Completed!" %}{% else %}{% translate "Your progress" %}{% endif %}</b><div class="muted small">{% translate "Last activity" %}: {{ enrollment.last_activity|date:"d.m.Y H:i" }}</div></div>
+          </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+          {% if enrollment.status == 'completed' %}
+            <a href="{% url 'learning:finish' topic.slug %}" class="btn btn-primary btn-lg btn-block">🏆 {% translate "See my results" %}</a>
+          {% else %}
+            <form method="post" action="{% url 'learning:start' topic.slug %}">{% csrf_token %}
+              <button class="btn btn-primary btn-lg btn-block" {% if not steps %}disabled{% endif %}>{% if enrollment %}{% translate "Continue" %}{% else %}{% translate "Start topic" %}{% endif %} →</button>
+            </form>
+            {% if enrollment %}<button class="btn btn-block" style="margin-top:10px" data-dialog-open="pause-{{ topic.pk }}">🔔 {% translate "Remind me later" %}</button>{% include "learning/_pause_dialog.html" %}{% endif %}
+          {% endif %}
+        {% else %}
+          <a href="{% url 'accounts:register' %}" class="btn btn-primary btn-lg btn-block">{% translate "Register to start" %} →</a>
+          <p class="muted small center" style="margin:12px 0 0">{% translate "Registration is free and takes a minute." %}</p>
+        {% endif %}
+      </div>
+      <div class="card reveal">
+        <p class="small muted" style="margin:0 0 10px;font-weight:700">{% translate "Prepared by" %}</p>
+        <div class="row" style="flex-wrap:nowrap">
+          <span class="avatar avatar-lg g-{{ topic.author.avatar_gradient }}" style="width:56px;height:56px;font-size:1.1rem">{{ topic.author.initials }}</span>
+          <div><b>{{ topic.author.display_name }}</b><div class="small" style="color:var(--primary);font-weight:700">{{ topic.author.specialization }}</div>{% if topic.author.is_verified %}<span class="verified">✔ {% translate "Verified" %}</span>{% endif %}</div>
+        </div>
+        {% if topic.author.bio %}<p class="muted small" style="margin:12px 0 0">{{ topic.author.bio|truncatewords:30 }}</p>{% endif %}
+      </div>
+    </aside>
+  </div>
+
+  {% if related %}
+    <section class="section" style="padding-bottom:40px">
+      <h2 class="reveal">{% translate "Related topics" %}</h2>
+      <div class="grid grid-3">{% for topic in related %}{% include "partials/topic_card.html" %}{% endfor %}</div>
+    </section>
+  {% endif %}
+</div>
+{% endblock %}

@@ -39,4 +39,5 @@ services:
 databases:
   - name: ruhiyat-db
     plan: free
+    region: frankfurt   # must match the web service: internal database hostnames only resolve within one region
     databaseName: ruhiyat

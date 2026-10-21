@@ -70,6 +70,8 @@ def month_grid(request, user):
     today = timezone.localdate()
     try:
         year, month = (int(x) for x in request.GET.get("month", "").split("-"))
+        if not 2000 <= year <= 2100:  # keeps prev/next month arithmetic far from date limits
+            raise ValueError
         first = date(year, month, 1)
     except ValueError:
         first = today.replace(day=1)

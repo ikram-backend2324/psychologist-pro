@@ -2,13 +2,13 @@
 
 AGREE_OPTIONS = (
     "Ha, bu men haqimda | 2\nQisman | 1\nYo‘q | 0",
-    "Awa, bul men haqqımda | 2\nBirazı | 1\nYaq | 0",
+    "Awa, bul men haqqımda | 2\nBir az | 1\nYaq | 0",
     "Да, это про меня | 2\nОтчасти | 1\nНет | 0",
     "Yes, that's me | 2\nPartly | 1\nNo | 0",
 )
 
 EXTRA_CATEGORIES = [
-    ("self-discovery", "🔎", "amber", ("O‘zini kashf etish", "Ózin ashıw", "Самопознание", "Self-discovery")),
+    ("self-discovery", "🔎", "amber", ("O‘zini kashf etish", "Ózin tanıw", "Самопознание", "Self-discovery")),
 ]
 
 EXTRA_PSYCHOLOGISTS = [
@@ -57,7 +57,7 @@ EXTRA_TOPICS = [
         "steps": [
             {
                 "kind": "lesson",
-                "title": ("Ichki energiya qayerdan keladi?", "Ishki energiya qaydan keledi?", "Откуда берётся энергия?", "Where does your energy come from?"),
+                "title": ("Ichki energiya qayerdan keladi?", "Energiya qaydan keledi?", "Откуда берётся энергия?", "Where does your energy come from?"),
                 "body": (
                     "Introvertlar yolg‘izlikda kuch to‘playdi, ekstravertlar esa odamlar orasida. Ikkalasi ham normal — yaxshi yoki yomon xarakter yo‘q.\n\nO‘zingizni bilsangiz, charchoqni oldindan sezasiz va o‘zingizga mos dam olishni tanlaysiz.",
                     "Introvertler jalǵızlıqta kúsh toplaydı, ekstravertler bolsa adamlar arasında. Ekewi de qalıptı — jaqsı yamasa jaman minez joq.\n\nÓzińizdi bilseńiz, sharshawdı aldınnan sezesiz hám ózińizge say dem alıwdı tańlaysız.",
@@ -72,7 +72,7 @@ EXTRA_TOPICS = [
                 "results": (
                     (
                         "Siz ko‘proq introvertsiz. Sokin dam olish, kitob va yaqin do‘st bilan suhbat sizga kuch beradi. Bu sizning kuchingiz: chuqur o‘ylaysiz va yaxshi tinglaysiz.",
-                        "Siz kóbirek introvertsiz. Tınısh dem alıw, kitap hám jaqın dos penen sáwbet sizge kúsh beredi. Bul sizdiń kúshińiz: tereń oylaysız hám jaqsı tińlaysız.",
+                        "Siz kóbirek introvertsiz. Tınısh dem alıw, kitap hám jaqın dos penen sáwbet sizge kúsh beredi. Bul sizdiń kúshińiz: tereń oylaysız hám jaqsı tıńlaysız.",
                         "Вы скорее интроверт. Вам дают силы тихий отдых, книги и разговор с близким другом. Это ваша сила: вы глубоко думаете и хорошо слушаете.",
                         "You lean introvert. Quiet rest, books and talks with a close friend recharge you. That's your strength: you think deeply and listen well.",
                     ),
@@ -92,8 +92,8 @@ EXTRA_TOPICS = [
                 "questions": [
                     (("Katta davradan keyin o‘zimni quvvatga to‘lgan his qilaman.", "Úlken jıyınnan keyin ózimdi quwatqa tolǵan sezemen.", "После большой компании я чувствую прилив сил.", "After a big gathering I feel full of energy."), AGREE_OPTIONS),
                     (("Notanish odamlar bilan oson gaplashaman.", "Tanıs emes adamlar menen ańsat sóylesemen.", "Мне легко заговорить с незнакомыми людьми.", "I easily talk to strangers."), AGREE_OPTIONS),
-                    (("O‘ylashdan ko‘ra avval gapirib yuboraman.", "Oylawdan góre aldın aytıp jiberemen.", "Я чаще сначала говорю, потом думаю.", "I tend to speak first and think later."), AGREE_OPTIONS),
-                    (("Dam olish kunini do‘stlar bilan o‘tkazishni yoqtiraman.", "Dem alıs kúnin doslar menen ótkeriwdi jaqsı kóremen.", "Я люблю проводить выходные с друзьями.", "I like spending weekends with friends."), AGREE_OPTIONS),
+                    (("O‘ylashdan ko‘ra avval gapirib yuboraman.", "Kóbinese áweli aytıp, keyin oylayman.", "Я чаще сначала говорю, потом думаю.", "I tend to speak first and think later."), AGREE_OPTIONS),
+                    (("Dam olish kunini do‘stlar bilan o‘tkazishni yoqtiraman.", "Dem alıs kúnlerin doslar menen ótkeriwdi jaqsı kóremen.", "Я люблю проводить выходные с друзьями.", "I like spending weekends with friends."), AGREE_OPTIONS),
                     (("Diqqat markazida bo‘lish menga yoqadi.", "Dıqqat orayında bolıw maǵan unaydı.", "Мне нравится быть в центре внимания.", "I enjoy being the centre of attention."), AGREE_OPTIONS),
                 ],
             },
@@ -190,7 +190,7 @@ EXTRA_TOPICS = [
                         ),
                         (
                             "Eshikni qarsillatib yopib, xonamga kirib ketaman | 0 | Hissiyot tushunarli, lekin bu suhbat imkoniyatini yopadi.\nNega xavotir olishlarini so‘rayman va kelishuv taklif qilaman: soat 21:00 gacha qaytaman | 2 | Juda yaxshi! Ularning xavotirini tushunish va kelishuv taklif qilish ishonchni oshiradi.\nYashirincha baribir chiqib ketaman | 0 | Bu ishonchni buzadi va xavfli bo‘lishi mumkin.",
-                            "Esikti qattı jawıp, bólmeme kirip ketemen | 0 | Sezim túsinikli, biraq bul sáwbet imkaniyatın jabadı.\nNe ushın qáweterlenetuǵının sorayman hám kelisim usınaman: saat 21:00 ge shekem qaytaman | 2 | Júdá jaqsı! Olardıń qáweterin túsiniw hám kelisim usınıw isenimdi asıradı.\nJasırın túrde bári bir shıǵıp ketemen | 0 | Bul isenimdi buzadı hám qáwipli bolıwı múmkin.",
+                            "Esikti qattı jawıp, bólmeme kirip ketemen | 0 | Sezim túsinikli, biraq bul sáwbet imkaniyatın jabadı.\nNe ushın qáweterlenetuǵının sorayman hám kelisim usınaman: saat 21:00-ge shekem qaytaman | 2 | Júdá jaqsı! Olardıń qáweterin túsiniw hám kelisim usınıw isenimdi asıradı.\nJasırın túrde bári bir shıǵıp ketemen | 0 | Bul isenimdi buzadı hám qáwipli bolıwı múmkin.",
                             "Хлопну дверью и уйду в комнату | 0 | Чувства понятны, но так закрывается возможность договориться.\nСпрошу, почему они волнуются, и предложу договор: вернусь до 21:00 | 2 | Очень хорошо! Понимание их тревоги и компромисс укрепляют доверие.\nВсё равно тайком уйду | 0 | Это разрушает доверие и может быть опасно.",
                             "Slam the door and go to my room | 0 | The feeling is understandable, but it closes the door to talking.\nAsk why they worry and offer a deal: I'll be back by 9 pm | 2 | Very good! Understanding their worry and offering a compromise builds trust.\nSneak out anyway | 0 | This breaks trust and can be dangerous.",
                         ),

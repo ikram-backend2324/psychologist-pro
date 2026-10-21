@@ -68,13 +68,13 @@ TOPICS = [
         "title": ("Odamlar bilan qanday muloqot qilish kerak", "Adamlar menen qalay sóylesiw kerek", "Как общаться с людьми", "How to communicate with people"),
         "summary": (
             "Faol tinglash, aniq gapirish va ishonchli muloqotning amaliy sirlari.",
-            "Belsendi tińlaw, anıq sóylew hám isenimli qarım-qatnastıń ámeliy sırları.",
+            "Belsendi tıńlaw, anıq sóylew hám isenimli qarım-qatnastıń ámeliy sırları.",
             "Практические секреты активного слушания, ясной речи и уверенного общения.",
             "Practical secrets of active listening, clear speech and confident conversation.",
         ),
         "goal": (
             "Suhbatdoshingizni tinglash va o‘z fikringizni xotirjam ifodalashni o‘rganasiz.",
-            "Sóylesiwshińizdi tińlawdı hám óz pikirińizdi tınısh bildiriwdi úyrenesiz.",
+            "Sóylesiwshińizdi tıńlawdı hám óz pikirińizdi tınısh bildiriwdi úyrenesiz.",
             "Вы научитесь слушать собеседника и спокойно выражать свои мысли.",
             "You will learn to listen to others and express your thoughts calmly.",
         ),
@@ -87,10 +87,10 @@ TOPICS = [
         "steps": [
             {
                 "kind": "lesson",
-                "title": ("Faol tinglash nima?", "Belsendi tińlaw degen ne?", "Что такое активное слушание?", "What is active listening?"),
+                "title": ("Faol tinglash nima?", "Belsendi tıńlaw degen ne?", "Что такое активное слушание?", "What is active listening?"),
                 "body": (
                     "Ko‘pchilik javob berish uchun tinglaydi, tushunish uchun emas. Faol tinglash — suhbatdoshga to‘liq e’tibor berish.\n\nUch oddiy qadam: ko‘zga qarang, gapni bo‘lmang, eshitganingizni o‘z so‘zlaringiz bilan qaytaring: «Demak, siz ... demoqchisiz».\n\nBu odamga uni tushunishganini his qildiradi va nizolarni kamaytiradi.",
-                    "Kópshilik juwap beriw ushın tińlaydı, túsiniw ushın emes. Belsendi tińlaw — sóylesiwshige tolıq dıqqat qaratıw.\n\nÚsh ápiwayı qádem: kózge qarań, sózdi bólmeń, esitkenińizdi óz sózlerińiz benen qaytalań: «Demek, siz ... demekshisiz».\n\nBul adamǵa onı túsingenin sezdiredi hám kelispewshilikti azaytadı.",
+                    "Kópshilik juwap beriw ushın tıńlaydı, túsiniw ushın emes. Belsendi tıńlaw — sóylesiwshige tolıq dıqqat qaratıw.\n\nÚsh ápiwayı qádem: kózge qarań, sózdi bólmeń, esitkenińizdi óz sózlerińiz benen qaytalań: «Demek, siz ... demekshisiz».\n\nBul adamǵa onı túsingenin sezdiredi hám kelispewshilikti azaytadı.",
                     "Большинство слушает, чтобы ответить, а не чтобы понять. Активное слушание — это полное внимание к собеседнику.\n\nТри простых шага: смотрите в глаза, не перебивайте, перескажите услышанное своими словами: «То есть вы хотите сказать...».\n\nТак человек чувствует, что его поняли, и конфликтов становится меньше.",
                     "Most people listen to reply, not to understand. Active listening means giving the other person your full attention.\n\nThree simple steps: keep eye contact, don't interrupt, and repeat what you heard in your own words: “So you mean...”.\n\nThis makes people feel understood and reduces conflict.",
                 ),
@@ -107,7 +107,7 @@ TOPICS = [
                 "results": (
                     (
                         "Muloqotda hali qiyinchiliklar bor — bu normal. Har kuni bitta suhbatda faol tinglashni mashq qiling.",
-                        "Qarım-qatnasta ele qıyınshılıqlar bar — bul qalıptı jaǵday. Hár kúni bir sáwbette belsendi tińlawdı shınıqtırıń.",
+                        "Qarım-qatnasta ele qıyınshılıqlar bar — bul qalıptı jaǵday. Hár kúni bir sáwbette belsendi tıńlawdı shınıqtırıń.",
                         "В общении пока есть трудности — это нормально. Тренируйте активное слушание хотя бы в одном разговоре в день.",
                         "Communication is still a challenge — that's normal. Practise active listening in at least one conversation a day.",
                     ),
@@ -119,13 +119,13 @@ TOPICS = [
                     ),
                     (
                         "Ajoyib! Siz yaxshi tinglovchisiz. Ko‘nikmalaringizni boshqalarga ham o‘rgating.",
-                        "Ájayıp! Siz jaqsı tińlawshısız. Kónlikpelerińizdi basqalarǵa da úyretiń.",
+                        "Ájayıp! Siz jaqsı tıńlawshısız. Kónlikpelerińizdi basqalarǵa da úyretiń.",
                         "Отлично! Вы хороший слушатель. Делитесь своими навыками с другими.",
                         "Excellent! You are a great listener. Share your skills with others.",
                     ),
                 ),
                 "questions": [
-                    (("Suhbatdoshning gapini oxirigacha tinglayman.", "Sóylesiwshiniń sózin aqırına shekem tińlayman.", "Я дослушиваю собеседника до конца.", "I listen to the other person until they finish."), FREQ_OPTIONS),
+                    (("Suhbatdoshning gapini oxirigacha tinglayman.", "Sóylesiwshiniń sózin aqırına shekem tıńlayman.", "Я дослушиваю собеседника до конца.", "I listen to the other person until they finish."), FREQ_OPTIONS),
                     (("Suhbat paytida telefonimga qarayman.", "Sáwbet waqtında telefonıma qarayman.", "Во время разговора я смотрю в телефон.", "I look at my phone during conversations."), FREQ_OPTIONS_REVERSED),
                     (("Tushunmasam, aniqlashtiruvchi savol beraman.", "Túsinbesem, anıqlawshı soraw beremen.", "Если не понял, задаю уточняющий вопрос.", "If I don't understand, I ask a clarifying question."), FREQ_OPTIONS),
                     (("Bahs paytida ovozimni ko‘taraman.", "Tartıs waqtında dawısımdı kóteremen.", "Во время спора я повышаю голос.", "I raise my voice during arguments."), FREQ_OPTIONS_REVERSED),
@@ -136,7 +136,7 @@ TOPICS = [
                 "title": ("O‘yin: To‘g‘ri iboralar", "Oyın: Durıs sóz dizbekleri", "Игра: правильные фразы", "Game: the right phrases"),
                 "body": (
                     "«Sen doim...» | «Men ... paytida xafa bo‘ldim» deb ayting\n«Bu bema’nilik» | «Men boshqacha o‘ylayman, chunki...»\n«Tezroq gapir» | «Shoshilmang, men tinglayapman»\n«Bilaman» | «Qiziq, batafsilroq aytib bering»",
-                    "«Sen árqashan...» | «Men ... waqtında renjidim» dep aytıń\n«Bul bos gáp» | «Men basqasha oylayman, sebebi...»\n«Tezirek sóyle» | «Asıqpań, men tińlap atırman»\n«Bilemen» | «Qızıq, tolıǵıraq aytıp beriń»",
+                    "«Sen árqashan...» | «Men ... waqtında renjidim» dep aytıń\n«Bul bos gáp» | «Men basqasha oylayman, sebebi...»\n«Tezirek sóyle» | «Asıqpań, men tıńlap atırman»\n«Bilemen» | «Qızıq, tolıǵıraq aytıp beriń»",
                     "«Ты всегда...» | Скажите: «Я расстроился, когда...»\n«Это ерунда» | «Я думаю иначе, потому что...»\n«Говори быстрее» | «Не спешите, я слушаю»\n«Я знаю» | «Интересно, расскажите подробнее»",
                     "“You always...” | Say: “I felt upset when...”\n“That's nonsense” | “I see it differently, because...”\n“Speak faster” | “Take your time, I'm listening”\n“I know” | “Interesting, tell me more”",
                 ),
@@ -146,7 +146,7 @@ TOPICS = [
                 "title": ("Mulohaza", "Oylanıw", "Размышление", "Reflection"),
                 "body": (
                     "Yaqinda kim bilan suhbatingiz yaxshi o‘tmadi? Endi faol tinglash orqali uni qanday boshqacha qilgan bo‘lardingiz?",
-                    "Jaqında kim menen sáwbetińiz jaqsı ótpedi? Endi belsendi tińlaw arqalı onı qalay basqasha qılǵan bolar edińiz?",
+                    "Jaqında kim menen sáwbetińiz jaqsı ótpedi? Endi belsendi tıńlaw arqalı onı qalay basqasha qılǵan bolar edińiz?",
                     "С кем недавно у вас не сложился разговор? Как бы вы провели его иначе, используя активное слушание?",
                     "Recently, which conversation didn't go well? How would you do it differently using active listening?",
                 ),
@@ -187,7 +187,7 @@ TOPICS = [
                 "title": ("Stress qanday ishlaydi", "Stress qalay isleydi", "Как работает стресс", "How stress works"),
                 "body": (
                     "Xavf sezilganda tana «jang yoki qoch» rejimiga o‘tadi: yurak tez uradi, nafas qisqaradi.\n\nSekin va chuqur nafas miyaga «xavf yo‘q» degan signal yuboradi. Ayniqsa nafas chiqarish nafas olishdan uzunroq bo‘lsa, tana tinchlanadi.",
-                    "Qáwip sezilgende dene «gúresiw yamasa qashıw» rejimine ótedi: júrek tez soǵadı, dem qısqaradı.\n\nAstań hám tereń dem miyge «qáwip joq» degen signal jiberedi. Ásirese dem shıǵarıw dem alıwdan uzınıraq bolsa, dene tınıshlanadı.",
+                    "Qáwip sezilgende dene «gúresiw yamasa qashıw» rejimine ótedi: júrek tez soǵadı, dem alıw tezlesedi.\n\nÁste hám tereń dem alıw miyge «qáwip joq» degen signal jiberedi. Ásirese dem shıǵarıw dem alıwdan uzınıraq bolsa, dene tınıshlanadı.",
                     "При ощущении опасности тело переходит в режим «бей или беги»: сердце бьётся чаще, дыхание становится поверхностным.\n\nМедленное глубокое дыхание посылает мозгу сигнал «опасности нет». Особенно если выдох длиннее вдоха.",
                     "When we sense danger, the body switches to “fight or flight”: the heart races and breathing gets shallow.\n\nSlow, deep breathing tells the brain “there is no danger”, especially when the exhale is longer than the inhale.",
                 ),
@@ -254,7 +254,7 @@ TOPICS = [
         "level": "intermediate",
         "minutes": 15,
         "tags": "confidence, self-esteem, communication",
-        "title": ("O‘zingizga ishoning", "Ózińizge isenıń", "Поверь в себя", "Believe in yourself"),
+        "title": ("O‘zingizga ishoning", "Ózińizge iseniń", "Поверь в себя", "Believe in yourself"),
         "summary": (
             "Ichki tanqidchini tinchlantirish va o‘ziga ishonchni oshirish mashqlari.",
             "Ishki sınshını tınıshlandırıw hám ózine isenimdi asırıw shınıǵıwları.",
@@ -302,7 +302,7 @@ TOPICS = [
                     ),
                     (
                         "Ishonchingiz o‘sib bormoqda. Kichik tavakkallarni davom ettiring.",
-                        "Isenimińiz ósip barmaqta. Kishi táwekelshilikti dawam ettiriń.",
+                        "Isenimińiz ósip barmaqta. Kishi batıl qádemlerdi dawam ettiriń.",
                         "Уверенность растёт. Продолжайте делать маленькие смелые шаги.",
                         "Your confidence is growing. Keep taking small brave steps.",
                     ),
@@ -367,7 +367,7 @@ TOPICS = [
             },
             {
                 "kind": "breathing",
-                "title": ("Chiqishdan oldin nafas", "Shıǵıwdan aldın dem", "Дыхание перед выступлением", "Breathing before you speak"),
+                "title": ("Chiqishdan oldin nafas", "Shıǵıp sóylewden aldın dem alıw", "Дыхание перед выступлением", "Breathing before you speak"),
                 "body": ("", "", "", ""),
                 "breathing": (4, 2, 6, 3),
             },
@@ -388,6 +388,13 @@ TOPICS = [
 
 class Command(BaseCommand):
     help = "Create demo categories, psychologists and topics (safe to run repeatedly)."
+
+    def add_arguments(self, parser):
+        parser.add_argument(
+            "--refresh",
+            action="store_true",
+            help="Also rewrite the texts of demo topics that already exist (e.g. after translation fixes).",
+        )
 
     @transaction.atomic
     def handle(self, *args, **options):
@@ -423,26 +430,32 @@ class Command(BaseCommand):
                 user.groups.add(group)
             authors[data["username"]] = user
 
-        created_topics = 0
+        created_topics = refreshed = 0
         for data in TOPICS + EXTRA_TOPICS:
-            if Topic.objects.filter(slug=data["slug"]).exists():
+            topic = Topic.objects.filter(slug=data["slug"]).first()
+            if topic and not options["refresh"]:
                 continue
-            topic = Topic(
-                slug=data["slug"],
-                category=categories[data["category"]],
-                author=authors[data["author"]],
-                icon=data["icon"],
-                color=data["color"],
-                level=data["level"],
-                duration_minutes=data["minutes"],
-                tags=data["tags"],
-                is_published=True,
-            )
+            if topic is None:
+                topic = Topic(
+                    slug=data["slug"],
+                    category=categories[data["category"]],
+                    author=authors[data["author"]],
+                    icon=data["icon"],
+                    color=data["color"],
+                    level=data["level"],
+                    duration_minutes=data["minutes"],
+                    tags=data["tags"],
+                    is_published=True,
+                )
+                created_topics += 1
+            else:
+                refreshed += 1
             for field in ("title", "summary", "goal", "description"):
                 tr(topic, field, data[field])
             topic.save()
             for order, s in enumerate(data["steps"], start=1):
-                step = Step(topic=topic, order=order, kind=s["kind"])
+                step = topic.steps.filter(order=order).first() or Step(topic=topic, order=order)
+                step.kind = s["kind"]
                 tr(step, "title", s["title"])
                 tr(step, "body", s.get("body", ("", "", "", "")))
                 if "breathing" in s:
@@ -451,10 +464,9 @@ class Command(BaseCommand):
                     for field, values in zip(("result_low", "result_mid", "result_high"), s["results"]):
                         tr(step, field, values)
                 step.save()
-                for q_order, (text, options) in enumerate(s.get("questions", []), start=1):
-                    question = QuizQuestion(step=step, order=q_order)
+                for q_order, (text, options_text) in enumerate(s.get("questions", []), start=1):
+                    question = step.questions.filter(order=q_order).first() or QuizQuestion(step=step, order=q_order)
                     tr(question, "text", text)
-                    tr(question, "options", options)
+                    tr(question, "options", options_text)
                     question.save()
-            created_topics += 1
-        self.stdout.write(self.style.SUCCESS(f"Demo content ready ({created_topics} new topic(s))."))
+        self.stdout.write(self.style.SUCCESS(f"Demo content ready ({created_topics} new, {refreshed} refreshed topic(s))."))

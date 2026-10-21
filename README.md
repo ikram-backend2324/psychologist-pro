@@ -39,7 +39,7 @@ copy .env.example .env            # set DJANGO_SUPERUSER_PASSWORD
 python manage.py compile_translations
 python manage.py migrate
 python manage.py setup_roles      # Psychologists group + admin from .env
-python manage.py seed_demo        # optional demo content
+python manage.py seed_demo        # optional demo content (--refresh rewrites existing demo texts)
 python manage.py runserver
 ```
 

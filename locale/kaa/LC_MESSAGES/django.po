@@ -51,18 +51,21 @@ msgstr "Belsendi"
 msgid "Active day"
 msgstr "Belsendi kún"
 
+msgid "Add %(name)s"
+msgstr "%(name)s qosıw"
+
 msgid ""
 "Add the ages you work with, your languages and a short bio so clients can "
 "find and choose you."
 msgstr ""
-"Klientler sizdi tawıp tańlawı ushın islesetuǵın jaslarıńızdı, tillerińizdi "
+"Klientler sizdi tawıp tańlawı ushın isleytuǵın jas toparların, tillerińizdi "
 "hám qısqa maǵlıwmat qosıń."
 
 msgid "Administrator"
 msgstr "Administrator"
 
 msgid "Adults (18–59)"
-msgstr "Úlkenler (18–59)"
+msgstr "Eresekler (18–59)"
 
 msgid "Advanced"
 msgstr "Joqarı"
@@ -80,7 +83,7 @@ msgid "All topics"
 msgstr "Barlıq temalar"
 
 msgid "Already registered?"
-msgstr "Dizimnen óttińiz be?"
+msgstr "Dizimnen ótkensiz be?"
 
 msgid "Amber"
 msgstr "Qaxrabo"
@@ -169,13 +172,13 @@ msgid ""
 msgstr ""
 "Tema tańlań, haqıyqıy psixologlar tayarlaǵan testler hám oyınlı "
 "shınıǵıwlardı orınlań hám rawajlanıwıńızǵa járdem beretuǵın juwmaqlar alıń —"
-" óz tempıńızda."
+" óz tempińizde."
 
 msgid "Choose this psychologist"
 msgstr "Usı psixologtı tańlaw"
 
 msgid "Choose your psychologist"
-msgstr "Psixologıńızdı tańlań"
+msgstr "Óz psixologıńızdı tańlań"
 
 msgid "Client"
 msgstr "Klient"
@@ -291,7 +294,7 @@ msgid ""
 "psychologist."
 msgstr ""
 "Hár bir tema — psixolog tayarlaǵan sabaqlar, testler hám oyınlardan ibarat "
-"qısqa saparı."
+"qısqa sapar."
 
 msgid "Edit"
 msgstr "Ózgertiw"
@@ -339,7 +342,7 @@ msgid "For any age"
 msgstr "Qálegen jas ushın"
 
 msgid "For example: I often feel anxious before exams…"
-msgstr "Mısalı: imtixanlar aldınan jiyi qáweterlenemen…"
+msgstr "Mısalı: imtixanlar aldında jiyi qáweterlenemen…"
 
 msgid "For psychologists"
 msgstr "Psixologlar ushın"
@@ -362,6 +365,9 @@ msgstr "Ju"
 msgid "Games"
 msgstr "Oyınlar"
 
+msgid "General"
+msgstr "Ulıwma"
+
 msgid ""
 "Generated automatically. It is not a diagnosis; your psychologist also sees "
 "your answer."
@@ -376,7 +382,10 @@ msgid "Get started"
 msgstr "Baslaw"
 
 msgid "Get supportive AI feedback"
-msgstr "AI dan qollap-quwatlawshı pikir alıw"
+msgstr "AI-dan qollap-quwatlawshı pikir alıw"
+
+msgid "Go"
+msgstr "Orınlaw"
 
 msgid "Go to dashboard"
 msgstr "Kabinetke ótiw"
@@ -427,25 +436,25 @@ msgid "I accept new clients"
 msgstr "Jańa klientlerdi qabıl etemen"
 
 msgid "I accepted your request. Let's work together!"
-msgstr "Sorawıńızdı qabıl ettim. Kelıń, birge isleymiz!"
+msgstr "Sorawıńızdı qabıl ettim. Keliń, birge isleymiz!"
 
 msgid "I am joining as"
-msgstr "Men qosılıp atırman:"
+msgstr "Kim retinde qosılasız?"
 
 msgid "I create topics and tests and follow my clients' progress."
-msgstr "Tema hám testler jaratamán, klientlerimniń rawajlanıwın baqlayman."
+msgstr "Temalar hám testler jarataman, klientlerimniń rawajlanıwın baqlayman."
 
 msgid "I want to learn about myself, pass tests and grow."
 msgstr "Ózimdi bilgim keledi, test tapsırıp, rawajlanǵım keledi."
 
 msgid "I work with"
-msgstr "Men isleymen"
+msgstr "Kimler menen isleymen"
 
 msgid "In 3 days"
 msgstr "3 kúnnen keyin"
 
 msgid "In progress"
-msgstr "Processte"
+msgstr "Dawam etpekte"
 
 msgid "Inhale"
 msgstr "Dem alıń"
@@ -696,10 +705,10 @@ msgstr ""
 " ajıratadı."
 
 msgid "Please tell clients what you specialize in."
-msgstr "Klientlerge qánigeligińizdi kórsetıń."
+msgstr "Klientlerge qánigeligińizdi kórsetiń."
 
 msgid "Popular topics"
-msgstr "Ataqlı temalar"
+msgstr "Kóp oqılatuǵın temalar"
 
 msgid "Prefer not to say"
 msgstr "Aytpawdı qáleymen"
@@ -708,7 +717,7 @@ msgid "Prepared by"
 msgstr "Tayarlaǵan"
 
 msgid "Press start and follow the circle"
-msgstr "«Baslaw»dı basıń hám sheńberge eriseń"
+msgstr "«Baslaw» túymesin basıp, sheńberdi baqlań"
 
 msgid "Previous month"
 msgstr "Aldınǵı ay"
@@ -824,7 +833,7 @@ msgid "Ruhiyat profile"
 msgstr "Ruhiyat profili"
 
 msgid "Ruhiyat: continue “%(topic)s”"
-msgstr "Ruhiyat: «%(topic)s» temasın dawam ettiriń"
+msgstr "Ruhiyat: «%(topic)s» temasın dawam etiń"
 
 msgid "Sa"
 msgstr "Sh"
@@ -857,6 +866,9 @@ msgstr ""
 msgid "Say hello and describe what you would like to work on."
 msgstr "Sálemlesiń hám ne ústinde islegińiz keletuǵının jazıń."
 
+msgid "Search"
+msgstr "Izlew"
+
 msgid "Search topics…"
 msgstr "Temalardı izlew…"
 
@@ -876,7 +888,7 @@ msgid "Send request"
 msgstr "Soraw jiberiw"
 
 msgid "Seniors (60+)"
-msgstr "Garrılar (60+)"
+msgstr "Jası úlkenler (60+)"
 
 msgid "September"
 msgstr "Sentyabr"
@@ -961,10 +973,10 @@ msgid "Supportive feedback"
 msgstr "Qollap-quwatlawshı pikir"
 
 msgid "Switch theme"
-msgstr "Temanı almastırıw"
+msgstr "Kórinisti almastırıw"
 
 msgid "Take a break — we'll remind you"
-msgstr "Dem alıń — biz eskertemiz"
+msgstr "Dem alıp alıń — biz eskertemiz"
 
 msgid ""
 "Take tests to learn about yourself, and play games that help you find a way "
@@ -990,7 +1002,7 @@ msgid "Test"
 msgstr "Test"
 
 msgid "Test completed"
-msgstr "Test juwmaqlandı"
+msgstr "Test tapsırıldı"
 
 msgid "Test results"
 msgstr "Test nátiyjeleri"
@@ -1051,7 +1063,7 @@ msgid "This is your psychologist"
 msgstr "Bul sizdiń psixologıńız"
 
 msgid "This page got lost. Let's find your way back."
-msgstr "Bul bet adasıp qaldı. Kelıń, artqa jol tabamız."
+msgstr "Bul bet adasıp qaldı. Keliń, artqa qaytatuǵın joldı tabamız."
 
 msgid "This password is entirely numeric."
 msgstr "Bul parol tek sanlardan ibarat."
@@ -1064,7 +1076,7 @@ msgid ""
 " local emergency services right away."
 msgstr ""
 "Bul platforma qánigeniń járdeminiń ornın baspaydı. Eger qáwip astında "
-"bolsańız, dárhal tez járdem xızmetine qońıraw etiń."
+"bolsańız, dárhal tez járdem xızmetine qońıraw qılıń."
 
 msgid "This psychologist is not accepting new clients right now."
 msgstr "Bul psixolog házir jańa klientlerdi qabıl etpeydi."
@@ -1125,7 +1137,7 @@ msgid "Tue"
 msgstr "Si"
 
 msgid "Understand yourself"
-msgstr "Ózińizdi túsinıń"
+msgstr "Ózińizdi túsiniń"
 
 msgid "Upcoming reminders"
 msgstr "Jaqın eskertpeler"
@@ -1173,7 +1185,7 @@ msgid "Wed"
 msgstr "Sá"
 
 msgid "Welcome back"
-msgstr "Xosh keldińiz"
+msgstr "Qaytadan xosh keldińiz"
 
 msgid "Welcome to Ruhiyat! Choose your first topic."
 msgstr "Ruhiyatqa xosh keldińiz! Birinshi temańızdı tańlań."
@@ -1183,7 +1195,7 @@ msgid ""
 "topics."
 msgstr ""
 "Xosh keldińiz! Administrator profilińizdi tastıyıqlaǵannan keyin temalar "
-"jaylastıra alasız."
+"jariyalay alasız."
 
 msgid "Well done!"
 msgstr "Barekella!"
@@ -1325,7 +1337,7 @@ msgid "duration (minutes)"
 msgstr "dawamlılıǵı (minut)"
 
 msgid "email address"
-msgstr "email mánzil"
+msgstr "email mánzili"
 
 msgid "enrollment"
 msgstr "jazılıw"
@@ -1460,7 +1472,7 @@ msgid "test results"
 msgstr "test nátiyjeleri"
 
 msgid "title"
-msgstr "atama"
+msgstr "ataw"
 
 msgid "topic"
 msgstr "tema"

@@ -7,8 +7,8 @@
     <header class="chat-head">
       <a href="{% url 'care:inbox' %}" class="icon-btn" aria-label="{% translate 'Back' %}">←</a>
       <span class="avatar g-{{ partner.avatar_gradient }}" style="width:44px;height:44px">{{ partner.initials }}</span>
-      <div style="min-width:0;flex:1">
-        <b style="display:block">{{ partner.display_name }}</b>
+      <div class="chat-who">
+        <b>{{ partner.display_name }}</b>
         <span class="small muted">{% if partner.is_psychologist %}{{ partner.specialization|default:_("Psychologist") }}{% else %}{% translate "Client" %}{% endif %} · <span data-chat-status>{{ c.get_status_display }}</span></span>
       </div>
       {% if c.is_open %}
@@ -32,7 +32,7 @@
       {% endif %}
     {% endif %}
 
-    <div class="chat-scroll" data-chat data-poll-url="{% url 'care:poll' c.pk %}" data-last-id="{{ last_id }}">
+    <div class="chat-scroll" data-chat data-status="{{ c.status }}" data-poll-url="{% url 'care:poll' c.pk %}" data-last-id="{{ last_id }}">
       {% if c.concern %}<div class="chat-note">📝 {% translate "Request" %}: {{ c.concern|truncatechars:300 }}</div>{% endif %}
       <div data-chat-list>{% for m in items %}{% include "care/_message.html" %}{% endfor %}</div>
       {% if not items %}<div class="chat-empty" data-chat-empty><span>👋</span>{% translate "Say hello and describe what you would like to work on." %}</div>{% endif %}

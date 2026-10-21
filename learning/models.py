@@ -151,6 +151,7 @@ class Step(models.Model):
 
     class Meta:
         ordering = ["topic", "order", "id"]
+        constraints = [models.UniqueConstraint(fields=["topic", "order"], name="unique_step_order_per_topic")]
         verbose_name = _("step")
         verbose_name_plural = _("Steps")
 

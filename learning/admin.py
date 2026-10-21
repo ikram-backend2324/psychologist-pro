@@ -21,6 +21,13 @@ class OwnTopicsMixin:
             return qs
         return qs.filter(**{self.topic_lookup: request.user})
 
+    def get_list_filter(self, request):
+        # Topic filters would list every psychologist's topic titles, drafts included.
+        filters = super().get_list_filter(request)
+        if is_platform_admin(request.user):
+            return filters
+        return [f for f in filters if "topic" not in f]
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "topic" and not is_platform_admin(request.user):
             kwargs["queryset"] = Topic.objects.filter(author=request.user)
@@ -73,7 +80,22 @@ class TopicAdmin(OwnTopicsMixin, TranslationAdmin):
         return obj.enrollments.count()
 
     def get_readonly_fields(self, request, obj=None):
-        return ("author",) if not is_platform_admin(request.user) else ()
+        return ("author_name",) if not is_platform_admin(request.user) else ()
+
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = super().get_fieldsets(request, obj)
+        if is_platform_admin(request.user):
+            return fieldsets
+        # Psychologists cannot open user records, so show the author as text instead of a link.
+        return [
+            (name, {**opts, "fields": tuple("author_name" if f == "author" else f for f in opts["fields"])})
+            for name, opts in fieldsets
+        ]
+
+    @admin.display(description=_("psychologist"))
+    def author_name(self, obj):
+        # On the add form there is no author yet; save_model assigns the current psychologist.
+        return obj.author.display_name if obj.author_id else "—"
 
     def save_model(self, request, obj, form, change):
         if not is_platform_admin(request.user):
@@ -113,6 +135,13 @@ class ReadOnlyAdmin(admin.ModelAdmin):
 @admin.register(Enrollment)
 class EnrollmentAdmin(OwnTopicsMixin, ReadOnlyAdmin):
     list_display = ("user", "topic", "status", "progress", "started_at", "last_activity")
+    # A plain-text client name: psychologists may not open user records.
+    fields = ("student", "topic", "status", "started_at", "last_activity", "completed_at")
+    readonly_fields = fields
+
+    @admin.display(description=_("Client"))
+    def student(self, obj):
+        return obj.user.display_name
     list_filter = ("status", "topic")
     search_fields = ("user__username", "topic__title")
 

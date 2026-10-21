@@ -45,10 +45,10 @@
   {% endif %}
 
   <div class="tiles">
-    <div class="tile reveal"><span class="e grad g-violet">💬</span><div class="num" data-count="{{ stats.clients }}">0</div><div class="label">{% translate "My clients" %}</div></div>
-    <div class="tile reveal" style="--d:.06s"><span class="e grad g-ocean">👥</span><div class="num" data-count="{{ stats.learners }}">0</div><div class="label">{% translate "Learners" %}</div></div>
-    <div class="tile reveal" style="--d:.12s"><span class="e grad g-mint">✅</span><div class="num"><span data-count="{{ stats.completion }}">0</span>%</div><div class="label">{% translate "Completion rate" %}</div></div>
-    <div class="tile reveal" style="--d:.18s"><span class="e grad g-amber">🧩</span><div class="num" data-count="{{ stats.abandoned }}">0</div><div class="label">{% translate "Stopped halfway" %}</div></div>
+    <div class="tile reveal"><span class="e grad g-violet">💬</span><div class="num" data-count="{{ stats.clients }}">{{ stats.clients }}</div><div class="label">{% translate "My clients" %}</div></div>
+    <div class="tile reveal" style="--d:.06s"><span class="e grad g-ocean">👥</span><div class="num" data-count="{{ stats.learners }}">{{ stats.learners }}</div><div class="label">{% translate "Learners" %}</div></div>
+    <div class="tile reveal" style="--d:.12s"><span class="e grad g-mint">✅</span><div class="num"><span data-count="{{ stats.completion }}">{{ stats.completion }}</span>%</div><div class="label">{% translate "Completion rate" %}</div></div>
+    <div class="tile reveal" style="--d:.18s"><span class="e grad g-amber">🧩</span><div class="num" data-count="{{ stats.abandoned }}">{{ stats.abandoned }}</div><div class="label">{% translate "Stopped halfway" %}</div></div>
   </div>
 
   <div class="dash-grid">

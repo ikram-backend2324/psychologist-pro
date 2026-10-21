@@ -169,7 +169,9 @@ def step_view(request, slug, order):
 @require_POST
 def step_submit(request, slug, order):
     topic = _visible_topic(request, slug)
-    step = get_object_or_404(Step, topic=topic, order=order)
+    step = topic.steps.filter(order=order).first()
+    if step is None:
+        raise Http404
     enrollment = _get_enrollment(request, topic)
 
     if step.kind == Step.Kind.QUIZ:
@@ -210,13 +212,17 @@ def step_submit(request, slug, order):
         return redirect("learning:step", slug=slug, order=order)
 
     _complete(enrollment, step)
-    return _go_next(enrollment, topic)
+    return _go_next(enrollment, topic, after=step.order)
 
 
 @login_required
 def continue_topic(request, slug):
     topic = _visible_topic(request, slug)
-    return _go_next(_get_enrollment(request, topic), topic)
+    try:
+        after = int(request.GET.get("after", ""))
+    except ValueError:
+        after = None
+    return _go_next(_get_enrollment(request, topic), topic, after=after)
 
 
 def _complete(enrollment, step):
@@ -229,8 +235,13 @@ def _complete(enrollment, step):
     enrollment.save()
 
 
-def _go_next(enrollment, topic):
-    step = enrollment.next_step()
+def _go_next(enrollment, topic, after=None):
+    """Next unfinished step after `after` (steps can be opened in any order), else the first unfinished one."""
+    step = None
+    if after is not None:
+        done = enrollment.completed_step_ids
+        step = next((s for s in topic.steps.filter(order__gt=after) if s.id not in done), None)
+    step = step or enrollment.next_step()
     if step is None:
         return redirect("learning:finish", slug=topic.slug)
     return redirect("learning:step", slug=topic.slug, order=step.order)

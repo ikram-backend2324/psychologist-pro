@@ -50,6 +50,9 @@ msgstr "Активно"
 msgid "Active day"
 msgstr "Активный день"
 
+msgid "Add %(name)s"
+msgstr "Добавить %(name)s"
+
 msgid ""
 "Add the ages you work with, your languages and a short bio so clients can "
 "find and choose you."
@@ -356,6 +359,9 @@ msgstr "Пт"
 msgid "Games"
 msgstr "Игры"
 
+msgid "General"
+msgstr "Общее"
+
 msgid ""
 "Generated automatically. It is not a diagnosis; your psychologist also sees "
 "your answer."
@@ -370,6 +376,9 @@ msgstr "Начать"
 
 msgid "Get supportive AI feedback"
 msgstr "Получить поддерживающий отзыв ИИ"
+
+msgid "Go"
+msgstr "Выполнить"
 
 msgid "Go to dashboard"
 msgstr "Перейти в кабинет"
@@ -432,7 +441,7 @@ msgid "I want to learn about myself, pass tests and grow."
 msgstr "Хочу узнать себя, проходить тесты и расти."
 
 msgid "I work with"
-msgstr "Я работаю с"
+msgstr "С кем я работаю"
 
 msgid "In 3 days"
 msgstr "Через 3 дня"
@@ -850,6 +859,9 @@ msgstr ""
 msgid "Say hello and describe what you would like to work on."
 msgstr "Поздоровайтесь и опишите, над чем хотите поработать."
 
+msgid "Search"
+msgstr "Поиск"
+
 msgid "Search topics…"
 msgstr "Поиск тем…"
 
@@ -954,7 +966,7 @@ msgid "Supportive feedback"
 msgstr "Поддерживающий отзыв"
 
 msgid "Switch theme"
-msgstr "Сменить тему"
+msgstr "Сменить оформление"
 
 msgid "Take a break — we'll remind you"
 msgstr "Сделайте паузу — мы напомним"

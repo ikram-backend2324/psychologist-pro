@@ -13,10 +13,10 @@
   </div>
 
   <div class="tiles">
-    <div class="tile reveal"><span class="e grad g-violet">🪜</span><div class="num" data-count="{{ stats.steps }}">0</div><div class="label">{% translate "Steps done" %}</div></div>
-    <div class="tile reveal" style="--d:.06s"><span class="e grad g-mint">🏆</span><div class="num" data-count="{{ stats.completed }}">0</div><div class="label">{% translate "Topics completed" %}</div></div>
-    <div class="tile reveal" style="--d:.12s"><span class="e grad g-ocean">📝</span><div class="num" data-count="{{ stats.tests }}">0</div><div class="label">{% translate "Tests taken" %}</div></div>
-    <div class="tile reveal" style="--d:.18s"><span class="e grad g-rose">✍️</span><div class="num" data-count="{{ stats.reflections }}">0</div><div class="label">{% translate "Reflections" %}</div></div>
+    <div class="tile reveal"><span class="e grad g-violet">🪜</span><div class="num" data-count="{{ stats.steps }}">{{ stats.steps }}</div><div class="label">{% translate "Steps done" %}</div></div>
+    <div class="tile reveal" style="--d:.06s"><span class="e grad g-mint">🏆</span><div class="num" data-count="{{ stats.completed }}">{{ stats.completed }}</div><div class="label">{% translate "Topics completed" %}</div></div>
+    <div class="tile reveal" style="--d:.12s"><span class="e grad g-ocean">📝</span><div class="num" data-count="{{ stats.tests }}">{{ stats.tests }}</div><div class="label">{% translate "Tests taken" %}</div></div>
+    <div class="tile reveal" style="--d:.18s"><span class="e grad g-rose">✍️</span><div class="num" data-count="{{ stats.reflections }}">{{ stats.reflections }}</div><div class="label">{% translate "Reflections" %}</div></div>
   </div>
 
   <div class="dash-grid">

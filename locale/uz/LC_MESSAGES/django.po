@@ -52,6 +52,9 @@ msgstr "Faol"
 msgid "Active day"
 msgstr "Faol kun"
 
+msgid "Add %(name)s"
+msgstr "%(name)s qo‘shish"
+
 msgid ""
 "Add the ages you work with, your languages and a short bio so clients can "
 "find and choose you."
@@ -364,6 +367,9 @@ msgstr "Ju"
 msgid "Games"
 msgstr "O‘yinlar"
 
+msgid "General"
+msgstr "Umumiy"
+
 msgid ""
 "Generated automatically. It is not a diagnosis; your psychologist also sees "
 "your answer."
@@ -379,6 +385,9 @@ msgstr "Boshlash"
 
 msgid "Get supportive AI feedback"
 msgstr "AI dan qo‘llab-quvvatlovchi fikr olish"
+
+msgid "Go"
+msgstr "Bajarish"
 
 msgid "Go to dashboard"
 msgstr "Kabinetga o‘tish"
@@ -441,7 +450,7 @@ msgid "I want to learn about myself, pass tests and grow."
 msgstr "O‘zimni bilmoqchiman, test topshirib, o‘smoqchiman."
 
 msgid "I work with"
-msgstr "Men ishlayman"
+msgstr "Kimlar bilan ishlayman"
 
 msgid "In 3 days"
 msgstr "3 kundan keyin"
@@ -859,6 +868,9 @@ msgstr ""
 msgid "Say hello and describe what you would like to work on."
 msgstr "Salomlashing va nima ustida ishlashni xohlashingizni yozing."
 
+msgid "Search"
+msgstr "Qidirish"
+
 msgid "Search topics…"
 msgstr "Mavzularni qidirish…"
 
@@ -965,7 +977,7 @@ msgid "Supportive feedback"
 msgstr "Qo‘llab-quvvatlovchi fikr"
 
 msgid "Switch theme"
-msgstr "Mavzuni almashtirish"
+msgstr "Ko‘rinishni almashtirish"
 
 msgid "Take a break — we'll remind you"
 msgstr "Dam oling — biz eslatamiz"

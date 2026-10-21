@@ -80,7 +80,8 @@
     };
     requestAnimationFrame(tick);
   };
-  if ("IntersectionObserver" in window) {
+  if ("IntersectionObserver" in window && !reduceMotion) {
+    counters.forEach((c) => { c.textContent = "0"; });
     const co = new IntersectionObserver((entries) => entries.forEach((en) => {
       if (en.isIntersecting) { runCount(en.target); co.unobserve(en.target); }
     }));
@@ -367,7 +368,7 @@
       });
     }
     const statusEl = $("[data-chat-status]");
-    let initialStatus = null;
+    const initialStatus = chat.dataset.status;
     const poll = async () => {
       if (document.hidden) return;
       try {
@@ -375,8 +376,7 @@
         if (!r.ok) return;
         const data = await r.json();
         append(data.html, data.last_id);
-        if (initialStatus === null) initialStatus = data.status;
-        else if (data.status !== initialStatus) window.location.reload();
+        if (data.status !== initialStatus) window.location.reload();
       } catch (err) { /* offline: try again on the next tick */ }
     };
     if (statusEl) setInterval(poll, 4000);

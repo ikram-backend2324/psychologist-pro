@@ -2,6 +2,7 @@ from datetime import timedelta
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.db import IntegrityError, transaction
 from django.db.models import Count, Q
 from django.http import Http404, HttpResponseForbidden, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
@@ -34,7 +35,8 @@ def open_connection(client, psychologist):
 def psychologist_list(request):
     qs = verified_psychologists()
     age = request.GET.get("age", "")
-    if not age and request.user.is_authenticated and getattr(request.user, "age_group", ""):
+    # Default to the client's own age group only on first visit; "Any age" (age=) must stay unfiltered.
+    if "age" not in request.GET and request.user.is_authenticated and getattr(request.user, "age_group", ""):
         age = request.user.age_group
     lang = request.GET.get("lang", "")
     q = request.GET.get("q", "").strip()
@@ -94,9 +96,14 @@ def choose(request, username):
         messages.error(request, _("This psychologist is not accepting new clients right now."))
         return redirect("care:psychologist", username=username)
     concern = request.POST.get("concern", "").strip()[:MAX_MESSAGE_LENGTH]
-    connection = Connection.objects.create(client=request.user, psychologist=psychologist, concern=concern)
-    if concern:
-        Message.objects.create(connection=connection, sender=request.user, text=concern)
+    try:
+        with transaction.atomic():
+            connection = Connection.objects.create(client=request.user, psychologist=psychologist, concern=concern)
+            if concern:
+                Message.objects.create(connection=connection, sender=request.user, text=concern)
+    except IntegrityError:
+        # A double-click already created the open request.
+        return redirect("care:chat", pk=open_connection(request.user, psychologist).pk)
     messages.success(request, _("Request sent! %(name)s will reply soon.") % {"name": psychologist.display_name})
     return redirect("care:chat", pk=connection.pk)
 
@@ -165,8 +172,9 @@ def send(request, pk):
         return HttpResponseForbidden(_("This conversation is closed."))
     text = request.POST.get("text", "").strip()[:MAX_MESSAGE_LENGTH]
     topic = None
-    if request.POST.get("topic") and request.user.pk == connection.psychologist_id:
-        topic = Topic.objects.published().filter(pk=request.POST["topic"]).first()
+    topic_id = request.POST.get("topic", "")
+    if topic_id.isdigit() and request.user.pk == connection.psychologist_id:
+        topic = Topic.objects.published().filter(pk=int(topic_id)).first()
     if not text and not topic:
         if request.headers.get("x-requested-with") == "fetch":
             return JsonResponse({"error": "empty"}, status=400)

@@ -43,6 +43,38 @@ class CareTests(TestCase):
         self.client.force_login(self.psych)
         self.assertEqual(self.client.get(reverse("admin:learning_topic_changelist")).status_code, 200)
 
+    def test_any_age_filter_overrides_default(self):
+        self.client.force_login(self.client_user)
+        r = self.client.get(reverse("care:psychologists"), {"age": ""})
+        self.assertEqual(r.context["active_age"], "")
+        self.assertEqual(len(r.context["psychologists"]), 3)
+
+    def test_studio_hides_topic_filters_from_psychologists(self):
+        self.client.force_login(self.psych)
+        r = self.client.get(reverse("admin:learning_step_changelist"))
+        self.assertEqual([f.field_path for f in r.context["cl"].filter_specs], ["kind"])
+
+    def test_psychologist_creates_topic_in_studio(self):
+        from learning.models import Category
+
+        self.client.force_login(self.psych)
+        data = {
+            "title_uz": "Yangi mavzu", "summary_uz": "Qisqa", "category": Category.objects.first().pk,
+            "icon": "🌟", "color": "violet", "level": "beginner", "duration_minutes": 10, "is_published": "on",
+            "steps-TOTAL_FORMS": "1", "steps-INITIAL_FORMS": "0", "steps-MIN_NUM_FORMS": "0", "steps-MAX_NUM_FORMS": "1000",
+            "steps-0-order": "1", "steps-0-kind": "lesson", "steps-0-title_uz": "Kirish",
+        }
+        r = self.client.post(reverse("admin:learning_topic_add"), data)
+        self.assertEqual(r.status_code, 302, r.content[:3000])
+        topic = Topic.objects.get(title_uz="Yangi mavzu")
+        self.assertEqual(topic.author, self.psych)
+        self.assertEqual(topic.steps.count(), 1)
+        # Duplicate step numbers are rejected by the form instead of crashing.
+        data.update({"title_uz": "Ikkinchi", "steps-TOTAL_FORMS": "2", "steps-1-order": "1", "steps-1-kind": "lesson", "steps-1-title_uz": "Takror"})
+        r = self.client.post(reverse("admin:learning_topic_add"), data)
+        self.assertEqual(r.status_code, 200)
+        self.assertFalse(Topic.objects.filter(title_uz="Ikkinchi").exists())
+
     def test_unverified_psychologist_is_hidden(self):
         User.objects.create_user("newbie", password="x", role=User.Role.PSYCHOLOGIST)
         self.assertEqual(self.client.get(reverse("care:psychologist", args=["newbie"])).status_code, 404)
@@ -89,6 +121,21 @@ class CareTests(TestCase):
         # Closing the conversation blocks new messages.
         self.client.post(reverse("care:respond", args=[connection.pk]), {"action": "end"})
         self.assertEqual(self.client.post(reverse("care:send", args=[connection.pk]), {"text": "hi"}).status_code, 403)
+
+    def test_bad_topic_id_is_ignored(self):
+        self.choose()
+        connection = Connection.objects.get()
+        self.client.force_login(self.psych)
+        r = self.client.post(reverse("care:send", args=[connection.pk]), {"text": "hi", "topic": "abc"}, **FETCH)
+        self.assertEqual(r.status_code, 200)
+
+    def test_extreme_calendar_month_does_not_crash(self):
+        self.client.force_login(self.client_user)
+        for value in ("1-1", "9999-12", "2026-13", "x"):
+            self.assertEqual(self.client.get(reverse("accounts:dashboard"), {"month": value}).status_code, 200)
+
+    def test_healthz_ignores_unknown_host(self):
+        self.assertEqual(self.client.get("/healthz", HTTP_HOST="10.0.0.5:10000").status_code, 200)
 
     def test_clients_cannot_send_topics_or_accept(self):
         self.choose()
@@ -150,6 +197,23 @@ class PracticeAndGameTests(TestCase):
         self.assertContains(r, "data-scenario")
         self.client.post(reverse("learning:step_submit", args=[topic.slug, step.order]))
         self.assertIn(step.id, Enrollment.objects.get(user=self.user, topic=topic).completed_step_ids)
+
+    def test_continue_goes_to_step_after_current(self):
+        self.client.force_login(self.user)
+        topic = Topic.objects.get(slug="solving-conflicts")
+        game = topic.steps.get(kind=Step.Kind.SCENARIO)
+        r = self.client.post(reverse("learning:step_submit", args=[topic.slug, game.order]))
+        nxt = topic.steps.filter(order__gt=game.order).first()
+        self.assertRedirects(r, reverse("learning:step", args=[topic.slug, nxt.order]))
+        r = self.client.get(reverse("learning:continue", args=[topic.slug]), {"after": game.order})
+        self.assertRedirects(r, reverse("learning:step", args=[topic.slug, nxt.order]))
+
+    def test_step_numbers_are_unique_per_topic(self):
+        from django.db import IntegrityError, transaction
+
+        topic = Topic.objects.first()
+        with self.assertRaises(IntegrityError), transaction.atomic():
+            Step.objects.create(topic=topic, order=topic.steps.first().order, title_uz="Takror")
 
     def test_pause_rejects_external_redirect(self):
         self.client.force_login(self.user)

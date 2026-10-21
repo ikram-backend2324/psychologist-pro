@@ -46,7 +46,7 @@
         <div class="stage-actions">
           <a class="btn" href="?retake=1">↻ {% translate "Retake test" %}</a>
           <span class="spacer"></span>
-          <a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}">{% translate "Continue" %} →</a>
+          <a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}?after={{ step.order }}">{% translate "Continue" %} →</a>
         </div>
       {% else %}
         {% if step.body %}<p class="muted">{{ step.body }}</p>{% endif %}
@@ -77,7 +77,7 @@
         {% if reflection.ai_feedback %}
           <div class="ai-box reveal"><div class="who"><span class="spark">✦</span>{% translate "Supportive feedback" %}</div><div style="white-space:pre-line">{{ reflection.ai_feedback }}</div><p class="small muted" style="margin:10px 0 0">{% translate "Generated automatically. It is not a diagnosis; your psychologist also sees your answer." %}</p></div>
         {% endif %}
-        <div class="stage-actions"><span class="spacer"></span><a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}">{% translate "Continue" %} →</a></div>
+        <div class="stage-actions"><span class="spacer"></span><a class="btn btn-primary btn-lg" href="{% url 'learning:continue' topic.slug %}?after={{ step.order }}">{% translate "Continue" %} →</a></div>
       {% else %}
         <form method="post" action="{% url 'learning:step_submit' topic.slug step.order %}" data-reflection style="margin-top:20px">{% csrf_token %}
           <div class="field"><label for="ref-text">{% translate "Your answer" %}</label><textarea id="ref-text" name="text" required placeholder="{% translate 'Write honestly — only you and your psychologist will see it.' %}"></textarea></div>

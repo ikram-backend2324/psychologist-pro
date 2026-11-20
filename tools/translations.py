@@ -196,6 +196,15 @@ TRANSLATIONS = {
     "Register to start": ("Boshlash uchun ro‘yxatdan o‘ting", "Baslaw ushın dizimnen ótiń", "Зарегистрируйтесь, чтобы начать"),
     "Registration is free and takes a minute.": ("Ro‘yxatdan o‘tish bepul va bir daqiqa oladi.", "Dizimnen ótiw biypul hám bir minut aladı.", "Регистрация бесплатна и займёт минуту."),
     "Prepared by": ("Tayyorlagan", "Tayarlaǵan", "Подготовил(а)"),
+    # --- Numbered courses & scientific sources ---
+    "Course topic": ("Kurs mavzusi", "Kurs teması", "Тема курса"),
+    "Scientific basis": ("Ilmiy asos", "Ilimiy tiykar", "Научная основа"),
+    "The lessons of this topic are based on these scientific sources:": ("Ushbu mavzu darslari quyidagi ilmiy manbalarga asoslangan:", "Bul temanıń sabaqları tómendegi ilimiy dereklerge tiykarlanǵan:", "Уроки этой темы основаны на следующих научных источниках:"),
+    "Next topic": ("Keyingi mavzu", "Keyingi tema", "Следующая тема"),
+    "number in course": ("kursdagi raqami", "kurstaǵı nomeri", "номер в курсе"),
+    "Position of the topic inside its category (1, 2, 3…). 0 = not part of a numbered course.": ("Mavzuning bo‘limdagi o‘rni (1, 2, 3…). 0 — raqamlangan kursga kirmaydi.", "Temanıń bólimdegi ornı (1, 2, 3…). 0 — nomerlengen kursqa kirmeydi.", "Место темы в разделе (1, 2, 3…). 0 — не входит в нумерованный курс."),
+    "scientific sources": ("ilmiy manbalar", "ilimiy derekler", "научные источники"),
+    "The scientific basis of the topic: one book or article per line.": ("Mavzuning ilmiy asosi: har bir qatorda bitta kitob yoki maqola.", "Temanıń ilimiy tiykarı: hár qatarda bir kitap yamasa maqala.", "Научная основа темы: по одной книге или статье в строке."),
     "Related topics": ("O‘xshash mavzular", "Uqsas temalar", "Похожие темы"),
     "This topic has no steps yet.": ("Bu mavzuda hali qadamlar yo‘q.", "Bul temada ele qádemler joq.", "В этой теме пока нет шагов."),
     # --- Step player ---

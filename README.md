@@ -25,6 +25,12 @@ optional AI feedback through OpenRouter. Ready for Render's free plan.
   the topic with related-topic suggestions. Users can pause any topic and set a reminder:
   it appears in the dashboard calendar and bell badge, and can be added to Google Calendar
   or the phone calendar (.ics with an alarm).
+- **Emotional intelligence course**: 8 numbered topics built on the scientific guide
+  (Mayer & Salovey, Bradberry & Greaves, Steiner, Lemberg…). Every topic has the same structure:
+  scientific basis (lesson with sources) → self-assessment test → practical exercise → self-help reflection.
+  Created by `python manage.py seed_ei` (also run by `build.sh`; `--refresh` rewrites the texts).
+  Topics have a *number in course* and *scientific sources*; the topic page shows “Topic N of 8”,
+  the sources and a link to the next topic.
 - **Languages**: switcher in the header. Interface strings live in `tools/translations.py`
   and `tools/translations_care.py`;
   content is translated per field in the admin (`title [uz]`, `title [kaa]`, …).
@@ -40,6 +46,7 @@ python manage.py compile_translations
 python manage.py migrate
 python manage.py setup_roles      # Psychologists group + admin from .env
 python manage.py seed_demo        # optional demo content (--refresh rewrites existing demo texts)
+python manage.py seed_ei          # emotional intelligence course (8 topics)
 python manage.py runserver
 ```
 

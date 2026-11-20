@@ -55,7 +55,7 @@ class StepInline(TranslationTabularInline):
 @admin.register(Topic)
 class TopicAdmin(OwnTopicsMixin, TranslationAdmin):
     topic_lookup = "author"
-    list_display = ("badge", "title", "category", "author", "level", "steps_total", "learners", "is_published")
+    list_display = ("badge", "title", "category", "order", "author", "level", "steps_total", "learners", "is_published")
     list_display_links = ("badge", "title")
     list_filter = ("is_published", "category", "level")
     list_editable = ("is_published",)
@@ -63,7 +63,8 @@ class TopicAdmin(OwnTopicsMixin, TranslationAdmin):
     inlines = [StepInline]
     fieldsets = (
         (_("Main"), {"fields": ("title", "summary", "goal", "description")}),
-        (_("Look and placement"), {"fields": ("category", "author", "icon", "color", "level", "duration_minutes", "tags", "is_published", "slug")}),
+        (_("Scientific basis"), {"fields": ("sources",)}),
+        (_("Look and placement"), {"fields": ("category", "order", "author", "icon", "color", "level", "duration_minutes", "tags", "is_published", "slug")}),
     )
     readonly_fields = ()
 

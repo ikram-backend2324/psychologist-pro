@@ -8,6 +8,7 @@
       <div>
         <div class="row" style="margin-bottom:18px">
           <span class="chip">{{ topic.category.icon }} {{ topic.category.name }}</span>
+          {% if topic.order and course_size %}<span class="chip">📚 {% translate "Course topic" %} {{ topic.order }}/{{ course_size }}</span>{% endif %}
           <span class="chip">⏱ {{ topic.duration_minutes }} {% translate "min" %}</span>
           <span class="chip">📈 {{ topic.get_level_display }}</span>
           <span class="chip">👥 {{ learners }}</span>
@@ -27,6 +28,13 @@
       {% endif %}
       {% if topic.description %}
         <div class="card prose reveal"><h3 class="panel-title">📖 {% translate "About this topic" %}</h3>{{ topic.description|linebreaks }}</div>
+      {% endif %}
+      {% if topic.source_list %}
+        <div class="card reveal">
+          <h3 class="panel-title">🔬 {% translate "Scientific basis" %}</h3>
+          <p class="muted small" style="margin:0 0 10px">{% translate "The lessons of this topic are based on these scientific sources:" %}</p>
+          <ol class="sources">{% for s in topic.source_list %}<li>{{ s }}</li>{% endfor %}</ol>
+        </div>
       {% endif %}
       <div class="card reveal">
         <h3 class="panel-title">🪜 {% translate "Your path" %}</h3>
@@ -76,6 +84,14 @@
       </div>
     </aside>
   </div>
+
+  {% if next_topic %}
+    <a href="{{ next_topic.get_absolute_url }}" class="card card-hover next-topic reveal">
+      <span class="big-emoji" aria-hidden="true">{{ next_topic.icon }}</span>
+      <div style="flex:1"><div class="kind">{% translate "Next topic" %} · {{ next_topic.order }}/{{ course_size }}</div><b>{{ next_topic.title }}</b><div class="muted small">{{ next_topic.summary }}</div></div>
+      <span class="btn btn-sm btn-ghost" aria-hidden="true">→</span>
+    </a>
+  {% endif %}
 
   {% if related %}
     <section class="section" style="padding-bottom:40px">

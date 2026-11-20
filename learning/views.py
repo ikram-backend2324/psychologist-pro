@@ -5,7 +5,7 @@ from urllib.parse import urlencode
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Count, Q
+from django.db.models import Case, Count, Q, Value, When
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
@@ -30,7 +30,10 @@ def catalog(request):
     if q:
         topics = topics.filter(Q(title__icontains=q) | Q(summary__icontains=q) | Q(tags__icontains=q))
     if category:
-        topics = topics.filter(category__slug=category)
+        # Inside a category, numbered course topics come first, in course order.
+        topics = topics.filter(category__slug=category).order_by(
+            Case(When(order=0, then=Value(1)), default=Value(0)), "order", "-created_at"
+        )
     if level:
         topics = topics.filter(level=level)
     return render(
@@ -106,6 +109,8 @@ def topic_detail(request, slug):
             "done_ids": done_ids,
             "related": topic.related(limit=3),
             "learners": topic.enrollments.count(),
+            "next_topic": topic.next_in_course(),
+            "course_size": topic.course_size(),
         },
     )
 
@@ -263,6 +268,7 @@ def finish(request, slug):
             "results": enrollment.quiz_results.select_related("step"),
             "reflections": enrollment.reflections.select_related("step"),
             "related": topic.related(limit=3, exclude_ids=taken),
+            "next_topic": topic.next_in_course(),
         },
     )
 

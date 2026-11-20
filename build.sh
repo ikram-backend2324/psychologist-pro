@@ -10,6 +10,9 @@ python manage.py collectstatic --no-input
 python manage.py migrate --no-input
 python manage.py setup_roles
 
+# Emotional intelligence course (8 topics). Creates missing topics only, never overwrites edits.
+python manage.py seed_ei
+
 if [ "${SEED_DEMO:-false}" = "true" ]; then
   python manage.py seed_demo
 fi

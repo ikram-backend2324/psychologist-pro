@@ -240,6 +240,9 @@ msgstr "To‘xtagan joyingizdan davom eting."
 msgid "Continue your conversation in the private chat."
 msgstr "Suhbatni shaxsiy chatda davom ettiring."
 
+msgid "Course topic"
+msgstr "Kurs mavzusi"
+
 msgid "Create account"
 msgstr "Hisob yaratish"
 
@@ -593,6 +596,9 @@ msgstr "Keyingi oy"
 msgid "Next situation"
 msgstr "Keyingi vaziyat"
 
+msgid "Next topic"
+msgstr "Keyingi mavzu"
+
 msgid "No account yet?"
 msgstr "Hisobingiz yo‘qmi?"
 
@@ -711,6 +717,12 @@ msgstr "Mijozlarga mutaxassisligingizni ko‘rsating."
 
 msgid "Popular topics"
 msgstr "Ommabop mavzular"
+
+msgid ""
+"Position of the topic inside its category (1, 2, 3…). 0 = not part of a "
+"numbered course."
+msgstr ""
+"Mavzuning bo‘limdagi o‘rni (1, 2, 3…). 0 — raqamlangan kursga kirmaydi."
 
 msgid "Prefer not to say"
 msgstr "Aytmaslikni afzal ko‘raman"
@@ -867,6 +879,9 @@ msgstr ""
 
 msgid "Say hello and describe what you would like to work on."
 msgstr "Salomlashing va nima ustida ishlashni xohlashingizni yozing."
+
+msgid "Scientific basis"
+msgstr "Ilmiy asos"
 
 msgid "Search"
 msgstr "Qidirish"
@@ -1044,8 +1059,14 @@ msgstr "So‘rovni qabul qilganingizdan so‘ng mijoz natijalari ko‘rinadi."
 msgid "The conversation was closed."
 msgstr "Suhbat yopildi."
 
+msgid "The lessons of this topic are based on these scientific sources:"
+msgstr "Ushbu mavzu darslari quyidagi ilmiy manbalarga asoslangan:"
+
 msgid "The password is too similar to the %(verbose_name)s."
 msgstr "Parol «%(verbose_name)s» ga juda o‘xshash."
+
+msgid "The scientific basis of the topic: one book or article per line."
+msgstr "Mavzuning ilmiy asosi: har bir qatorda bitta kitob yoki maqola."
 
 msgid "The two password fields didn’t match."
 msgstr "Parollar mos kelmadi."
@@ -1388,6 +1409,9 @@ msgstr "nomi"
 msgid "note"
 msgstr "izoh"
 
+msgid "number in course"
+msgstr "kursdagi raqami"
+
 msgid "order"
 msgstr "tartib"
 
@@ -1432,6 +1456,9 @@ msgstr "natija: o‘rta ball"
 
 msgid "role"
 msgstr "rol"
+
+msgid "scientific sources"
+msgstr "ilmiy manbalar"
 
 msgid "score"
 msgstr "ball"

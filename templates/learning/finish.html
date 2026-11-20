@@ -8,7 +8,8 @@
     <h1 class="reveal">{% translate "Congratulations!" %}</h1>
     <p class="muted reveal" style="font-size:1.15rem;--d:.1s">{% translate "You completed the topic" %} <b style="color:var(--text)">{{ topic.title }}</b></p>
     <div class="row reveal" style="justify-content:center;--d:.2s">
-      <a href="{% url 'accounts:dashboard' %}" class="btn btn-primary btn-lg">{% translate "Go to dashboard" %}</a>
+      {% if next_topic %}<a href="{{ next_topic.get_absolute_url }}" class="btn btn-primary btn-lg">{% translate "Next topic" %}: {{ next_topic.order }}. {{ next_topic.title }} →</a>{% endif %}
+      <a href="{% url 'accounts:dashboard' %}" class="btn {% if not next_topic %}btn-primary {% endif %}btn-lg">{% translate "Go to dashboard" %}</a>
       {% with first=topic.steps.first %}{% if first %}<a href="{% url 'learning:step' topic.slug first.order %}" class="btn btn-lg">↻ {% translate "Review steps" %}</a>{% endif %}{% endwith %}
     </div>
   </div>

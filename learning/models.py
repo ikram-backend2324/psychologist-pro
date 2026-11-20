@@ -77,6 +77,16 @@ class Topic(models.Model):
     level = models.CharField(_("level"), max_length=20, choices=Level.choices, default=Level.BEGINNER)
     duration_minutes = models.PositiveSmallIntegerField(_("duration (minutes)"), default=15)
     tags = models.CharField(_("tags"), max_length=200, blank=True, help_text=_("Comma separated, used to suggest related topics."))
+    order = models.PositiveSmallIntegerField(
+        _("number in course"),
+        default=0,
+        help_text=_("Position of the topic inside its category (1, 2, 3…). 0 = not part of a numbered course."),
+    )
+    sources = models.TextField(
+        _("scientific sources"),
+        blank=True,
+        help_text=_("The scientific basis of the topic: one book or article per line."),
+    )
     is_published = models.BooleanField(_("published"), default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -98,6 +108,26 @@ class Topic(models.Model):
 
     def get_absolute_url(self):
         return reverse("learning:topic", args=[self.slug])
+
+    @property
+    def source_list(self):
+        return [line.strip() for line in self.sources.splitlines() if line.strip()]
+
+    def next_in_course(self):
+        """The next published topic of the same numbered course, if any."""
+        if not self.order:
+            return None
+        return (
+            Topic.objects.published()
+            .filter(category_id=self.category_id, order__gt=self.order)
+            .order_by("order", "created_at")
+            .first()
+        )
+
+    def course_size(self):
+        if not self.order:
+            return 0
+        return Topic.objects.published().filter(category_id=self.category_id, order__gt=0).count()
 
     @property
     def tag_list(self):

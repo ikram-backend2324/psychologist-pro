@@ -188,3 +188,76 @@ class FlowTests(TestCase):
 
     def test_healthz(self):
         self.assertEqual(self.client.get("/healthz").json(), {"status": "ok"})
+
+
+class EmotionalIntelligenceCourseTests(TestCase):
+    """The 8-topic course from the scientific guide: seeding, numbering, sources and every step."""
+
+    @classmethod
+    def setUpTestData(cls):
+        call_command("setup_roles", verbosity=0)
+        call_command("seed_ei", verbosity=0)
+        cls.topics = list(Topic.objects.filter(category__slug="emotional-intelligence").order_by("order"))
+
+    def login_client(self):
+        user = User.objects.create_user("zarina", password="Str0ng-pass!", role="client")
+        self.client.force_login(user)
+        return user
+
+    def test_eight_numbered_topics_with_full_structure(self):
+        self.assertEqual([t.order for t in self.topics], list(range(1, 9)))
+        for t in self.topics:
+            kinds = [s.kind for s in t.steps.all()]
+            self.assertEqual(kinds[0], "lesson", t.slug)
+            self.assertEqual(kinds[1], "quiz", t.slug)
+            self.assertIn(kinds[2], ("cards", "scenario", "breathing"), t.slug)
+            self.assertEqual(kinds[3], "reflection", t.slug)
+            self.assertTrue(t.source_list, t.slug)
+            for lang in LANGS:
+                self.assertTrue(getattr(t, f"title_{lang}"), f"{t.slug} {lang}")
+                for s in t.steps.all():
+                    self.assertTrue(getattr(s, f"body_{lang}"), f"{t.slug} step {s.order} {lang}")
+
+    def test_seed_is_idempotent_and_keeps_edits(self):
+        t = self.topics[0]
+        t.title_uz = "Tahrirlangan"
+        t.save()
+        call_command("seed_ei", verbosity=0)
+        self.assertEqual(Topic.objects.filter(category__slug="emotional-intelligence").count(), 8)
+        t.refresh_from_db()
+        self.assertEqual(t.title_uz, "Tahrirlangan")
+        call_command("seed_ei", "--refresh", verbosity=0)
+        t.refresh_from_db()
+        self.assertEqual(t.title_uz, "Hissiy intellekt nima?")
+
+    def test_next_topic_and_course_position(self):
+        self.assertEqual(self.topics[0].next_in_course(), self.topics[1])
+        self.assertIsNone(self.topics[-1].next_in_course())
+        self.client.post(reverse("set_language"), {"language": "uz", "next": "/"})
+        r = self.client.get(self.topics[2].get_absolute_url())
+        self.assertContains(r, "Kurs mavzusi 3/8")
+        self.assertContains(r, "Ilmiy asos")
+        self.assertContains(r, "Bradberry T., Greaves J.")
+        self.assertContains(r, self.topics[3].title_uz)
+
+    def test_category_lists_course_in_order(self):
+        r = self.client.get(reverse("learning:catalog") + "?category=emotional-intelligence")
+        self.assertEqual([t.order for t in r.context["topics"]], list(range(1, 9)))
+
+    def test_every_step_opens_and_can_be_completed(self):
+        self.login_client()
+        for t in self.topics:
+            self.client.post(reverse("learning:start", args=[t.slug]))
+            for s in t.steps.all():
+                url = reverse("learning:step", args=[t.slug, s.order])
+                self.assertEqual(self.client.get(url).status_code, 200, f"{t.slug} {s.order}")
+                data = {}
+                if s.kind == "quiz":
+                    data = {f"q{q.pk}": 0 for q in s.questions.all()}
+                elif s.kind == "reflection":
+                    data = {"text": "Bugun o‘zimni kuzatdim."}
+                r = self.client.post(reverse("learning:step_submit", args=[t.slug, s.order]), data)
+                self.assertIn(r.status_code, (200, 302), f"{t.slug} {s.order}")
+        self.assertEqual(Enrollment.objects.filter(status="completed", topic__in=self.topics).count(), 8)
+        finish = self.client.get(reverse("learning:finish", args=[self.topics[0].slug]))
+        self.assertContains(finish, self.topics[1].title)

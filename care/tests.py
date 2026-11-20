@@ -60,7 +60,7 @@ class CareTests(TestCase):
         self.client.force_login(self.psych)
         data = {
             "title_uz": "Yangi mavzu", "summary_uz": "Qisqa", "category": Category.objects.first().pk,
-            "icon": "🌟", "color": "violet", "level": "beginner", "duration_minutes": 10, "is_published": "on",
+            "icon": "🌟", "color": "violet", "level": "beginner", "duration_minutes": 10, "order": 0, "is_published": "on",
             "steps-TOTAL_FORMS": "1", "steps-INITIAL_FORMS": "0", "steps-MIN_NUM_FORMS": "0", "steps-MAX_NUM_FORMS": "1000",
             "steps-0-order": "1", "steps-0-kind": "lesson", "steps-0-title_uz": "Kirish",
         }

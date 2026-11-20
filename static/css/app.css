@@ -925,3 +925,11 @@ a:hover .go { transform: translateX(4px); }
   .flip-face { padding: 12px; font-size: 0.85rem; }
   .brand .name { display: none; }
 }
+
+/* Scientific sources list and next-topic link (numbered courses) */
+.sources{margin:0;padding-left:1.3em;display:grid;gap:6px;font-size:.92rem;line-height:1.45}
+.sources li::marker{color:var(--primary);font-weight:700}
+.next-topic{display:flex;align-items:center;gap:16px;margin-top:22px;text-decoration:none;color:inherit}
+.next-topic .big-emoji{font-size:2.4rem;line-height:1}
+.next-topic .kind{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--primary)}
+@media (max-width:560px){.next-topic{gap:12px}.next-topic .big-emoji{font-size:1.9rem}}
